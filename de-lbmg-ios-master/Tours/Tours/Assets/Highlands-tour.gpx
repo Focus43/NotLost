@@ -1,0 +1,339 @@
+<?xml version="1.0" standalone="yes"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="KML2GPX.COM" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+                                                                                
+                <wpt lat="39.75849912188566" lon="-105.0112410204099">
+                    <course>45.2</course>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.758499" lon="-105.0112410204099">
+        <course>45.2</course>
+    </wpt>
+    
+                <wpt lat="39.75855492169212" lon="-105.0113456845035">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 2]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 2]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.758555" lon="-105.0113456845035">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 2]]></cmt>
+        <desc><![CDATA[This is waypoint no: 2]]></desc>
+    </wpt>
+                <wpt lat="39.75907217176322" lon="-105.0106835462245">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 3]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 3]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.759072" lon="-105.0106835462245">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 3]]></cmt>
+        <desc><![CDATA[This is waypoint no: 3]]></desc>
+    </wpt>
+    
+                <wpt lat="39.75923367479857" lon="-105.0105004116628">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 4]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 4]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.759233" lon="-105.0105004116628">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 4]]></cmt>
+        <desc><![CDATA[This is waypoint no: 4]]></desc>
+    </wpt>
+    
+                <wpt lat="39.75962661909242" lon="-105.0110099410488">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 5]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 5]]></desc>
+                </wpt>
+                                                                                                                            
+    
+    <wpt lat="39.759626" lon="-105.0110099410488">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 5]]></cmt>
+        <desc><![CDATA[This is waypoint no: 5]]></desc>
+    </wpt>
+    
+                <wpt lat="39.75978498865638" lon="-105.0111641463281">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 6]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 6]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.759784" lon="-105.0111641463281">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 6]]></cmt>
+        <desc><![CDATA[This is waypoint no: 6]]></desc>
+    </wpt>
+    
+                <wpt lat="39.76080256615859" lon="-105.0111732395801">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Audio 1]]></name>
+                    <cmt><![CDATA[Waypoint no: 7]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 7]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.760802" lon="-105.0111732395801">
+        <ele>0</ele>
+        <name><![CDATA[Audio 1]]></name>
+        <cmt><![CDATA[Waypoint no: 7]]></cmt>
+        <desc><![CDATA[This is waypoint no: 7]]></desc>
+    </wpt>
+    
+                <wpt lat="39.76176348075148" lon="-105.0111802818767">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 8]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 8]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.761763" lon="-105.0111802818767">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 8]]></cmt>
+        <desc><![CDATA[This is waypoint no: 8]]></desc>
+    </wpt>
+    
+                <wpt lat="39.76199583516657" lon="-105.0111888569965">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 9]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 9]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.761995" lon="-105.0111888569965">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 9]]></cmt>
+        <desc><![CDATA[This is waypoint no: 9]]></desc>
+    </wpt>
+    
+                <wpt lat="39.76199603980542" lon="-105.012896495542">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 10]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 10]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.761996" lon="-105.012896495542">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 10]]></cmt>
+        <desc><![CDATA[This is waypoint no: 10]]></desc>
+    </wpt>
+    
+                <wpt lat="39.7619806953717" lon="-105.013120910333">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 11]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 11]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.7619806" lon="-105.013120910333">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 11]]></cmt>
+        <desc><![CDATA[This is waypoint no: 11]]></desc>
+    </wpt>
+    
+                <wpt lat="39.76082422830714" lon="-105.013177692319">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 12]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 12]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.760824" lon="-105.013177692319">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 12]]></cmt>
+        <desc><![CDATA[This is waypoint no: 12]]></desc>
+    </wpt>
+    
+                <wpt lat="39.76082263064561" lon="-105.0138056097946">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 13]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 13]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.760822" lon="-105.0138056097946">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 13]]></cmt>
+        <desc><![CDATA[This is waypoint no: 13]]></desc>
+    </wpt>
+    
+                <wpt lat="39.760814" lon="-105.0144596934794">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 14]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 14]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.76081452970000" lon="-105.0144596934794">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 14]]></cmt>
+        <desc><![CDATA[This is waypoint no: 14]]></desc>
+    </wpt>
+    
+                <wpt lat="39.76015775758103" lon="-105.0144801252626">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Media Point]]></name>
+                    <cmt><![CDATA[Waypoint no: 15]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 15]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.760157" lon="-105.0144801252626">
+        <ele>0</ele>
+        <name><![CDATA[Media Point]]></name>
+        <cmt><![CDATA[Waypoint no: 15]]></cmt>
+        <desc><![CDATA[This is waypoint no: 15]]></desc>
+    </wpt>
+    
+                <wpt lat="39.75965184551163" lon="-105.0144755781886">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 16]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 16]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.759651" lon="-105.0144755781886">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 16]]></cmt>
+        <desc><![CDATA[This is waypoint no: 16]]></desc>
+    </wpt>
+    
+                <wpt lat="39.75966092202881" lon="-105.0118427179624">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 17]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 17]]></desc>
+                </wpt>
+                                                                                                                            
+    
+    <wpt lat="39.75966092202881" lon="-105.0118427179624">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 17]]></cmt>
+        <desc><![CDATA[This is waypoint no: 17]]></desc>
+    </wpt>
+    
+                <wpt lat="39.75840389107147" lon="-105.0118206049271">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 18]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 18]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.75840389107147" lon="-105.0118206049271">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 18]]></cmt>
+        <desc><![CDATA[This is waypoint no: 18]]></desc>
+    </wpt>
+    
+                <wpt lat="39.758449323514" lon="-105.0131501183356">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 19]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 19]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.758449" lon="-105.0131501183356">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 19]]></cmt>
+        <desc><![CDATA[This is waypoint no: 19]]></desc>
+    </wpt>
+    
+                <wpt lat="39.75965071946396" lon="-105.0131462412322">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 20]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 20]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.759650" lon="-105.0131462412322">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 20]]></cmt>
+        <desc><![CDATA[This is waypoint no: 20]]></desc>
+    </wpt>
+    
+                <wpt lat="39.75965355908862" lon="-105.0118236121476">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 21]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 21]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.7596532" lon="-105.0118236121476">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 21]]></cmt>
+        <desc><![CDATA[This is waypoint no: 21]]></desc>
+    </wpt>
+    
+                <wpt lat="39.75838912406422" lon="-105.0118203048848">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 22]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 22]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.758389" lon="-105.0118203048848">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 22]]></cmt>
+        <desc><![CDATA[This is waypoint no: 22]]></desc>
+    </wpt>
+    
+                <wpt lat="39.75839069250424" lon="-105.0116096073341">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 23]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 23]]></desc>
+                </wpt>
+                                                                                                                            
+    <wpt lat="39.758390" lon="-105.0116096073341">
+        <ele>0</ele>
+        <name><![CDATA[Untitled Placemark]]></name>
+        <cmt><![CDATA[Waypoint no: 23]]></cmt>
+        <desc><![CDATA[This is waypoint no: 23]]></desc>
+    </wpt>
+    
+                <wpt lat="39.75844579682098" lon="-105.0112747710093">
+                                                            <ele>0</ele>
+                    <name><![CDATA[End]]></name>
+                    <cmt><![CDATA[Waypoint no: 24]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 24]]></desc>
+                </wpt>
+                                                            
+    
+    <wpt lat="39.758445" lon="-105.0112747710093">
+        <ele>0</ele>
+        <name><![CDATA[End]]></name>
+        <cmt><![CDATA[Waypoint no: 24]]></cmt>
+        <desc><![CDATA[This is waypoint no: 24]]></desc>
+    </wpt>
+    
+    
+    
+</gpx>

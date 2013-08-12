@@ -1,0 +1,321 @@
+{
+    "routes" : [
+                {
+                "routeName" : "Fort Benning",
+                "description" : "A brief tour to demonstrate the capabilities of the current level of the demo app.",
+                "outlineRoute" : [
+                                  {
+                                  "latitude" : 32.350102,
+                                  "longitude" :-84.974549
+                                  },
+                                  {
+                                  "latitude" : 32.350341,
+                                  "longitude" : -84.974534
+                                  },
+                                  {
+                                  "latitude" :  32.350345,
+                                  "longitude" : -84.975428
+                                  },
+                                  {
+                                  "latitude" :  32.350156,
+                                  "longitude" : -84.975457
+                                  },
+                                  {
+                                  "latitude" :   32.349671,
+                                  "longitude" : -84.975431
+                                  },
+                                  {
+                                  "latitude" :  32.349635,
+                                  "longitude" : -84.971700
+                                  },
+                                  {
+                                  "latitude" :  32.349678,
+                                  "longitude" : -84.964056
+                                  },
+                                  {
+                                  "latitude" :  32.349431,
+                                  "longitude" : -84.964004
+                                  },
+                                  {
+                                  "latitude" :  32.349061,
+                                  "longitude" : -84.963664
+                                  },
+                                  {
+                                  "latitude" : 32.349152,
+                                  "longitude" : -84.963400
+                                  },
+                                  {
+                                  "latitude" : 32.352418,
+                                  "longitude" : -84.957595
+                                  },
+                                  {
+                                  "latitude" : 32.352803,
+                                  "longitude" : -84.956287
+                                  },
+                                  {
+                                  "latitude" : 32.35271720659783,
+                                  "longitude" : -84.95273155224253
+                                  },
+                                  {
+                                  "latitude" : 32.352608,
+                                  "longitude" : -84.951488
+                                  },
+                                  {
+                                  "latitude" : 32.351836,
+                                  "longitude" : -84.951468
+                                  },
+                                  {
+                                  "latitude" : 32.351650,
+                                  "longitude" : -84.951627
+                                  },
+                                  {
+                                  "latitude" : 32.351597,
+                                  "longitude" : -84.952181
+                                  },
+                                  {
+                                  "latitude" : 32.35163758046212,
+                                  "longitude" : -84.95297673166259
+                                  },
+                                  {
+                                  "latitude" : 32.35154144003275,
+                                  "longitude" : -84.95347813711031
+                                  },
+                                  {
+                                  "latitude" :  32.351494,
+                                  "longitude" : -84.954572
+                                  },
+                                  {
+                                  "latitude" : 32.35102941846381,
+                                  "longitude" : -84.95416804941152
+                                  },
+                                  {
+                                  "latitude" : 32.351118,
+                                  "longitude" : -84.951785
+                                  },
+                                  {
+                                  "latitude" : 32.351836,
+                                  "longitude" : -84.951468
+                                  },
+                                  {
+                                  "latitude" : 32.352608,
+                                  "longitude" : -84.951488
+                                  },
+                                  {
+                                  "latitude" : 32.35265095255556,
+                                  "longitude" : -84.95187526576682
+                                  }
+                                  ],
+                "wayPoints" : [
+                               {
+                               "name" : "Wp1",
+                               "poi" : true,
+                               "latitude" :  32.350102,
+                               "longitude" : -84.974549,
+                               "radiusMeters" : 50,
+                               "audioItem" : "wp1.caf"
+                               },
+                               {
+                               "latitude" : 32.350341,
+                               "longitude" : -84.974534,
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "latitude" :  32.350345,
+                               "longitude" : -84.975428,
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "name" : "Wp2",
+                               "poi" : true,
+                               "latitude" : 32.350156,
+                               "longitude" : -84.975457,
+                               "radiusMeters" : 20,
+                               "audioItem" : "wp2.caf"
+                               },
+                               {
+                               "latitude" :   32.349671,
+                               "longitude" : -84.975431,
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "name" : "Wp3",
+                               "poi" : true,
+                               "latitude" :  32.349635,
+                               "longitude" : -84.971700,
+                               "radiusMeters" : 20,
+                               "audioItem" : "wp3.caf",
+                               "photos" : [
+                                           {
+                                           "photo" : "picture3.jpg",
+                                           "caption" :" - "
+                                           }
+                                           ]
+                               },
+                               {
+                               "latitude" :  32.349678,
+                               "longitude" : -84.964056,
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "latitude" :  32.349431,
+                               "longitude" : -84.964004,
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "latitude" :  32.349061,
+                               "longitude" : -84.963664,
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "name" : "Wp4",
+                               "poi" : true,
+                               "latitude" : 32.349152,
+                               "longitude" : -84.963400,
+                               "radiusMeters" : 20,
+                               "audioItem" : "wp4.caf"
+                               },
+                               {
+                               "latitude" : 32.352418,
+                               "longitude" : -84.957595,
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "latitude" : 32.352803,
+                               "longitude" : -84.956287,
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "name" : "Wp5",
+                               "poi" : true,
+                               "latitude" : 32.35271720659783,
+                               "longitude" : -84.95273155224253,
+                               "radiusMeters" : 20,
+                               "audioItem" : "wp5.caf",
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "latitude" : 32.352608,
+                               "longitude" : -84.951488,
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "latitude" : 32.351836,
+                               "longitude" : -84.951468,
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "name" : "Wp6",
+                               "poi" : true,
+                               "latitude" : 32.351650,
+                               "longitude" : -84.951627,
+                               "radiusMeters" : 20,
+                               "audioItem" : "wp6.caf",
+                               "photos" : [
+                                           {
+                                           "photo" : "picture6.jpg",
+                                           "caption" :" - "
+                                           }
+                                           ]
+                               },
+                               {
+                               "name" : "Wp7",
+                               "poi" : true,
+                               "latitude" : 32.351597,
+                               "longitude" : -84.952181,
+                               "radiusMeters" : 20,
+                               "audioItem" : "wp7.caf"
+                               },
+                               {
+                               "name" : "Wp8",
+                               "poi" : true,
+                               "latitude" : 32.35163758046212,
+                               "longitude" : -84.95297673166259,
+                               "radiusMeters" : 20,
+                               "audioItem" : "wp8.caf",
+                               "videos" : [
+                                           "video8.m4v"
+                                           ]
+                               },
+                               {
+                               "name" : "Wp9",
+                               "poi" : true,
+                               "latitude" : 32.35154144003275,
+                               "longitude" : -84.95347813711031,
+                               "radiusMeters" : 20,
+                               "audioItem" : "wp9.caf"
+                               },
+                               {
+                               "latitude" :  32.351494,
+                               "longitude" : -84.954572,
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "name" : "Wp10",
+                               "poi" : true,
+                               "latitude" : 32.35102941846381,
+                               "longitude" : -84.95416804941152,
+                               "radiusMeters" : 20,
+                               "audioItem" : "wp10.caf"
+                               },
+                               {
+                               "latitude" : 32.351118,
+                               "longitude" : -84.951785,
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "latitude" : 32.351836,
+                               "longitude" : -84.951468,
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "latitude" : 32.352608,
+                               "longitude" : -84.951488,
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "name" : "Wp11",
+                               "poi" : true,
+                               "latitude" : 32.35265095255556,
+                               "longitude" : -84.95187526576682,
+                               "radiusMeters" : 20,
+                               "audioItem" : "wp11.caf"
+                               }
+                               ],
+                "mediaPoints" : [
+                                 {
+                                 "name" : "Media 3",
+                                 "latitude" : 32.349688,
+                                 "longitude" : -84.968012,
+                                 "radiusMeters" : 350,
+                                 "photos" : [
+                                             {
+                                             "photo" : "picture3.png",
+                                             "caption" :"Fort Benning"
+                                             }
+                                             ]
+                                 },
+                                 {
+                                 "name" : "Media 6",
+                                 "latitude" : 32.351685,
+                                 "longitude" : -84.951861,
+                                 "radiusMeters" : 25,
+                                 "photos" : [
+                                             {
+                                             "photo" : "picture6.png",
+                                             "caption" :"Passes"
+                                             }
+                                             ]
+                                 },
+                                 {
+                                 "name" : "Media 9",
+                                 "latitude" :  32.351541,
+                                 "longitude" : -84.953478,
+                                 "radiusMeters" : 50,
+                                 "videos" : [
+                                             "handling.m4v"
+                                             ]
+                                 }                                 ]
+                
+                }
+                ]
+}

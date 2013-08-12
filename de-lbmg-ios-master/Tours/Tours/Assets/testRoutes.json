@@ -1,0 +1,664 @@
+{
+    "routes" : [
+                {
+                "routeName" : "Katie's Tour",
+                "description" : "A brief tour around the delights of Jackson Hole to demonstrate the capabilities of the current level of the demo app.",
+                "wayPoints" : [
+                               {
+                               "name" : "Home - All Waypoints radius 14 except where noted",
+                               "poi" : true,
+                               "latitude" : 43.470494,
+                               "longitude" : -110.769968,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Intro.caf"
+                               },
+                               {
+                               "name" : "Wp1- POI",
+                               "poi" : true,
+                               "latitude" : 43.470710,
+                               "longitude" : -110.769608,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp1.caf"
+                               },
+                               {
+                               "name" : "Wp2 - Audio only",
+                               "latitude" : 43.470802,
+                               "longitude" : -110.769884,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp2.caf"
+                               },
+                               {
+                               "name" : " - ",
+                               "latitude" : 43.470899,
+                               "longitude" : -110.770051,
+                               "radiusMeters" : 14
+                               },
+                               {
+                               "name" : "Wp3 - POI",
+                               "poi" : true,
+                               "latitude" : 43.471061,
+                               "longitude" : -110.769554,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp3.caf"
+                               },
+                               {
+                               "name" : " - ",
+                               "latitude" : 43.471180,
+                               "longitude" : -110.769257,
+                               "radiusMeters" : 14
+                               },
+                               {
+                               "name" : "Wp4 - Pic 16 & Video",
+                               "latitude" : 43.471545,
+                               "longitude" : -110.769730,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp4.caf",
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 16.jpg",
+                                           "caption" :"Climber"
+                                           }
+                                           ],
+                               "videos" : [
+                                           "test.m4v"
+                                           ]
+                               },
+                               {
+                               "name" : " - ",
+                               "latitude" : 43.471631,
+                               "longitude" : -110.769993,
+                               "radiusMeters" : 14
+                               },
+                               {
+                               "name" : "Wp5 20M Radius - Pics 11 & 12 ",
+                               "poi" : true,
+                               "latitude" : 43.471790,
+                               "longitude" : -110.769824,
+                               "radiusMeters" : 20,
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 11.jpg",
+                                           "caption" :"Horse & Rider"
+                                           },
+                                           {
+                                           "photo" : "pic 12.jpg",
+                                           "caption" :"Dog and Stick"
+                                           }
+                                           ]
+                               },
+                               {
+                               "name" : "Wp6 - Audio Only",
+                               "latitude" : 43.471891,
+                               "longitude" : -110.769637,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp6.caf"
+                               },
+                               {
+                               "latitude" : 43.471881,
+                               "longitude" : -110.768692,
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "name" : "Wp7 - No Audio",
+                               "poi" : true,
+                               "latitude" : 43.471891,
+                               "longitude" : -110.768570,
+                               "radiusMeters" : 14
+                               },
+                               {
+                               "name" : "Wp8 - pics 2 & 3",
+                               "latitude" : 43.471871,
+                               "longitude" : -110.767565,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp8.caf",
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 2.jpg",
+                                           "caption" :"Founders"
+                                           },
+                                           {
+                                           "photo" : "pic 3.jpg",
+                                           "caption" :"A mysterious Climber"
+                                           }
+                                           ]
+                               },
+                               {
+                               "name" : "Wp9 - Audio & Pic 17",
+                               "poi" : true,
+                               "latitude" : 43.471877,
+                               "longitude" : -110.765737,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp9.caf",
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 17.jpg",
+                                           "caption" :"No Caption!"
+                                           }
+                                           ],
+                               "videos" : [
+                                           "test.m4v"
+                                           ]
+                               },
+                               {
+                               "name" : " - ",
+                               "latitude" : 43.471926,
+                               "longitude" : -110.763676,
+                               "radiusMeters" : 14
+                               },
+                               {
+                               "latitude" : 43.472035,
+                               "longitude" : -110.763086,
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "name" : "Wp10 - Pic 6",
+                               "latitude" : 43.472148,
+                               "longitude" : -110.762827,
+                               "radiusMeters" : 14,
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 6.jpg",
+                                           "caption" :"Picture 6"
+                                           }
+                                           ]
+                               },
+                               {
+                               "name" : " - ",
+                               "latitude" : 43.472456,
+                               "longitude" : -110.762358,
+                               "radiusMeters" : 14
+                               },
+                               {
+                               "name" : "Wp11 - Audio",
+                               "latitude" : 43.473083,
+                               "longitude" : -110.762406,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp11.caf"
+                               },
+                               {
+                               "name" : " - ",
+                               "latitude" : 43.472456,
+                               "longitude" : -110.762358,
+                               "radiusMeters" : 14
+                               },
+                               {
+                               "name" : "Wp12 - No Text",
+                               "poi" : true,
+                               "latitude" : 43.473064,
+                               "longitude" : -110.760977,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp12.caf"
+                               },
+                               {
+                               "name" : "Wp13 - Audio Not Yet Dependant on Wp12",
+                               "latitude" : 43.473340,
+                               "longitude" : -110.761709,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp13.caf"
+                               },
+                               {
+                               "name" : "Wp14 - pic 7",
+                               "poi" : true,
+                               "dependancy" : 4,
+                               "latitude" : 43.473355,
+                               "longitude" : -110.764729,
+                               "radiusMeters" : 14,
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 7.jpg",
+                                           "caption" :"A Black Dog"
+                                           }
+                                           ]
+                               },
+                               {
+                               "name" : " - ",
+                               "latitude" : 43.473379,
+                               "longitude" : -110.766161,
+                               "radiusMeters" : 14
+                               },
+                               {
+                               "name" : "Wp15 - pic 8 & Video",
+                               "latitude" : 43.473004,
+                               "longitude" : -110.766907,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp15.caf",
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 8.jpg",
+                                           "caption" :"Gaper Guide Logo"
+                                           }
+                                           ],
+                               "videos" : [
+                                           "test.m4v"
+                                           ]
+                               },
+                               {
+                               "name" : "Wp16 - Pic 9",
+                               "latitude" : 43.472993,
+                               "longitude" : -110.769431,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp16.caf",
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 9.jpg",
+                                           "caption" :"Founders"
+                                           }
+                                           ]
+                               },
+                               {
+                               "name" : "Wp17 - Pic 7",
+                               "poi" : true,
+                               "latitude" : 43.473069,
+                               "longitude" : -110.770525,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp17.caf",
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 7.jpg",
+                                           "caption" :"Black Dog"
+                                           }
+                                           ]
+                               },
+                               {
+                               "name" : " - ",
+                               "latitude" : 43.473092,
+                               "longitude" : -110.770832,
+                               "radiusMeters" : 14
+                               },
+                               {
+                               "name" : "Wp18 - Audio only",
+                               "latitude" : 43.472848,
+                               "longitude" : -110.770905,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp18.caf"
+                               },
+                               {
+                               "name" : " - ",
+                               "latitude" : 43.471884,
+                               "longitude" : -110.770818,
+                               "radiusMeters" : 14
+                               },
+                               {
+                               "name" : "Wp19 - No Audio - Pic 10",
+                               "latitude" : 43.471676,
+                               "longitude" : -110.770477,
+                               "radiusMeters" : 14,
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 10.jpg",
+                                           "caption" :"Jack - o - lope"
+                                           }
+                                           ]
+                               },
+                               {
+                               "name" : " - ",
+                               "latitude" : 43.471180,
+                               "longitude" : -110.769257,
+                               "radiusMeters" : 14
+                               },
+                               {
+                               "name" : "Wp20 - pic 13",
+                               "latitude" : 43.470952,
+                               "longitude" : -110.769815,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp20.caf",
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 13.jpg",
+                                           "caption" :"Mountains"
+                                           }
+                                           ]
+                               },
+                               {
+                               "name" : " - ",
+                               "latitude" : 43.470899,
+                               "longitude" : -110.770051,
+                               "radiusMeters" : 14
+                               },
+                               {
+                               "name" : "Wp22 - pic 12",
+                               "poi" : true,
+                               "latitude" : 43.470802,
+                               "longitude" : -110.769884,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp22.caf",
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 12.jpg",
+                                           "caption" :"Wet Dog With Stick"
+                                           }
+                                           ]
+                               },
+                               {
+                               "name" : "Tour Complete - pic 13 - Congratulations",
+                               "poi" : true,
+                               "latitude" : 43.470710,
+                               "longitude" : -110.769608,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp23.caf",
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 13.jpg",
+                                           "caption" :"Sunset Mountains"
+                                           }
+                                           ]
+                               }
+                               ],
+                "mediaPoints" : [
+                                 {
+                                 "name" : "Media 4",
+                                 "latitude" : 43.471545,
+                                 "longitude" : -110.769730,
+                                 "radiusMeters" : 100,
+                                 "audioItem" : "longAudio.m4a",
+                                 "photos" : [
+                                             {
+                                             "photo" : "pic 2.jpg",
+                                             "caption" :"Founders"
+                                             },
+                                             {
+                                             "photo" : "pic 5.jpg",
+                                             "caption" :"Interesting Image"
+                                             },
+                                             {
+                                             "photo" : "pic 6.jpg",
+                                             "caption" :" - "
+                                             },
+                                             {
+                                             "photo" : "pic 7.jpg",
+                                             "caption" :"A mysterious Climber"
+                                             }
+                                             ],
+                                 "videos" : [
+                                             "test.m4v"
+                                             ]
+                                 },
+                                 {
+                                 "name" : "Media 8",
+                                 "latitude" : 43.471871,
+                                 "longitude" : -110.767565,
+                                 "radiusMeters" : 100,
+                                 "audioItem" : "longAudio.m4a",
+                                 "photos" : [
+                                             {
+                                             "photo" : "pic 8.jpg",
+                                             "caption" :"More words"
+                                             },
+                                             {
+                                             "photo" : "pic 9.jpg",
+                                             "caption" :"Another caption"
+                                             }
+                                             ]
+                                 }
+                                 
+                                 ]
+                
+                },
+                {
+                "routeName" : "Office Tour",
+                "description" : "A brief tour around the area surrounding the office",
+                "wayPoints" : [
+                               {
+                               "name" : "Home - All Waypoints radius 14 except where noted",
+                               "poi" : true,
+                               "latitude" : 39.676637,
+                               "longitude" : -104.934137,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Intro.caf"
+                               },
+                               {
+                               "name" : "Wp1- POI",
+                               "poi" : true,
+                               "latitude" : 39.675617,
+                               "longitude" : -104.934167,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp1.caf"
+                               },
+                               {
+                               "name" : "Wp2 - Audio only",
+                               "latitude" : 39.674920,
+                               "longitude" : -104.934142,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp2.caf"
+                               },
+                               {
+                               "name" : "Wp3 - POI",
+                               "poi" : true,
+                               "latitude" : 39.674825,
+                               "longitude" : -104.934195,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp3.caf"
+                               },
+                               {
+                               "name" : "Wp4 - Pic 16 & Video",
+                               "latitude" : 39.674823,
+                               "longitude" : -104.935185,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp4.caf",
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 16.jpg",
+                                           "caption" :"Climber"
+                                           }
+                                           ],
+                               "videos" : [
+                                           "test.m4v"
+                                           ]
+                               },
+                               {
+                               "name" : "Wp6 - Audio Only",
+                               "latitude" : 39.675828,
+                               "longitude" : -104.935237,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp6.caf"
+                               },
+                               {
+                               "latitude" : 39.676544,
+                               "longitude" : -104.935247,
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "name" : "Wp7 - No Audio",
+                               "poi" : true,
+                               "latitude" : 39.676626,
+                               "longitude" : -104.935249,
+                               "radiusMeters" : 14
+                               },
+                               {
+                               "name" : "Wp8 - pics 2 & 3",
+                               "latitude" : 39.676639,
+                               "longitude" : -104.935320,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp8.caf",
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 2.jpg",
+                                           "caption" :"Founders"
+                                           },
+                                           {
+                                           "photo" : "pic 3.jpg",
+                                           "caption" :"A mysterious Climber"
+                                           }
+                                           ]
+                               },
+                               {
+                               "name" : "Wp9 - Audio & Pic 17",
+                               "poi" : true,
+                               "latitude" : 39.676628,
+                               "longitude" : -104.936307,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp9.caf",
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 17.jpg",
+                                           "caption" :"No Caption!"
+                                           }
+                                           ],
+                               "videos" : [
+                                           "test.m4v"
+                                           ]
+                               },
+                               {
+                               "name" : " - ",
+                               "latitude" : 39.676604,
+                               "longitude" : -104.936332,
+                               "radiusMeters" : 14
+                               },
+                               {
+                               "latitude" : 39.675699,
+                               "longitude" : -104.936316,
+                               "radiusMeters" : 20
+                               },
+                               {
+                               "name" : "Wp10 - Pic 6",
+                               "latitude" : 39.674844,
+                               "longitude" : -104.936244,
+                               "radiusMeters" : 14,
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 6.jpg",
+                                           "caption" :"Picture 6"
+                                           }
+                                           ]
+                               },
+                               {
+                               "name" : "Wp11 - Audio",
+                               "latitude" : 39.674866,
+                               "longitude" : -104.935250,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp11.caf"
+                               },
+                               {
+                               "name" : " - ",
+                               "latitude" : 39.674920,
+                               "longitude" : -104.935246,
+                               "radiusMeters" : 14
+                               },
+                               {
+                               "name" : "Wp12 - No Text",
+                               "poi" : true,
+                               "latitude" : 39.675571,
+                               "longitude" : -104.935234,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp12.caf"
+                               },
+                               {
+                               "name" : "Wp14 - pic 7",
+                               "poi" : true,
+                               "dependancy" : 4,
+                               "latitude" : 39.676619,
+                               "longitude" : -104.935226,
+                               "radiusMeters" : 14,
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 7.jpg",
+                                           "caption" :"A Black Dog"
+                                           }
+                                           ]
+                               },
+                               {
+                               "name" : " - ",
+                               "latitude" : 39.676630,
+                               "longitude" : -104.934291,
+                               "radiusMeters" : 14
+                               },
+                               {
+                               "name" : "Wp16 - Pic 9",
+                               "latitude" : 39.676710,
+                               "longitude" : -104.934147,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp16.caf",
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 9.jpg",
+                                           "caption" :"Founders"
+                                           }
+                                           ]
+                               },
+                               {
+                               "name" : "Wp17 - Pic 7",
+                               "poi" : true,
+                               "latitude" : 39.676815,
+                               "longitude" : -104.934148,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp17.caf",
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 7.jpg",
+                                           "caption" :"Black Dog"
+                                           }
+                                           ]
+                               },
+                               {
+                               "name" : " - ",
+                               "latitude" : 39.676976,
+                               "longitude" : -104.934147,
+                               "radiusMeters" : 14
+                               },
+                               {
+                               "name" : "Tour Complete - pic 13 - Congratulations",
+                               "poi" : true,
+                               "latitude" : 39.677259,
+                               "longitude" : -104.934147,
+                               "radiusMeters" : 14,
+                               "audioItem" : "Wp23.caf",
+                               "photos" : [
+                                           {
+                                           "photo" : "pic 13.jpg",
+                                           "caption" :"Sunset Mountains"
+                                           }
+                                           ]
+                               }
+                               ],
+                "mediaPoints" : [
+                                 {
+                                 "name" : "Media 4",
+                                 "latitude" : 39.675786,
+                                 "longitude" : -104.936323,
+                                 "radiusMeters" : 100,
+                                 "audioItem" : "longAudio.m4a",
+                                 "photos" : [
+                                             {
+                                             "photo" : "pic 2.jpg",
+                                             "caption" :"Founders"
+                                             },
+                                             {
+                                             "photo" : "pic 5.jpg",
+                                             "caption" :"Interesting Image"
+                                             },
+                                             {
+                                             "photo" : "pic 6.jpg",
+                                             "caption" :" - "
+                                             },
+                                             {
+                                             "photo" : "pic 7.jpg",
+                                             "caption" :"A mysterious Climber"
+                                             }
+                                             ],
+                                 "videos" : [
+                                             "test.m4v"
+                                             ]
+                                 },
+                                 {
+                                 "name" : "Media 8",
+                                 "latitude" : 39.674825,
+                                 "longitude" : -104.9346,
+                                 "radiusMeters" : 100,
+                                 "audioItem" : "longAudio.m4a",
+                                 "photos" : [
+                                             {
+                                             "photo" : "pic 8.jpg",
+                                             "caption" :"More words"
+                                             },
+                                             {
+                                             "photo" : "pic 9.jpg",
+                                             "caption" :"Another caption"
+                                             }
+                                             ]
+                                 }
+                                 
+                                 ]
+                
+                }
+                ]
+}

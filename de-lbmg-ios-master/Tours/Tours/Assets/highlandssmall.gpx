@@ -1,0 +1,56 @@
+<?xml version="1.0" standalone="yes"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" creator="KML2GPX.COM" version="1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+
+                                                                                
+                <wpt lat="39.76108835340087" lon="-105.011151650487">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Pre -start]]></name>
+                    <cmt><![CDATA[Waypoint no: 1]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 1]]></desc>
+                </wpt>
+                                                                                                                            
+                <wpt lat="39.7612531531335" lon="-105.0111555088322">
+                                                            <ele>0</ele>
+                    <name><![CDATA[1 - Start]]></name>
+                    <cmt><![CDATA[Waypoint no: 2]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 2]]></desc>
+                </wpt>
+                                                                                                                            
+                <wpt lat="39.76157650968692" lon="-105.0111473106917">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 3]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 3]]></desc>
+                </wpt>
+                                                                                                                            
+                <wpt lat="39.7619861543654" lon="-105.0111956147157">
+                                                            <ele>0</ele>
+                    <name><![CDATA[2 - POI]]></name>
+                    <cmt><![CDATA[Waypoint no: 4]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 4]]></desc>
+                </wpt>
+                                                                                                                            
+                <wpt lat="39.76197560076044" lon="-105.0112002741178">
+                                                            <ele>0</ele>
+                    <name><![CDATA[2 - Audio]]></name>
+                    <cmt><![CDATA[Waypoint no: 5]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 5]]></desc>
+                </wpt>
+                                                                                                                            
+                <wpt lat="39.76204851596364" lon="-105.0118375947008">
+                                                            <ele>0</ele>
+                    <name><![CDATA[Untitled Placemark]]></name>
+                    <cmt><![CDATA[Waypoint no: 6]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 6]]></desc>
+                </wpt>
+                                                                                                                            
+                <wpt lat="39.76202127142652" lon="-105.0124893042855">
+                                                            <ele>0</ele>
+                    <name><![CDATA[3 - End]]></name>
+                    <cmt><![CDATA[Waypoint no: 7]]></cmt>
+                    <desc><![CDATA[This is waypoint no: 7]]></desc>
+                </wpt>
+                                                            
+                    
+    
+</gpx>

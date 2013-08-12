@@ -1,0 +1,268 @@
+{
+    "tour": {
+        "id": 1,
+        "name": "Office Tour",
+        "description": "A brief tour around the area surrounding the office",
+        "version": 2.3,
+        "assetZIP": "HTTP://www.endpoint.com",
+        "route": {
+            "tourPoints": [
+                           {
+                           "seqNum": 1,
+                           "type": "AudioPoint",
+                           "name": "Home - All Waypoints radius 14 except where noted",
+                           "poi": true,
+                           "latitude": 39.676637,
+                           "longitude": -104.934137,
+                           "radius": 14,
+                           "audio": "Intro.caf"
+                           },
+                           {
+                           "seqNum": 2,
+                           "name": "Wp1 - Bank Left",
+                           "type": "NavigationPoint",
+                           "icon": "tour_bankleft",
+                           "directionText": "Bank Left",
+                           "latitude": 39.675617,
+                           "longitude": -104.934167,
+                           "radius": 14,
+                           "audio": "Wp1.caf"
+                           },
+                           {
+                           "seqNum": 3,
+                           "type": "AudioPoint",
+                           "name": "Wp2 - Audio only",
+                           "latitude": 39.67492,
+                           "longitude": -104.934142,
+                           "radius": 14,
+                           "audio": "Wp2.caf"
+                           },
+                           {
+                           "seqNum": 4,
+                           "type": "AudioPoint",
+                           "latitude": 39.674825,
+                           "longitude": -104.934195,
+                           "radius": 14,
+                           "audio": "Wp3.caf"
+                           },
+                           {
+                           "seqNum": 5,
+                           "type": "AudioPoint",
+                           "latitude": 39.674823,
+                           "longitude": -104.935185,
+                           "radius": 14,
+                           "audio": "Wp4.caf"
+                           },
+                           {
+                           "seqNum": 6,
+                           "name": "Wp3 - Audio Only",
+                           "type": "AudioPoint",
+                           "latitude": 39.675828,
+                           "longitude": -104.935237,
+                           "radius": 14,
+                           "audio": "Wp6.caf"
+                           },
+                           {
+                           "seqNum": 7,
+                           "type": "OutlinePoint",
+                           "latitude": 39.676544,
+                           "longitude": -104.935247,
+                           "radius": 20
+                           },
+                           {
+                           "seqNum": 8,
+                           "name": "Wp4 - No Audio",
+                           "type": "AudioPoint",
+                           "latitude": 39.676626,
+                           "longitude": -104.935249,
+                           "radius": 14
+                           },
+                           {
+                           "seqNum": 9,
+                           "name": "Wp5 - pics 2 & 3",
+                           "type": "AudioPoint",
+                           "latitude": 39.676639,
+                           "longitude": -104.93532,
+                           "radius": 14,
+                           "audio": "Wp8.caf"
+                           },
+                           {
+                           "seqNum": 10,
+                           "name": "Wp6 - Audio & Pic 17",
+                           "type": "NavigationPoint",
+                           "icon": "tour_caution",
+                           "directionText": "Use Caution!",
+                           "latitude": 39.676628,
+                           "longitude": -104.936307,
+                           "radius": 14,
+                           "audio": "Wp9.caf"
+                           },
+                           {
+                           "seqNum": 11,
+                           "type": "OutlinePoint",
+                           "latitude": 39.676604,
+                           "longitude": -104.936332,
+                           "radius": 14
+                           },
+                           {
+                           "seqNum": 12,
+                           "type": "OutlinePoint",
+                           "latitude": 39.675699,
+                           "longitude": -104.936316,
+                           "radius": 20
+                           },
+                           {
+                           "seqNum": 13,
+                           "name": "Wp7 - Pic 6",
+                           "type": "OutlinePoint",
+                           "latitude": 39.674844,
+                           "longitude": -104.936244,
+                           "radius": 14
+                           },
+                           {
+                           "seqNum": 14,
+                           "name": "Wp8 - Audio",
+                           "type": "AudioPoint",
+                           "latitude": 39.674866,
+                           "longitude": -104.93525,
+                           "radius": 14,
+                           "audio": "Wp11.caf"
+                           },
+                           {
+                           "seqNum": 15,
+                           "type": "OutlinePoint",
+                           "latitude": 39.67492,
+                           "longitude": -104.935246,
+                           "radius": 14
+                           },
+                           {
+                           "seqNum": 16,
+                           "type": "AudioPoint",
+                           "name": "Wp9 - No Text",
+                           "poi": true,
+                           "latitude": 39.675571,
+                           "longitude": -104.935234,
+                           "radius": 14,
+                           "audio": "Wp12.caf"
+                           },
+                           {
+                           "seqNum": 17,
+                           "name": "Wp10 - pic 7",
+                           "type": "NavigationPoint",
+                           "icon": "tour_bankright",
+                           "directionText": "Bank Right!",
+                           "latitude": 39.676619,
+                           "longitude": -104.935226,
+                           "radius": 14
+                           },
+                           {
+                           "seqNum": 18,
+                           "type": "OutlinePoint",
+                           "latitude": 39.67663,
+                           "longitude": -104.934291,
+                           "radius": 14
+                           },
+                           {
+                           "seqNum": 19,
+                           "type": "AudioPoint",
+                           "name": "Wp11 - Pic 9",
+                           "latitude": 39.67671,
+                           "longitude": -104.934147,
+                           "radius": 14,
+                           "audio": "Wp16.caf"
+                           },
+                           {
+                           "seqNum": 20,
+                           "type": "AudioPoint",
+                           "name": "Wp12 - Pic 7",
+                           "poi": true,
+                           "latitude": 39.676815,
+                           "longitude": -104.934148,
+                           "radius": 14,
+                           "audio": "Wp17.caf"
+                           },
+                           {
+                           "seqNum": 21,
+                           "type": "OutlinePoint",
+                           "latitude": 39.676976,
+                           "longitude": -104.934147,
+                           "radius": 14
+                           },
+                           {
+                           "seqNum": 22,
+                           "name": "Tour Complete - pic 13 - Congratulations",
+                           "type": "AudioPoint",
+                           "latitude": 39.677259,
+                           "longitude": -104.934147,
+                           "radius": 14,
+                           "audio": "Wp23.caf"
+                           }
+                           ],
+            "mediaPoints": [
+                            {
+                            "name": "Media 1",
+                            "latitude": 39.675786,
+                            "longitude": -104.936323,
+                            "radius": 100,
+                            "sequenceMax": 3,
+                            "audio": "longAudio.m4a",
+                            "photos": [
+                                       {
+                                       "photo": "pic 2.jpg",
+                                       "caption": "Founders"
+                                       },
+                                       {
+                                       "photo": "pic 5.jpg",
+                                       "caption": "Interesting Image"
+                                       },
+                                       {
+                                       "photo": "pic 6.jpg",
+                                       "caption": " - "
+                                       },
+                                       {
+                                       "photo": "pic 7.jpg",
+                                       "caption": "A mysterious Climber"
+                                       }
+                                       ],
+                            "videos": [
+                                       "test.m4v"
+                                       ]
+                            },
+                            {
+                            "name": "Media 2",
+                            "latitude": 39.674825,
+                            "longitude": -104.9346,
+                            "radius": 100,
+                            "audio": "longAudio.m4a",
+                            "sequenceMax": 3,
+                            "photos": [
+                                       {
+                                       "photo": "pic 8.jpg",
+                                       "caption": "More words"
+                                       },
+                                       {
+                                       "photo": "pic 9.jpg",
+                                       "caption": "Another caption"
+                                       }
+                                       ]
+                            }
+                            ],
+            "poiPoints" : [
+                           {
+                           "name" : "POI 1",
+                           "latitude": 39.675699,
+                           "longitude": -104.936316,
+                           "radius" : 14,
+                           "type" : "checkpoint"
+                           },
+                           {
+                           "name" : "POI 2",
+                           "latitude": 39.674825,
+                           "longitude": -104.934195,
+                           "radius" : 14,
+                           "type" : "checkpoint"
+                           }                           
+                           ]
+        }
+    }
+}
