@@ -527,6 +527,10 @@
 		A9C97F911700ACEC00F0BC9C /* jackson.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A9C97F8A1700ACE400F0BC9C /* jackson.gpx */; };
 		A9C97F921700ACEC00F0BC9C /* localPath.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A9C97F8B1700ACE700F0BC9C /* localPath.gpx */; };
 		A9C97F931700ACEC00F0BC9C /* officeRoute.gpx in Resources */ = {isa = PBXBuildFile; fileRef = A9C97F8C1700ACEA00F0BC9C /* officeRoute.gpx */; };
+		E343565817B9C157000409CE /* LBMGNavTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E343565617B9C157000409CE /* LBMGNavTableVC.m */; };
+		E343565917B9C157000409CE /* LBMGNavTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E343565717B9C157000409CE /* LBMGNavTableVC.xib */; };
+		E343565C17B9CE9A000409CE /* LBMGNavTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E343565B17B9CE9A000409CE /* LBMGNavTableCell.m */; };
+		E343565E17B9CED7000409CE /* LBMGNavTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E343565D17B9CED7000409CE /* LBMGNavTableCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1264,6 +1268,12 @@
 		A9C97F8A1700ACE400F0BC9C /* jackson.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = jackson.gpx; sourceTree = "<group>"; };
 		A9C97F8B1700ACE700F0BC9C /* localPath.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = localPath.gpx; sourceTree = "<group>"; };
 		A9C97F8C1700ACEA00F0BC9C /* officeRoute.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = officeRoute.gpx; sourceTree = "<group>"; };
+		E343565517B9C157000409CE /* LBMGNavTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LBMGNavTableVC.h; path = Navigation/LBMGNavTableVC.h; sourceTree = "<group>"; };
+		E343565617B9C157000409CE /* LBMGNavTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LBMGNavTableVC.m; path = Navigation/LBMGNavTableVC.m; sourceTree = "<group>"; };
+		E343565717B9C157000409CE /* LBMGNavTableVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LBMGNavTableVC.xib; path = Navigation/LBMGNavTableVC.xib; sourceTree = "<group>"; };
+		E343565A17B9CE9A000409CE /* LBMGNavTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LBMGNavTableCell.h; path = Navigation/LBMGNavTableCell.h; sourceTree = "<group>"; };
+		E343565B17B9CE9A000409CE /* LBMGNavTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LBMGNavTableCell.m; path = Navigation/LBMGNavTableCell.m; sourceTree = "<group>"; };
+		E343565D17B9CED7000409CE /* LBMGNavTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LBMGNavTableCell.xib; path = Navigation/LBMGNavTableCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1357,6 +1367,7 @@
 				6D0782A716FB8D060029FAA4 /* LBMGMainMasterPageVC.h */,
 				6D0782A816FB8D060029FAA4 /* LBMGMainMasterPageVC.m */,
 				6D0782A916FB8D060029FAA4 /* LBMGMainMasterPageVC.xib */,
+				E343565417B9C08C000409CE /* Navigation */,
 				A9C97E4717008EEF00F0BC9C /* Mapping */,
 				6D0782A616FB8CEF0029FAA4 /* Tour Library */,
 				6D0783A216FBBFC80029FAA4 /* Your Library */,
@@ -2494,6 +2505,19 @@
 			path = TestFlightSDK1;
 			sourceTree = "<group>";
 		};
+		E343565417B9C08C000409CE /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				E343565517B9C157000409CE /* LBMGNavTableVC.h */,
+				E343565617B9C157000409CE /* LBMGNavTableVC.m */,
+				E343565717B9C157000409CE /* LBMGNavTableVC.xib */,
+				E343565A17B9CE9A000409CE /* LBMGNavTableCell.h */,
+				E343565B17B9CE9A000409CE /* LBMGNavTableCell.m */,
+				E343565D17B9CED7000409CE /* LBMGNavTableCell.xib */,
+			);
+			name = Navigation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2923,6 +2947,8 @@
 				6D18815317B1F4C0001DCAB7 /* README.txt in Resources */,
 				6DDE14C817B419060007CF8A /* Greybutton.png in Resources */,
 				6DDE14C917B419060007CF8A /* Greybutton@2x.png in Resources */,
+				E343565917B9C157000409CE /* LBMGNavTableVC.xib in Resources */,
+				E343565E17B9CED7000409CE /* LBMGNavTableCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3053,6 +3079,8 @@
 				6D18815917B1F4C1001DCAB7 /* TapItOpenUDID.m in Sources */,
 				6D18816917B1F4C1001DCAB7 /* TapItReachability.m in Sources */,
 				6D18816A17B1F4C1001DCAB7 /* TapItAdMobStubs.m in Sources */,
+				E343565817B9C157000409CE /* LBMGNavTableVC.m in Sources */,
+				E343565C17B9CE9A000409CE /* LBMGNavTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

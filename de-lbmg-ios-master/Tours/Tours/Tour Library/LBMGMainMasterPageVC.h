@@ -12,5 +12,7 @@
 
 @property (nonatomic, strong) NSArray *contentList;
 @property (weak, nonatomic) IBOutlet UIScrollView *pagedScrollView;
+@property (strong, nonatomic) IBOutlet UIView *maskingLayerView;
+
 
 @end

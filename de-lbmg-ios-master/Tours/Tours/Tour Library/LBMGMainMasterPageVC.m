@@ -12,6 +12,7 @@
 #import "LBMGAroundMeMasterPageVC.h"
 #import "LBMGCalendarMasterVC.h"
 #import "LBMGBaseTourMapVC.h"
+#import "LBMGNavTableVC.h"
 
 //static NSString *kNameKey = @"nameKey";
 //static NSString *kImageKey = @"imageKey";
@@ -20,11 +21,15 @@
 
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
 @property (nonatomic, strong) IBOutlet UIPageControl *pageControl;
+@property (nonatomic, strong) IBOutlet UIButton *mainNavButton;
 @property (nonatomic, strong) NSMutableArray *viewControllers;
 
 @property (nonatomic, strong) LBMGTourLibraryMasterPageVC *tourLibraryMaster;
 @property (nonatomic, strong) LBMGAroundMeMasterPageVC *aroundMeMaster;
 @property (nonatomic, strong) LBMGCalendarMasterVC *calendarMaster;
+@property (strong, nonatomic) LBMGNavTableVC *navTableVC;
+
+- (IBAction)showMainNav:(id)sender;
 
 @end
 
@@ -176,6 +181,30 @@
 - (IBAction)changePage:(id)sender
 {
     [self gotoPage:YES];    // YES = animate
+}
+
+#pragma mark - New Main Nav
+
+- (IBAction)showMainNav:(id)sender
+{
+    [self displayNavTable];
+}
+
+- (void)displayNavTable {
+    // build first Level TableView
+    if (!self.navTableVC) {
+        self.navTableVC = [LBMGNavTableVC new];
+        self.navTableVC.scroller = self.scrollView;
+        
+        CGRect childFrame = self.navTableVC.view.frame;
+        childFrame.size.height = [[UIScreen mainScreen] bounds].size.height - 20;
+        self.navTableVC.view.frame = childFrame;
+        
+        [self.view insertSubview:self.navTableVC.view atIndex:0];
+        [self.view bringSubviewToFront:self.navTableVC.view];
+        
+        self.navTableVC.masterVC = self;
+    }
 }
 
 #pragma mark - VC getters
