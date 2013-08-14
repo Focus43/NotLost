@@ -10,6 +10,8 @@
 #import <MapKit/MapKit.h>
 #import "TapItAdDelegates.h"
 
+@class TourList;
+
 @interface LBMGTourLibraryMasterPageVC : LBMGNoRotateViewController <UIScrollViewDelegate, TapItInterstitialAdDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *maskingLayerView;
@@ -21,6 +23,7 @@
 @property (nonatomic, strong) NSDate *lastRefreshTime;
 @property (nonatomic, strong) NSTimer *dataRefreshTimer;
 
+@property (strong, nonatomic) TourList *tourList;
 
 - (IBAction)yourLibraryTouched:(id)sender;
 - (IBAction)refreshTouched:(id)sender;

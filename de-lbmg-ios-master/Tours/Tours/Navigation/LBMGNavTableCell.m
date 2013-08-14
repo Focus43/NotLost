@@ -20,25 +20,27 @@
 //    return self;
 //}
 
-- (void)animateForDuration:(CGFloat) duration {
+- (void)animateForDuration:(CGFloat)duration forVisibility:(BOOL)isVisible {
     CGRect bounds = self.backgroundImageView.bounds;
-    bounds.size.width = 0;
+//    bounds.size.width = 0;
     self.backgroundImageView.layer.anchorPoint = CGPointMake(1.0, 0.5);
     self.backgroundColor = [UIColor clearColor];
     self.layer.anchorPoint = CGPointMake(0.0, 0.5);
     self.backgroundImageView.frame = CGRectMake(0, 0, bounds.size.width, bounds.size.height);
-    self.backgroundImageView.bounds = bounds;
+//    self.backgroundImageView.bounds = bounds;
     CGSize size = [_navigationString sizeWithFont:self.navigationLabel.font];
     self.backgroundImageView.bounds = CGRectMake(0, 0, size.width+40, self.bounds.size.height);
-    [self animateBack:duration];
+    if ( isVisible ) {
+        [self animateOut:duration];
+    } else {
+        [self animateIn:duration];    
+    }
 }
 
-- (void)animateBack:(CGFloat) duration  {
+- (void)animateIn:(CGFloat) duration  {
     self.backgroundImageView.layer.transform = CATransform3DIdentity;
     CABasicAnimation * anim = [CABasicAnimation animation];
     CATransform3D transform = CATransform3DIdentity;
-//    transform.m34 = 1.0 / -500;
-//    transform = CATransform3DRotate(transform, M_PI/2, 0.0f, 1.0f, 0.0f);
     transform.m34 = 1.0 / -500;
     transform = CATransform3DRotate(transform, M_PI/2, 0.0f, -1.0f, 0.0f);
     anim.keyPath = @"transform";
@@ -48,6 +50,22 @@
     anim.fillMode = kCAFillModeBoth;
     anim.beginTime = CACurrentMediaTime()+(duration-1);
     [self.layer addAnimation:anim forKey:@"transform"];    
+    
+}
+
+- (void)animateOut:(CGFloat) duration  {
+    self.backgroundImageView.layer.transform = CATransform3DIdentity;
+    CABasicAnimation * anim = [CABasicAnimation animation];
+    CATransform3D transform = CATransform3DIdentity;
+    transform.m34 = 1.0 / -500;
+    transform = CATransform3DRotate(transform, M_PI/-2, 0.0f, -1.0f, 0.0f);
+    anim.keyPath = @"transform";
+    anim.fromValue = [NSValue valueWithCATransform3D:transform];
+    anim.toValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
+    anim.duration = 0.75;
+    anim.fillMode = kCAFillModeBoth;
+    anim.beginTime = CACurrentMediaTime()+(duration-1);
+    [self.layer addAnimation:anim forKey:@"transform"];
     
 }
 

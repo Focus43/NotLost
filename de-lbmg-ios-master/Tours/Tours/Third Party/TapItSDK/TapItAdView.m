@@ -106,7 +106,7 @@
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    TILog(@"webViewDidFinishLoad: %@", webView);
+//    TILog(@"webViewDidFinishLoad: %@", webView);
     if(!self.isLoaded || self.interceptPageLoads) {
         [self.tapitDelegate didLoadAdView:self];
     }

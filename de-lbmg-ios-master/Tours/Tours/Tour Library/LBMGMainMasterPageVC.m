@@ -20,16 +20,15 @@
 @interface LBMGMainMasterPageVC ()
 
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
-@property (nonatomic, strong) IBOutlet UIPageControl *pageControl;
 @property (nonatomic, strong) IBOutlet UIButton *mainNavButton;
 @property (nonatomic, strong) NSMutableArray *viewControllers;
 
-@property (nonatomic, strong) LBMGTourLibraryMasterPageVC *tourLibraryMaster;
-@property (nonatomic, strong) LBMGAroundMeMasterPageVC *aroundMeMaster;
-@property (nonatomic, strong) LBMGCalendarMasterVC *calendarMaster;
-@property (strong, nonatomic) LBMGNavTableVC *navTableVC;
+//@property (nonatomic, strong) LBMGTourLibraryMasterPageVC *tourLibraryMaster;
+//@property (nonatomic, strong) LBMGAroundMeMasterPageVC *aroundMeMaster;
+//@property (nonatomic, strong) LBMGCalendarMasterVC *calendarMaster;
+//@property (strong, nonatomic) LBMGNavTableVC *navTableVC;
 
-- (IBAction)showMainNav:(id)sender;
+- (IBAction)toggleMainNav:(id)sender;
 
 @end
 
@@ -141,11 +140,11 @@
 // at the end of scroll animation, reset the boolean used when scrolls originate from the UIPageControl
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    
+    DLog(@"scrollViewDidEndDecelerating");
     // switch the indicator when more than 50% of the previous/next page is visible
     CGFloat pageWidth = CGRectGetWidth(self.scrollView.frame);
     NSUInteger page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    
+    DLog(@"page = %d", page);
     if (page != self.pageControl.currentPage) {   // Only if the page has changed
         self.pageControl.currentPage = page;
         
@@ -159,6 +158,27 @@
         // find currentPage
         LBMGNoRotateViewController *controller = [self.viewControllers objectAtIndex:page];
         [controller scrolledIntoView];
+    }
+}
+
+- (void)scootToPage:(NSInteger)page
+{
+    DLog(@"scootOver to page %d", page);
+    if (page != self.pageControl.currentPage) {   // Only if the page has changed
+        self.pageControl.currentPage = page;
+        
+        // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
+        [self loadScrollViewWithPage:page - 1];
+        [self loadScrollViewWithPage:page];
+        [self loadScrollViewWithPage:page + 1];
+        
+        // a possible optimization would be to unload the views+controllers which are no longer visible
+        
+        // find currentPage
+        LBMGNoRotateViewController *controller = [self.viewControllers objectAtIndex:page];
+        [controller scrolledIntoView];
+        
+        [self gotoPage:YES];
     }
 }
 
@@ -185,9 +205,16 @@
 
 #pragma mark - New Main Nav
 
-- (IBAction)showMainNav:(id)sender
+- (IBAction)toggleMainNav:(id)sender
 {
-    [self displayNavTable];
+    DLog(@"toggle nav - self.navIsVisible = %c", self.navIsVisible);
+    if (self.navIsVisible) {
+        self.navIsVisible = false;
+        [self hideNavTable];
+    } else {
+        self.navIsVisible = true;
+        [self displayNavTable];
+    }
 }
 
 - (void)displayNavTable {
@@ -200,11 +227,18 @@
         childFrame.size.height = [[UIScreen mainScreen] bounds].size.height - 20;
         self.navTableVC.view.frame = childFrame;
         
-        [self.view insertSubview:self.navTableVC.view atIndex:0];
-        [self.view bringSubviewToFront:self.navTableVC.view];
-        
         self.navTableVC.masterVC = self;
     }
+    
+    [self.view insertSubview:self.navTableVC.view atIndex:0];
+    [self.view bringSubviewToFront:self.navTableVC.view];
+}
+
+- (void)hideNavTable
+{
+    [self.navTableVC flipTableCellsOut];
+    // delay this!!1
+//    [self.navTableVC.view removeFromSuperview];
 }
 
 #pragma mark - VC getters

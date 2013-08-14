@@ -65,7 +65,7 @@
 							<object class="IBUIButton" id="156886132">
 								<reference key="NSNextResponder" ref="577369928"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{6, 5}, {44, 44}}</string>
+								<string key="NSFrame">{{270, 5}, {44, 44}}</string>
 								<reference key="NSSuperview" ref="577369928"/>
 								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="448267521"/>
@@ -138,6 +138,7 @@
 						<string key="NSFrame">{{35, 492}, {251, 44}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>
@@ -736,7 +737,6 @@
 						<string key="clearTextButtonPressed:">id</string>
 						<string key="closeSearchButtonPressed:">id</string>
 						<string key="searchButtonTouched:">id</string>
-						<string key="yourLibraryTouched:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="clearTextButtonPressed:">
@@ -749,10 +749,6 @@
 						</object>
 						<object class="IBActionInfo" key="searchButtonTouched:">
 							<string key="name">searchButtonTouched:</string>
-							<string key="candidateClassName">id</string>
-						</object>
-						<object class="IBActionInfo" key="yourLibraryTouched:">
-							<string key="name">yourLibraryTouched:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 					</dictionary>

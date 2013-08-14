@@ -12,6 +12,7 @@
 #import "LBMGMainMasterPageVC.h"
 #import "TourDetail.h"
 #import "PRPAlertView.h"
+#import "LBMGNavTableVC.h"
 
 @interface LBMGYourLibraryTBVC ()
 
@@ -171,6 +172,8 @@ static NSString *DetailCellIdentifier = @"DetailCell";
     [self dismissViewControllerAnimated:YES completion:^{
         DLog(@"dismissed");
     }];
+    // HACK to fix the moving nav bug
+    self.presentingViewController.view.frame = CGRectMake(0, 50, 320, 518);
 }
 
 - (void)startTour:(TourDetail *)tour atRow:(NSInteger)row

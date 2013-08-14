@@ -26,8 +26,9 @@
 @property (strong, nonatomic) NSIndexPath *selectedRow;
 
 @property (nonatomic) BOOL inSubview;
-
+//@property (nonatomic) CGRect frameRect;
 
 - (void)deselectCurrentRow;
+- (void)flipTableCellsOut;
 
 @end

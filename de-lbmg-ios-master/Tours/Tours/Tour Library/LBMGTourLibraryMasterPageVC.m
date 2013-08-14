@@ -24,7 +24,7 @@ const float autoRefreshInterval = 300.0;
 @interface LBMGTourLibraryMasterPageVC ()
 
 @property (strong, nonatomic) LBMGTourLibraryChildTBVC *routeTBVC;
-@property (strong, nonatomic) TourList *tourList;
+//@property (strong, nonatomic) TourList *tourList;
 
 @property (strong, nonatomic) TapItInterstitialAd *interstitialAd;
 
@@ -123,7 +123,7 @@ const float autoRefreshInterval = 300.0;
 {
     [SVProgressHUD showWithStatus:@"Loading Tours"];
     [ApplicationDelegate.lbmgEngine getNearbyToursWithLatitude:self.locationManager.location.coordinate.latitude andLongitude:self.locationManager.location.coordinate.longitude contentBlock:^(NSArray *responseArray) {
-        NSLog(@"%@", responseArray);
+//        NSLog(@"%@", responseArray);
         [SVProgressHUD dismiss];
         NSDictionary *tourData = [NSDictionary dictionaryWithObject:responseArray forKey:@"TourData"];
         self.tourList = [TourList instanceFromDictionary:tourData];

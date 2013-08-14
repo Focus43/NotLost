@@ -49,6 +49,9 @@ static NSString *CellIdentifier = @"Cell";
 
 - (void)viewDidLoad
 {
+    DLog(@"LBMGCalendarMasterVC view did load");
+    self.openDay = 0;
+    
     [super viewDidLoad];
     
     UINib *cellNib = [UINib nibWithNibName:@"LBMGCalendarEventCell" bundle:nil];
@@ -156,7 +159,7 @@ static NSString *CellIdentifier = @"Cell";
     // Look for saved Events with selected date inlcuded in thsi week
     self.weeksSelectedEvents = [LBMGUtilities savedEventsFrom:self.weekStartDate to:self.weekEndDate];
     [self updateSelectedEvents];
-    DLog(@"%@", self.weeksSelectedEvents);
+//    DLog(@"%@", self.weeksSelectedEvents);
     
     self.weeksFavorites = [LBMGUtilities favoriteEventsForWeek:self.weekStartDate];
     [self updateFavorites];
@@ -422,7 +425,8 @@ static NSString *CellIdentifier = @"Cell";
     if (indexPath.section == 0) {
         cell.personalContentView.hidden = NO;
         cell.otherContentView.hidden = YES;
-        if ([self.weeksEvents[self.openDay-1] boolValue]) {
+        // Updated by stine: added self.openDay !=0 && 
+        if (self.openDay !=0 && [self.weeksEvents[self.openDay-1] boolValue]) {
             cell.personalItemLabel.text = @"You have a personal item on your calendar today";
         } else if (self.hasCalendarAccess) {
             cell.personalItemLabel.text = @"Your calendar is empty for today";
@@ -503,7 +507,7 @@ static NSString *CellIdentifier = @"Cell";
             //curl -u 'lbmg:de2013' -H "Accept:application/vnd.lbmg+json;version=1" http://lbmg-staging.herokuapp.com/api/events/1.json
             [ApplicationDelegate.lbmgEngine getEventWithId:[event.eventDescriptionId intValue] factual:event.factualId contentBlock:^(NSDictionary *response) {
                 [SVProgressHUD dismiss];
-                NSLog(@"%@", response);
+//                NSLog(@"%@", response);
                 
                 Event *event = [Event instanceFromDictionary:response];
                 

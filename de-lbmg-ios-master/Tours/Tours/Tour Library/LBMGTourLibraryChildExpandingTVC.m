@@ -180,7 +180,7 @@ static NSString *DetailCellIdentifier = @"DetailCell";
                                                                   userInfo:nil];
             }];
             [ApplicationDelegate.lbmgEngine logTourDownloadWithId:tour.tourDetailId latitude:self.userLatitude andLongitude:self.userLongitude contentBlock:^(NSDictionary *dictionary) {
-                DLog(@"%@", dictionary);
+//                DLog(@"%@", dictionary);
             } errorBlock:^(NSError *error) {
                 DLog(@"ERROR logging tour download");
             }];
