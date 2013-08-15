@@ -20,6 +20,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
+    // TESTFLIGHT
+    [TestFlight takeOff:@"bda21c49-ea18-4948-8873-b82c19aacdf7"];
+    
     self.lbmgEngine = [[LBMGEngine alloc] init];   // Build Network Engine
 
     self.viewController = [[LBMGMainMasterPageVC alloc] initWithNibName:@"LBMGMainMasterPageVC" bundle:nil];

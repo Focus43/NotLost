@@ -171,9 +171,15 @@ static NSString *DetailCellIdentifier = @"DetailCell";
     self.locationManager = nil;
     [self dismissViewControllerAnimated:YES completion:^{
         DLog(@"dismissed");
+        // HACK to fix the moving nav button bug
+        LBMGMainMasterPageVC *presentingController = self.presentingViewController;
+        CGRect buttonFrame = presentingController.mainNavButton.frame;
+        buttonFrame.origin.x = 7;
+//        buttonFrame.origin.x = (presentingController.pageControl.currentPage * self.view.frame.size.width) + 7;
+//        presentingController.mainNavButton.frame = buttonFrame;
+        [presentingController.mainNavButton setFrame:buttonFrame];
     }];
-    // HACK to fix the moving nav bug
-    self.presentingViewController.view.frame = CGRectMake(0, 50, 320, 518);
+    
 }
 
 - (void)startTour:(TourDetail *)tour atRow:(NSInteger)row

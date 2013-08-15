@@ -14,6 +14,4 @@
 @property (weak, nonatomic) IBOutlet UILabel *navigationLabel;
 @property (strong, nonatomic) NSString *navigationString;
 
-- (void)animateForDuration:(CGFloat)duration forVisibility:(BOOL)isVisible;
-
 @end

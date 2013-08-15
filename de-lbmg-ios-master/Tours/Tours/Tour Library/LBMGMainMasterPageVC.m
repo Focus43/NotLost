@@ -20,7 +20,7 @@
 @interface LBMGMainMasterPageVC ()
 
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
-@property (nonatomic, strong) IBOutlet UIButton *mainNavButton;
+//@property (nonatomic, strong) IBOutlet UIButton *mainNavButton;
 @property (nonatomic, strong) NSMutableArray *viewControllers;
 
 //@property (nonatomic, strong) LBMGTourLibraryMasterPageVC *tourLibraryMaster;
@@ -207,7 +207,6 @@
 
 - (IBAction)toggleMainNav:(id)sender
 {
-    DLog(@"toggle nav - self.navIsVisible = %c", self.navIsVisible);
     if (self.navIsVisible) {
         self.navIsVisible = false;
         [self hideNavTable];
@@ -222,23 +221,64 @@
     if (!self.navTableVC) {
         self.navTableVC = [LBMGNavTableVC new];
         self.navTableVC.scroller = self.scrollView;
+        self.navTableVC.masterVC = self;
         
         CGRect childFrame = self.navTableVC.view.frame;
         childFrame.size.height = [[UIScreen mainScreen] bounds].size.height - 20;
         self.navTableVC.view.frame = childFrame;
-        
-        self.navTableVC.masterVC = self;
+        [self.scrollView insertSubview:self.navTableVC.view atIndex:0];
     }
+    // move the nav view to below the current page view
+    [self.scrollView insertSubview:self.navTableVC.view atIndex:self.pageControl.currentPage];
     
-    [self.view insertSubview:self.navTableVC.view atIndex:0];
-    [self.view bringSubviewToFront:self.navTableVC.view];
+    // add shadow on left side of current page
+    UIViewController *currentVC = self.viewControllers[self.pageControl.currentPage];
+    [currentVC.view.layer setShadowOffset:CGSizeMake(-3.0, 3.0)];
+    [currentVC.view.layer setShadowRadius:3.0];
+    [currentVC.view.layer setShadowOpacity:1.0];
+        
+    [UIView animateWithDuration:.25
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         
+                         UIViewController *currentViewController = [self.viewControllers objectAtIndex:self.pageControl.currentPage];
+                         // first move nav to correct spot in the main view scrollView
+                         CGRect navFrame = self.navTableVC.view.frame;
+                         navFrame.origin.x = navFrame.size.width * self.pageControl.currentPage;
+                         self.navTableVC.view.frame = navFrame;
+                         // then slide current page's and main nav button's view over to the right to reveal nav
+                         CGRect currentFrame = currentViewController.view.frame;
+                         currentFrame.origin.x = currentFrame.size.width-100 + (self.pageControl.currentPage * currentFrame.size.width);
+                         CGRect buttonFrame = self.mainNavButton.frame;
+                         buttonFrame.origin.x = 7 + currentFrame.size.width-100;
+                         
+                         [currentViewController.view setFrame:currentFrame];
+                         [self.mainNavButton setFrame:buttonFrame];
+                     }
+                     completion:^(BOOL finished) {
+                     }];
 }
 
 - (void)hideNavTable
 {
-    [self.navTableVC flipTableCellsOut];
-    // delay this!!1
-//    [self.navTableVC.view removeFromSuperview];
+    [UIView animateWithDuration:.25
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         
+                         UIViewController *currentViewController = [self.viewControllers objectAtIndex:self.pageControl.currentPage];
+                         // resest to original spot
+                         CGRect currentFrame = currentViewController.view.frame;
+                         currentFrame.origin.x = (self.pageControl.currentPage * currentFrame.size.width);
+                         CGRect buttonFrame = self.mainNavButton.frame;
+                         buttonFrame.origin.x = 7;
+                         
+                         [currentViewController.view setFrame:currentFrame];
+                         [self.mainNavButton setFrame:buttonFrame];
+                     }
+                     completion:^(BOOL finished) {
+                     }];
 }
 
 #pragma mark - VC getters

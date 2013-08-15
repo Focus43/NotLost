@@ -16,6 +16,8 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *pagedScrollView;
 @property (strong, nonatomic) IBOutlet UIView *maskingLayerView;
 @property (nonatomic, strong) IBOutlet UIPageControl *pageControl;
+@property (nonatomic, strong) IBOutlet UIButton *mainNavButton;
+
 @property (nonatomic) BOOL navIsVisible;
 
 @property (nonatomic, strong) LBMGTourLibraryMasterPageVC *tourLibraryMaster;
@@ -24,5 +26,6 @@
 @property (strong, nonatomic) LBMGNavTableVC *navTableVC;
 
 - (void)scootToPage:(NSInteger)page;
+- (void)hideNavTable;
 
 @end

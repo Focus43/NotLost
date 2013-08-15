@@ -531,6 +531,8 @@
 		E343565917B9C157000409CE /* LBMGNavTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E343565717B9C157000409CE /* LBMGNavTableVC.xib */; };
 		E343565C17B9CE9A000409CE /* LBMGNavTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E343565B17B9CE9A000409CE /* LBMGNavTableCell.m */; };
 		E343565E17B9CED7000409CE /* LBMGNavTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E343565D17B9CED7000409CE /* LBMGNavTableCell.xib */; };
+		E376EA3D17BD614300E2399F /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = E376EA3B17BD614300E2399F /* menu.png */; };
+		E376EA3E17BD614300E2399F /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E376EA3C17BD614300E2399F /* menu@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1274,6 +1276,8 @@
 		E343565A17B9CE9A000409CE /* LBMGNavTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LBMGNavTableCell.h; path = Navigation/LBMGNavTableCell.h; sourceTree = "<group>"; };
 		E343565B17B9CE9A000409CE /* LBMGNavTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LBMGNavTableCell.m; path = Navigation/LBMGNavTableCell.m; sourceTree = "<group>"; };
 		E343565D17B9CED7000409CE /* LBMGNavTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LBMGNavTableCell.xib; path = Navigation/LBMGNavTableCell.xib; sourceTree = "<group>"; };
+		E376EA3B17BD614300E2399F /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
+		E376EA3C17BD614300E2399F /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1426,6 +1430,8 @@
 		6D0782AC16FB8D450029FAA4 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E376EA3B17BD614300E2399F /* menu.png */,
+				E376EA3C17BD614300E2399F /* menu@2x.png */,
 				6DDE14C617B419060007CF8A /* Greybutton.png */,
 				6DDE14C717B419060007CF8A /* Greybutton@2x.png */,
 				6DA8424917B00EA6003FA743 /* disclosureiconBack.png */,
@@ -2949,6 +2955,8 @@
 				6DDE14C917B419060007CF8A /* Greybutton@2x.png in Resources */,
 				E343565917B9C157000409CE /* LBMGNavTableVC.xib in Resources */,
 				E343565E17B9CED7000409CE /* LBMGNavTableCell.xib in Resources */,
+				E376EA3D17BD614300E2399F /* menu.png in Resources */,
+				E376EA3E17BD614300E2399F /* menu@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3143,7 +3151,7 @@
 					"\"$(SRCROOT)/Tours/Third Party/Lib\"",
 				);
 				PRODUCT_NAME = NotLost;
-				PROVISIONING_PROFILE = "5AD9FD5A-3B21-4103-8EF6-029797BE74A3";
+				PROVISIONING_PROFILE = "2FFD19E1-3452-42A9-BD77-EDA325A2E995";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
