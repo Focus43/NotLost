@@ -20,6 +20,11 @@
 @property (strong, nonatomic) IBOutlet UIButton *clearSearchTextButton;
 @property (retain, nonatomic) TapItBannerAdView *tapitAd;
 
+// this is kind of a hack. It's been added in the NoRotateViewController, but AroundMe is the only one that doesn't use that for super
+@property (nonatomic, strong) UIViewController *mainVC;
+@property (nonatomic, strong) UIView *swipeClosedView;
+- (void)addCloseNavGesture;
+
 - (IBAction)searchButtonTouched:(id)sender;
 - (IBAction)closeSearchButtonPressed:(id)sender;
 - (IBAction)clearTextButtonPressed:(id)sender;

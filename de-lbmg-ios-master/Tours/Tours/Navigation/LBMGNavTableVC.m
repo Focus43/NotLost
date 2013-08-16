@@ -51,11 +51,11 @@ static NSString *CellIdentifier = @"NavCell";
     [self.navTableView selectRowAtIndexPath:self.selectedRow animated:YES scrollPosition:UITableViewScrollPositionNone];
 }
 
-- (void)flipTableCellsOut
-{
-    NSArray *idxPaths = [NSArray arrayWithObjects:[NSIndexPath indexPathForItem:0 inSection:0], [NSIndexPath indexPathForItem:1 inSection:0], [NSIndexPath indexPathForItem:2 inSection:0], [NSIndexPath indexPathForItem:3 inSection:0], [NSIndexPath indexPathForItem:4 inSection:0], nil];
-    [self.tableViewController.tableView deleteRowsAtIndexPaths:idxPaths withRowAnimation:UITableViewRowAnimationLeft];
-}
+//- (void)flipTableCellsOut
+//{
+//    NSArray *idxPaths = [NSArray arrayWithObjects:[NSIndexPath indexPathForItem:0 inSection:0], [NSIndexPath indexPathForItem:1 inSection:0], [NSIndexPath indexPathForItem:2 inSection:0], [NSIndexPath indexPathForItem:3 inSection:0], [NSIndexPath indexPathForItem:4 inSection:0], nil];
+//    [self.tableViewController.tableView deleteRowsAtIndexPaths:idxPaths withRowAnimation:UITableViewRowAnimationLeft];
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {

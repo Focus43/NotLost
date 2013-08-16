@@ -7,8 +7,11 @@
 //
 
 #import "LBMGNoRotateViewController.h"
+#import "LBMGMainMasterPageVC.h"
 
 @interface LBMGNoRotateViewController ()
+
+- (void)handleSwipeClosed:(UISwipeGestureRecognizer *)recognizer;
 
 @end
 
@@ -47,6 +50,34 @@
 {
 }
 
+#pragma -- mark swipe navigation closed
+
+- (void)addCloseNavGesture
+{
+    if (!self.swipeClosedView) {
+        CGRect frame = self.mainVC.view.frame;
+        frame.size.width = 100;
+        self.swipeClosedView = [[UIView alloc] initWithFrame:frame];
+        
+        UISwipeGestureRecognizer *swipeClosed = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                                                          action:@selector(handleSwipeClosed:)];
+        [swipeClosed setDirection:(UISwipeGestureRecognizerDirectionLeft )];
+        [self.swipeClosedView addGestureRecognizer:swipeClosed];
+    }
+    
+    [self.view addSubview:self.swipeClosedView];
+    [self.view bringSubviewToFront:self.swipeClosedView];
+}
+
+- (void)handleSwipeClosed:(UISwipeGestureRecognizer *)recognizer
+{
+    DLog(@"direction = %u", recognizer.direction);
+    if (recognizer.direction != UISwipeGestureRecognizerDirectionLeft) return;
+    
+    // if swiped left, close nav and remove the gesture view
+    LBMGMainMasterPageVC *mainController = self.mainVC;
+    [mainController hideNavTable];
+}
 
 
 @end

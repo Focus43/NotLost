@@ -20,13 +20,7 @@
 @interface LBMGMainMasterPageVC ()
 
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
-//@property (nonatomic, strong) IBOutlet UIButton *mainNavButton;
 @property (nonatomic, strong) NSMutableArray *viewControllers;
-
-//@property (nonatomic, strong) LBMGTourLibraryMasterPageVC *tourLibraryMaster;
-//@property (nonatomic, strong) LBMGAroundMeMasterPageVC *aroundMeMaster;
-//@property (nonatomic, strong) LBMGCalendarMasterVC *calendarMaster;
-//@property (strong, nonatomic) LBMGNavTableVC *navTableVC;
 
 - (IBAction)toggleMainNav:(id)sender;
 
@@ -51,6 +45,10 @@
                             self.aroundMeMaster,
                             self.calendarMaster,
                             nil];
+    
+    for (LBMGNoRotateViewController *c in self.viewControllers) {
+        c.mainVC = self;
+    }
     
     // a page is the width of the scroll view
     self.scrollView.pagingEnabled = YES;
@@ -232,11 +230,15 @@
     [self.scrollView insertSubview:self.navTableVC.view atIndex:self.pageControl.currentPage];
     
     // add shadow on left side of current page
-    UIViewController *currentVC = self.viewControllers[self.pageControl.currentPage];
+    LBMGNoRotateViewController *currentVC = self.viewControllers[self.pageControl.currentPage];
     [currentVC.view.layer setShadowOffset:CGSizeMake(-3.0, 3.0)];
     [currentVC.view.layer setShadowRadius:3.0];
     [currentVC.view.layer setShadowOpacity:1.0];
-        
+    
+    // add gesture recogniser to close nav
+    [currentVC addCloseNavGesture];
+    
+    // slide open
     [UIView animateWithDuration:.25
                           delay:0
                         options:UIViewAnimationOptionCurveEaseIn
@@ -267,7 +269,7 @@
                         options:UIViewAnimationOptionCurveEaseIn
                      animations:^{
                          
-                         UIViewController *currentViewController = [self.viewControllers objectAtIndex:self.pageControl.currentPage];
+                         LBMGNoRotateViewController *currentViewController = [self.viewControllers objectAtIndex:self.pageControl.currentPage];
                          // resest to original spot
                          CGRect currentFrame = currentViewController.view.frame;
                          currentFrame.origin.x = (self.pageControl.currentPage * currentFrame.size.width);
@@ -276,6 +278,7 @@
                          
                          [currentViewController.view setFrame:currentFrame];
                          [self.mainNavButton setFrame:buttonFrame];
+                         [currentViewController.swipeClosedView removeFromSuperview];
                      }
                      completion:^(BOOL finished) {
                      }];
