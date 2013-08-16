@@ -44,6 +44,8 @@
 @property (nonatomic, strong) NSArray *searchResultArray;
 @property (strong, nonatomic) TapItInterstitialAd *interstitialAd;
 
+- (void)handleSwipeClosed:(UISwipeGestureRecognizer *)recognizer;
+
 @end
 
 
@@ -392,5 +394,35 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
     NSLog(@"Ad action did finish");
 }
 
+#pragma mark swipe navigation closed
+// TODO: this is kinda bunk, since it's a copy from NORotateVC. ALl the other pages are children of that
+// I'm just adding this here, to avoid having to try and make this a child of that too, and potentioally causing regression bugs.
+
+- (void)addCloseNavGesture
+{
+    if (!self.swipeClosedView) {
+        CGRect frame = self.mainVC.view.frame;
+        frame.size.width = 100;
+        self.swipeClosedView = [[UIView alloc] initWithFrame:frame];
+        
+        UISwipeGestureRecognizer *swipeClosed = [[UISwipeGestureRecognizer alloc] initWithTarget:self
+                                                                                          action:@selector(handleSwipeClosed:)];
+        [swipeClosed setDirection:(UISwipeGestureRecognizerDirectionLeft )];
+        [self.swipeClosedView addGestureRecognizer:swipeClosed];
+    }
+    
+    [self.view addSubview:self.swipeClosedView];
+    [self.view bringSubviewToFront:self.swipeClosedView];
+}
+
+- (void)handleSwipeClosed:(UISwipeGestureRecognizer *)recognizer
+{
+    DLog(@"direction = %u", recognizer.direction);
+    if (recognizer.direction != UISwipeGestureRecognizerDirectionLeft) return;
+    
+    // if swiped left, close nav and remove the gesture view
+    LBMGMainMasterPageVC *mainController = self.mainVC;
+    [mainController hideNavTable];
+}
 
 @end

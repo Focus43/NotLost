@@ -32,7 +32,7 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>2.1</string>
 	<key>LBMGServer</key>
 	<string>lbmg-staging.herokuapp.com</string>
 	<key>LSRequiresIPhoneOS</key>

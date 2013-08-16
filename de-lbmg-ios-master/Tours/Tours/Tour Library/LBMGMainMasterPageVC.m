@@ -12,6 +12,7 @@
 #import "LBMGAroundMeMasterPageVC.h"
 #import "LBMGCalendarMasterVC.h"
 #import "LBMGBaseTourMapVC.h"
+#import "LBMGNavTableVC.h"
 
 //static NSString *kNameKey = @"nameKey";
 //static NSString *kImageKey = @"imageKey";
@@ -19,12 +20,9 @@
 @interface LBMGMainMasterPageVC ()
 
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
-@property (nonatomic, strong) IBOutlet UIPageControl *pageControl;
 @property (nonatomic, strong) NSMutableArray *viewControllers;
 
-@property (nonatomic, strong) LBMGTourLibraryMasterPageVC *tourLibraryMaster;
-@property (nonatomic, strong) LBMGAroundMeMasterPageVC *aroundMeMaster;
-@property (nonatomic, strong) LBMGCalendarMasterVC *calendarMaster;
+- (IBAction)toggleMainNav:(id)sender;
 
 @end
 
@@ -47,6 +45,10 @@
                             self.aroundMeMaster,
                             self.calendarMaster,
                             nil];
+    
+    for (LBMGNoRotateViewController *c in self.viewControllers) {
+        c.mainVC = self;
+    }
     
     // a page is the width of the scroll view
     self.scrollView.pagingEnabled = YES;
@@ -136,11 +138,11 @@
 // at the end of scroll animation, reset the boolean used when scrolls originate from the UIPageControl
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    
+    DLog(@"scrollViewDidEndDecelerating");
     // switch the indicator when more than 50% of the previous/next page is visible
     CGFloat pageWidth = CGRectGetWidth(self.scrollView.frame);
     NSUInteger page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    
+    DLog(@"page = %d", page);
     if (page != self.pageControl.currentPage) {   // Only if the page has changed
         self.pageControl.currentPage = page;
         
@@ -154,6 +156,27 @@
         // find currentPage
         LBMGNoRotateViewController *controller = [self.viewControllers objectAtIndex:page];
         [controller scrolledIntoView];
+    }
+}
+
+- (void)scootToPage:(NSInteger)page
+{
+    DLog(@"scootOver to page %d", page);
+    if (page != self.pageControl.currentPage) {   // Only if the page has changed
+        self.pageControl.currentPage = page;
+        
+        // load the visible page and the page on either side of it (to avoid flashes when the user starts scrolling)
+        [self loadScrollViewWithPage:page - 1];
+        [self loadScrollViewWithPage:page];
+        [self loadScrollViewWithPage:page + 1];
+        
+        // a possible optimization would be to unload the views+controllers which are no longer visible
+        
+        // find currentPage
+        LBMGNoRotateViewController *controller = [self.viewControllers objectAtIndex:page];
+        [controller scrolledIntoView];
+        
+        [self gotoPage:YES];
     }
 }
 
@@ -176,6 +199,89 @@
 - (IBAction)changePage:(id)sender
 {
     [self gotoPage:YES];    // YES = animate
+}
+
+#pragma mark - New Main Nav
+
+- (IBAction)toggleMainNav:(id)sender
+{
+    if (self.navIsVisible) {
+        self.navIsVisible = false;
+        [self hideNavTable];
+    } else {
+        self.navIsVisible = true;
+        [self displayNavTable];
+    }
+}
+
+- (void)displayNavTable {
+    // build first Level TableView
+    if (!self.navTableVC) {
+        self.navTableVC = [LBMGNavTableVC new];
+        self.navTableVC.scroller = self.scrollView;
+        self.navTableVC.masterVC = self;
+        
+        CGRect childFrame = self.navTableVC.view.frame;
+        childFrame.size.height = [[UIScreen mainScreen] bounds].size.height - 20;
+        self.navTableVC.view.frame = childFrame;
+        [self.scrollView insertSubview:self.navTableVC.view atIndex:0];
+    }
+    // move the nav view to below the current page view
+    [self.scrollView insertSubview:self.navTableVC.view atIndex:self.pageControl.currentPage];
+    
+    // add shadow on left side of current page
+    LBMGNoRotateViewController *currentVC = self.viewControllers[self.pageControl.currentPage];
+    [currentVC.view.layer setShadowOffset:CGSizeMake(-3.0, 3.0)];
+    [currentVC.view.layer setShadowRadius:3.0];
+    [currentVC.view.layer setShadowOpacity:1.0];
+    
+    // add gesture recogniser to close nav
+    [currentVC addCloseNavGesture];
+    
+    // slide open
+    [UIView animateWithDuration:.25
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         
+                         UIViewController *currentViewController = [self.viewControllers objectAtIndex:self.pageControl.currentPage];
+                         // first move nav to correct spot in the main view scrollView
+                         CGRect navFrame = self.navTableVC.view.frame;
+                         navFrame.origin.x = navFrame.size.width * self.pageControl.currentPage;
+                         self.navTableVC.view.frame = navFrame;
+                         // then slide current page's and main nav button's view over to the right to reveal nav
+                         CGRect currentFrame = currentViewController.view.frame;
+                         currentFrame.origin.x = currentFrame.size.width-100 + (self.pageControl.currentPage * currentFrame.size.width);
+                         CGRect buttonFrame = self.mainNavButton.frame;
+                         buttonFrame.origin.x = 7 + currentFrame.size.width-100;
+                         
+                         [currentViewController.view setFrame:currentFrame];
+                         [self.mainNavButton setFrame:buttonFrame];
+                     }
+                     completion:^(BOOL finished) {
+                     }];
+}
+
+- (void)hideNavTable
+{
+    [UIView animateWithDuration:.25
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseIn
+                     animations:^{
+                         
+                         LBMGNoRotateViewController *currentViewController = [self.viewControllers objectAtIndex:self.pageControl.currentPage];
+                         // resest to original spot
+                         CGRect currentFrame = currentViewController.view.frame;
+                         currentFrame.origin.x = (self.pageControl.currentPage * currentFrame.size.width);
+                         CGRect buttonFrame = self.mainNavButton.frame;
+                         buttonFrame.origin.x = 7;
+                         
+                         [currentViewController.view setFrame:currentFrame];
+                         [self.mainNavButton setFrame:buttonFrame];
+                         [currentViewController.swipeClosedView removeFromSuperview];
+                     }
+                     completion:^(BOOL finished) {
+                     }];
 }
 
 #pragma mark - VC getters

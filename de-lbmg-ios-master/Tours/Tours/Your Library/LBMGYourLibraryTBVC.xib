@@ -129,7 +129,7 @@
 						</object>
 						<object class="NSCustomResource" key="IBUINormalImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">white_backarrow.png</string>
+							<string key="NSResourceName">close_x.png</string>
 						</object>
 						<object class="IBUIFontDescription" key="IBUIFontDescription">
 							<int key="type">2</int>
@@ -164,6 +164,7 @@
 						<string key="NSFrame">{{0, 411}, {320, 132}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<reference key="IBUIBackgroundColor" ref="394897539"/>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -437,6 +438,20 @@
 							<string key="candidateClassName">id</string>
 						</object>
 					</object>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="topToursContainerView">UIView</string>
+						<string key="toursListTBLV">UITableView</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="topToursContainerView">
+							<string key="name">topToursContainerView</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="toursListTBLV">
+							<string key="name">toursListTBLV</string>
+							<string key="candidateClassName">UITableView</string>
+						</object>
+					</dictionary>
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/LBMGYourLibraryTBVC.h</string>
@@ -450,9 +465,9 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="buytour_subheader.png">{320, 25}</string>
+			<string key="close_x.png">{32, 33}</string>
 			<string key="tour_mainbkgrdimage.png">{320, 548}</string>
 			<string key="tour_yourcontent_text.png">{209, 21}</string>
-			<string key="white_backarrow.png">{32, 33}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">2083</string>
 	</data>

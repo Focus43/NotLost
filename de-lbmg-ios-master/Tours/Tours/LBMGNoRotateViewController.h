@@ -10,6 +10,10 @@
 
 @interface LBMGNoRotateViewController : UIViewController
 
+@property (nonatomic, strong) UIView *swipeClosedView;
+@property (nonatomic, strong) UIViewController *mainVC;
+
 - (void)scrolledIntoView;
+- (void)addCloseNavGesture;
 
 @end
