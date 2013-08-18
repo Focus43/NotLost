@@ -417,7 +417,6 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
 
 - (void)handleSwipeClosed:(UISwipeGestureRecognizer *)recognizer
 {
-    DLog(@"direction = %u", recognizer.direction);
     if (recognizer.direction != UISwipeGestureRecognizerDirectionLeft) return;
     
     // if swiped left, close nav and remove the gesture view
