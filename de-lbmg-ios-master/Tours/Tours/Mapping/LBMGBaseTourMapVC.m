@@ -10,7 +10,7 @@
 #define personalContentRadius @14
 
 // displays the circular area around waypoints if enabled
-#define TEST_MODE_STATS_VIEW FALSE
+#define TEST_MODE_STATS_VIEW TRUE
 #define kTestModePlistKey @"ShowLocationAreas"
 
 
