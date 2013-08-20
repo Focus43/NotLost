@@ -22,6 +22,8 @@
 @property (strong, nonatomic) IBOutlet UIButton *searchButton;
 @property (retain, nonatomic) TapItBannerAdView *tapitAd;
 
+@property (nonatomic, strong) CLLocationManager *locationManager;
+
 // this is kind of a hack. It's been added in the NoRotateViewController, but AroundMe is the only one that doesn't use that for super
 @property (nonatomic, strong) LBMGMainMasterPageVC *mainVC;
 @property (nonatomic, strong) UIView *swipeClosedView;

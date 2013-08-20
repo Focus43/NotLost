@@ -34,6 +34,8 @@
 @property (strong, nonatomic) NSArray *oldIndexArray;
 @property (strong, nonatomic) NSDictionary *favorites;
 
+- (float)distanceToEvent:(EventDescription *)event;
+
 @end
 
 @implementation LBMGAroundMeChildExpandingTVC
@@ -65,6 +67,26 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
         [self.toursTableView selectRowAtIndexPath:firstItemIP animated:YES scrollPosition:UITableViewScrollPositionNone];
         [self.toursTableView.delegate tableView:self.toursTableView didSelectRowAtIndexPath:firstItemIP];
     }
+}
+
+- (float)distanceToEvent:(EventDescription *)event
+{
+    CLLocationDegrees fromLatitude  = self.masterPage.locationManager.location.coordinate.latitude;
+    CLLocationDegrees fromLongitude = self.masterPage.locationManager.location.coordinate.longitude;
+    CLLocationCoordinate2D fromPoint = CLLocationCoordinate2DMake(fromLatitude, fromLongitude);
+    
+    CLLocationDegrees toLatitude  = [event.latitude doubleValue];
+    CLLocationDegrees toLongitude = [event.longitude doubleValue];
+    CLLocationCoordinate2D toPoint = CLLocationCoordinate2DMake(toLatitude, toLongitude);
+    
+    float distanceMeters = MKMetersBetweenMapPoints(MKMapPointForCoordinate(fromPoint), MKMapPointForCoordinate(toPoint));
+    
+    return distanceMeters * 0.00062137119;
+    
+//    double bearing = [self.currentTour calculateCourseFromLocation:fromPoint toLocation:toPoint];
+//    CLLocationCoordinate2D projectedPoint = [self coordinateFromCoord:fromPoint atDistanceM:distanceMeters atBearingDegrees:bearing];
+//    
+//    float meters = MKMetersBetweenMapPoints(MKMapPointForCoordinate(newLocation.coordinate), MKMapPointForCoordinate(projectedPoint));
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -113,7 +135,8 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
             LBMGAroundMeFeaturedCell *cell = [tableView dequeueReusableCellWithIdentifier:FeaturedCellIdentifier forIndexPath:indexPath];
             
             cell.tourNameLabel.text = event.name;
-            cell.tourAddress.text = event.descriptionText;
+//            cell.tourAddress.text = event.descriptionText;
+            cell.tourAddress.text = [NSString stringWithFormat:@"%3.2f miles", [self distanceToEvent:event]];
             return cell;
             
         }
@@ -174,6 +197,16 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
     for (EventSubCategory *subCategory in self.places) {
         [newArray addObject:subCategory];
         if (i == self.currentOpenIndex) {
+            
+            // Slight hack here to sort events by featured. Should move to model?
+            // This actually comes from the AroundMeMasterPageVC::getData that calls an LBMGEngine method: getAroundMeWithLatitude
+            // That method then calls a generic data getter in the LBMGENgine and leaves a few sorting tasks up to the controller. No model used...
+            // In the master page controller there is a call to LBMGUtilities buildSponseredEvents, but it seems like that is actually looking for favorites.
+            // Instead of trying to sort that out and potntially causing a regression bug (without accomplishing moving this out of a view controller), Im
+            // leaving this here. At least it won't be called until it is really needed...
+            NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"sponsored" ascending:NO];
+            subCategory.events = [subCategory.events sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+            
             int j = i+1;
             for (EventDescription *event in subCategory.events) {
                 [newArray addObject:event];

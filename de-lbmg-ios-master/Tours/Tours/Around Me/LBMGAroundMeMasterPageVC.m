@@ -38,7 +38,7 @@
 @interface LBMGAroundMeMasterPageVC ()
 
 @property (strong, nonatomic) LBMGAroundMeChildTBVC *eventTBVC;
-@property (nonatomic, strong) CLLocationManager *locationManager;
+//@property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) NSArray *detailArray;
 @property (nonatomic, strong) NSArray *suggestionsArray;
 @property (nonatomic, strong) NSArray *searchResultArray;

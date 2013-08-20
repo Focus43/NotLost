@@ -32,13 +32,11 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>2.1</string>
+	<string>2.2</string>
 	<key>LBMGServer</key>
 	<string>lbmg-staging.herokuapp.com</string>
-	<key>LSRequiresIPhoneOS</key>
-	<true/>
 	<key>ShowLocationAreas</key>
-	<false/>
+	<true/>
 	<key>UIAppFonts</key>
 	<array>
 		<string>ArialBlack.ttf</string>
