@@ -88,6 +88,10 @@ static NSString *CellIdentifier = @"Cell";
         [self.scroller setContentOffset:CGPointMake(280, 0) animated:YES];
         
         self.masterPage.titleLabel.text = events.name;
+        
+        // hide main nav and search buttons
+        self.masterPage.mainVC.mainNavButton.hidden = YES;
+        self.masterPage.searchButton.hidden = YES;
     }
 }
 

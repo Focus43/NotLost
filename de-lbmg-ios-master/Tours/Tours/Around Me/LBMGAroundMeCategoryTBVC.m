@@ -124,6 +124,9 @@ static NSString *CellIdentifier = @"Cell";
         self.scroller.contentOffset = CGPointMake(0, 0);
         self.masterPage.titleLabel.text = self.oldTitleText;
         self.masterPage.tapitAd.alpha = 0;
+        // un-hide main nav and search buttons
+        self.masterPage.mainVC.mainNavButton.hidden = NO;
+        self.masterPage.searchButton.hidden = NO;
     } completion:^(BOOL finished) {
         [self.view removeFromSuperview];
         [self.previousPage deselectCurrentRow];

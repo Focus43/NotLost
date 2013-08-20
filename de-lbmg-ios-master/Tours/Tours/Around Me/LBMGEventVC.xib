@@ -171,13 +171,13 @@
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MC41AA</bytes>
 								</object>
+								<object class="NSCustomResource" key="IBUINormalImage">
+									<string key="NSClassName">NSImage</string>
+									<string key="NSResourceName">close_x.png</string>
+								</object>
 								<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage">
 									<string key="NSClassName">NSImage</string>
 									<string key="NSResourceName">gray_backarrow_on.png</string>
-								</object>
-								<object class="NSCustomResource" key="IBUINormalBackgroundImage">
-									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">gray_backarrow.png</string>
 								</object>
 								<object class="IBUIFontDescription" key="IBUIFontDescription" id="409416743">
 									<int key="type">2</int>
@@ -512,6 +512,7 @@
 										<string key="NSFrame">{{0, 1}, {290, 1}}</string>
 										<reference key="NSSuperview" ref="622205246"/>
 										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<object class="NSColor" key="IBUIBackgroundColor">
 											<int key="NSColorSpace">1</int>
@@ -538,6 +539,7 @@
 								<string key="NSFrame">{{95, 6}, {200, 21}}</string>
 								<reference key="NSSuperview" ref="134875925"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="636770256"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -590,7 +592,7 @@
 								<string key="NSFrame">{{88, 2}, {192, 28}}</string>
 								<reference key="NSSuperview" ref="134875925"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="636770256"/>
+								<reference key="NSNextKeyView" ref="300727905"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<reference key="IBUIBackgroundColor" ref="777107085"/>
 								<bool key="IBUIOpaque">NO</bool>
@@ -1505,10 +1507,10 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA</b
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="Backgroud_slither.png">{300, 1}</string>
+			<string key="close_x.png">{32, 33}</string>
 			<string key="event_farbackground5.png">{640, 1116}</string>
 			<string key="event_goingbanner.png">{64, 80}</string>
 			<string key="event_not_goingbanner.png">{64, 80}</string>
-			<string key="gray_backarrow.png">{32, 33}</string>
 			<string key="gray_backarrow_on.png">{32, 33}</string>
 			<string key="tour_takemebutton.png">{146, 44}</string>
 			<string key="tour_takemebutton_on.png">{146, 44}</string>

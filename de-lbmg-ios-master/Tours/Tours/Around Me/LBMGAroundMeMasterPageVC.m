@@ -97,7 +97,8 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
     
     if (!self.tapitAd) {
         // don't re-define if we used IB to init the banner...
-        self.tapitAd = [[TapItBannerAdView alloc] initWithFrame:CGRectMake(0, 0, 320, 50)];
+        CGRect parentFrame = self.view.frame;
+        self.tapitAd = [[TapItBannerAdView alloc] initWithFrame:CGRectMake(0, parentFrame.size.height-50, 320, 50)];
         [self.view addSubview:self.tapitAd];
     }
     [self.tapitAd startServingAdsForRequest:[TapItRequest requestWithAdZone:ZONE_ID]];
@@ -183,6 +184,8 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
     
     [self.searchTextView becomeFirstResponder];
     [UIView transitionWithView:self.view duration:0.25 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        // hide main nav button, since it interferes with the current page nav
+        self.mainVC.mainNavButton.hidden = YES;
         [self.view  addSubview:self.searchViewContainer];
         self.searchTextView.text = @"";
         self.suggestionsArray = nil;
@@ -197,6 +200,7 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
     // start search
     [self.searchTextView resignFirstResponder];
     [UIView transitionWithView:self.view duration:0.25 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
+        self.mainVC.mainNavButton.hidden = NO;
         [self.searchViewContainer removeFromSuperview];
     } completion:^(BOOL finished) {
         //
