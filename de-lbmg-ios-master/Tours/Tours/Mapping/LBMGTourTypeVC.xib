@@ -84,9 +84,9 @@
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MC41AA</bytes>
 								</object>
-								<object class="NSCustomResource" key="IBUIHighlightedBackgroundImage">
+								<object class="NSCustomResource" key="IBUIHighlightedImage">
 									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">white_backarrow_on.png</string>
+									<string key="NSResourceName">close_x.png</string>
 								</object>
 								<object class="NSCustomResource" key="IBUINormalBackgroundImage">
 									<string key="NSClassName">NSImage</string>
@@ -305,6 +305,7 @@
 								<string key="NSFrame">{{58, 493}, {204, 43}}</string>
 								<reference key="NSSuperview" ref="867482302"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<float key="IBUIAlpha">0.0</float>
@@ -751,6 +752,7 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
+			<string key="close_x.png">{32, 33}</string>
 			<string key="realtimebutton.png">{204, 43}</string>
 			<string key="realtimebutton_on.png">{204, 43}</string>
 			<string key="tour_backgroundimage5.png">{640, 1127}</string>
@@ -758,7 +760,6 @@
 			<string key="virtualbutton.png">{204, 43}</string>
 			<string key="virtualbutton_on.png">{204, 43}</string>
 			<string key="white_backarrow.png">{32, 33}</string>
-			<string key="white_backarrow_on.png">{32, 33}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">2083</string>
 	</data>

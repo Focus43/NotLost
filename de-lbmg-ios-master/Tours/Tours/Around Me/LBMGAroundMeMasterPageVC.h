@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "TapIt.h"
+#import "LBMGMainMasterPageVC.h"
 
 @interface LBMGAroundMeMasterPageVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
@@ -18,10 +19,11 @@
 @property (weak, nonatomic) IBOutlet UITableView *searchTableView;
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UIButton *clearSearchTextButton;
+@property (strong, nonatomic) IBOutlet UIButton *searchButton;
 @property (retain, nonatomic) TapItBannerAdView *tapitAd;
 
 // this is kind of a hack. It's been added in the NoRotateViewController, but AroundMe is the only one that doesn't use that for super
-@property (nonatomic, strong) UIViewController *mainVC;
+@property (nonatomic, strong) LBMGMainMasterPageVC *mainVC;
 @property (nonatomic, strong) UIView *swipeClosedView;
 - (void)addCloseNavGesture;
 
