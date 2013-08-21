@@ -231,9 +231,9 @@
        
     CGPoint area = CGPointMake(northEastPoint.x - southWestPoint.x, northEastPoint.y - southWestPoint.y);
     MKMapRect sectionRect = MKMapRectMake(southWestPoint.x, southWestPoint.y, area.x, area.y);
-    
-//    [self.mapView setVisibleMapRect:sectionRect animated:YES];    
-    [self.mapView setVisibleMapRect:sectionRect edgePadding:UIEdgeInsetsMake(66, 5, 66, 5) animated:YES];
+        
+    // accounting for size of icons and top and bottom bar here
+    [self.mapView setVisibleMapRect:sectionRect edgePadding:UIEdgeInsetsMake(88, 11, 60, 11) animated:YES];
 }
 
 - (void)addRouteSectionOverlay
@@ -582,6 +582,10 @@
 }
 
 - (void)updateAnnotations {
+    
+    self.currentTour.lastPointPassedIndex = 8;
+    
+    BOOL startWasFound = NO;
     self.mapView.delegate = self;
     [self.mapView removeAnnotations:[self.mapView annotations]];
      
@@ -612,15 +616,18 @@
         if ([self isKindOfClass:[LBMGVirtualTourMapVC class]]) {            
             LBMGVirtualTourMapVC *vc = (LBMGVirtualTourMapVC *)self;
             if ( [way matchesTourPoint:[self.currentTour.route.tourPoints objectAtIndex:vc.virtualPointPassedIndex+1]] ) {
-               pin.isStart = true; 
+                pin.isStart = true;
+                startWasFound = YES;
             }
         } else if (self.currentTour.lastPointPassedIndex > -1) {
             if ( [way matchesTourPoint:[self.currentTour.route.tourPoints objectAtIndex:self.currentTour.lastPointPassedIndex+1]] ) {
                 pin.isStart = true;
+                startWasFound = YES;
             }
         } else {
             if ( [way matchesTourPoint:[self.currentTour.route.tourPoints objectAtIndex:0]] ) {
                 pin.isStart = true;
+                startWasFound = YES;
             }
         }
         
@@ -628,6 +635,7 @@
         [self.mapView addAnnotation:pin];
         i++;
     }
+    
     for (NSDictionary *personalItem in self.currentTour.userContent) {
         XCRPointAnnotation *pin = [XCRPointAnnotation new];
         pin.type = personal;
@@ -636,9 +644,23 @@
         pin.coordinate = CLLocationCoordinate2DMake(latitude, longitude);
         [self.mapView addAnnotation:pin];
     }
+    
     if (!self.currentTour.isRouteBasedTour) {
         float progressValue = (CGFloat)touchedCount/self.currentTour.touchedPoints.count;
         [self.progressBar setValue:progressValue animated:YES];
+    }
+    
+    if (!startWasFound && self.currentTour.lastPointPassedIndex > -1) {
+        
+        XCRPointAnnotation *pin = [XCRPointAnnotation new];
+        pin.type = poi;
+        pin.isStart = YES;
+        
+        TourPoint *way = (TourPoint *)[self.currentTour.route.tourPoints objectAtIndex:self.currentTour.lastPointPassedIndex+1];
+        pin.coordinate = CLLocationCoordinate2DMake([way.latitude doubleValue], [way.longitude doubleValue]);
+        
+        [self.mapView addAnnotation:pin];
+        startWasFound = YES;
     }
 }
 

@@ -31,6 +31,8 @@
     if (self.currentTour.lastPointPassedIndex > -1) {  // Tour already started
         [self hideGuideToTourView];
         self.messageLabel.text = ((TourPoint *)[self.currentTour.route.tourPoints objectAtIndex:self.currentTour.lastPointPassedIndex]).directionText;
+        
+        // zoom to show current section and current user position
     }
     else {
 //        self.messageLabel.text = @"seeking Location...";
