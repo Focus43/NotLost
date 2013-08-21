@@ -68,10 +68,15 @@
     
     self.routeNameLabel.text = self.currentTour.routeData.name;
     self.routeDescription.text = self.currentTour.routeData.descriptionText;
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    
+    // Taking out the virtual/real swap buttom
+    [self.realTourButton setHidden:YES];
+    
     self.mapView.delegate = self;
     if (self.currentTour.useMapSettings) {
         self.mapView.region = self.currentTour.mapRegion;
@@ -107,7 +112,11 @@
     [self.virtualTourBeginView setHidden:YES];
     [self.backButton setHidden:YES];
     [self.homeButton setHidden:NO];
-    [self.realTourButton setHidden:NO];
+    
+//    [self.realTourButton setHidden:NO];
+    // Taking out the virtual/real swap buttom
+    [self.realTourButton setHidden:YES];
+    
 //    [self.previousButton setHidden:NO];
     [self.nextButton setHidden:NO];
 }
@@ -187,6 +196,9 @@
 }
 
 - (IBAction)switchToRealTimeTourButtonPressed:(id)sender {
+    // Taking out the virtual/real swap buttom functionality
+    return;
+    
     [self silenceAudio];
     [self.tourMC switchToRealTimeTour];
 }

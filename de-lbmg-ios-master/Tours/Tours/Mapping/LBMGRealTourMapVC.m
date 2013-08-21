@@ -49,10 +49,15 @@
     }
     
 //    [self.mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    
+    // Taking out the virtual/real swap buttom
+    [self.virtualTourButton setHidden:YES];
+    
     if (!self.locationSetup) {
         [self setupLocationManagerAndMap];
         self.mapView.delegate = self;
@@ -119,7 +124,11 @@
 - (void)showTourStartedElements {
     [self.progressContainer setHidden:NO];
     [self.directionsContainer setHidden:NO];
-    [self.virtualTourButton setHidden:NO];
+    
+//    [self.virtualTourButton setHidden:NO];
+    // Taking out the virtual/real swap buttom
+    [self.virtualTourButton setHidden:YES];
+    
     [self.homeButton setHidden:NO];
 }
 
@@ -487,6 +496,9 @@
 }
 
 - (IBAction)switchToVirtualTourButtonPressed:(id)sender {
+    // Taking out the virtual/real swap buttom functionality
+    return;
+    
     [self silenceAudio];
     self.currentTour.mapCenter = self.mapView.center;
     self.currentTour.mapRegion = self.mapView.region;
