@@ -13,5 +13,6 @@
 @property (nonatomic, assign) int type;
 @property (nonatomic, assign) int poiState;
 @property (nonatomic, assign) int poiIndex;
+@property (nonatomic, assign) BOOL isStart;
 
 @end

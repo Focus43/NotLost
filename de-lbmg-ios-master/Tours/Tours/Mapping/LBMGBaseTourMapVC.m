@@ -354,6 +354,10 @@
                 
                 pinView.leftCalloutAccessoryView = annotationToggle;
                 
+                if (annotate.isStart) {
+                    pinView.image = [UIImage imageNamed:@"start_pin_poi"];
+                }
+                
                 return pinView;
             }
             else if (annotate.poiState == Unvisited) {
@@ -367,14 +371,19 @@
                 
                 pinView.canShowCallout = YES;
                 pinView.centerOffset = CGPointMake(0, -22);
-                pinView.image = [UIImage imageNamed:@"tour_pin_poi"];
                 
+                pinView.image = [UIImage imageNamed:@"tour_pin_poi"]; 
+               
                 UIToggleButton *annotationToggle = [[UIToggleButton alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
                 [annotationToggle setToggleOffImage:[UIImage imageNamed:@"tour_annotation_checkbox_off"] andToggleOnImage:[UIImage imageNamed:@"tour_annotation_checkbox_on"]];
                 [annotationToggle addTarget:self action:@selector(toggleAnnotation) forControlEvents:UIControlEventTouchUpInside];
                 [annotationToggle setOff];
                 
                 pinView.leftCalloutAccessoryView = annotationToggle;
+                
+                if (annotate.isStart) {
+                    pinView.image = [UIImage imageNamed:@"start_pin_poi"];
+                }
                 
                 return pinView;
             }
@@ -575,12 +584,16 @@
 - (void)updateAnnotations {
     self.mapView.delegate = self;
     [self.mapView removeAnnotations:[self.mapView annotations]];
-    int i = 0;
+     
+    int i = 0;    
     int touchedCount = 0;
     for (NSNumber *touched in self.currentTour.touchedPoints) {
+        
         PoiPoint *way = [self.currentTour.route.poiPoints objectAtIndex:i];
         XCRPointAnnotation *pin = [XCRPointAnnotation new];
+        
         pin.type = poi;
+        
         pin.coordinate = CLLocationCoordinate2DMake([way.latitude doubleValue], [way.longitude doubleValue]);
         pin.title = way.labelText;
         
@@ -595,6 +608,23 @@
             pin.poiState = Visited;
             touchedCount++;
         }
+        
+        if ([self isKindOfClass:[LBMGVirtualTourMapVC class]]) {            
+            LBMGVirtualTourMapVC *vc = (LBMGVirtualTourMapVC *)self;
+            if ( [way matchesTourPoint:[self.currentTour.route.tourPoints objectAtIndex:vc.virtualPointPassedIndex+1]] ) {
+               pin.isStart = true; 
+            }
+        } else if (self.currentTour.lastPointPassedIndex > -1) {
+            if ( [way matchesTourPoint:[self.currentTour.route.tourPoints objectAtIndex:self.currentTour.lastPointPassedIndex+1]] ) {
+                pin.isStart = true;
+            }
+        } else {
+            if ( [way matchesTourPoint:[self.currentTour.route.tourPoints objectAtIndex:0]] ) {
+                pin.isStart = true;
+            }
+        }
+        
+        
         [self.mapView addAnnotation:pin];
         i++;
     }

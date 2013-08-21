@@ -23,7 +23,8 @@ typedef enum {
 typedef enum {
 	poi,
 	personal,
-    userLocation
+    userLocation,
+    start
 } pinTypes;
 
 @class Route;
