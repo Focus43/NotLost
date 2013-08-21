@@ -233,7 +233,7 @@
     MKMapRect sectionRect = MKMapRectMake(southWestPoint.x, southWestPoint.y, area.x, area.y);
     
 //    [self.mapView setVisibleMapRect:sectionRect animated:YES];    
-    [self.mapView setVisibleMapRect:sectionRect edgePadding:UIEdgeInsetsMake(40, 0, 40, 0) animated:YES];
+    [self.mapView setVisibleMapRect:sectionRect edgePadding:UIEdgeInsetsMake(66, 5, 66, 5) animated:YES];
 }
 
 - (void)addRouteSectionOverlay
