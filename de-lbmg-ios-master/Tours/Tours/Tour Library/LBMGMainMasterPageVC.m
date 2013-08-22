@@ -13,6 +13,10 @@
 #import "LBMGCalendarMasterVC.h"
 #import "LBMGBaseTourMapVC.h"
 #import "LBMGNavTableVC.h"
+#import "LBMGWebViewVC.h"
+
+#define kSharpUrlString @"http://notlost.tstr.co/sharp/"
+#define kGearUrlString @"http://notlost.tstr.co/deals/"
 
 //static NSString *kNameKey = @"nameKey";
 //static NSString *kImageKey = @"imageKey";
@@ -37,14 +41,25 @@
                         [UIColor purpleColor],
                         nil];
 
-    NSUInteger numberPages = self.contentList.count;
+//    NSUInteger numberPages = self.contentList.count;
     
 
     self.viewControllers = [NSArray arrayWithObjects:
                             self.tourLibraryMaster,
                             self.aroundMeMaster,
                             self.calendarMaster,
+                            self.sharpMaster,
+                            self.gearMaster,
                             nil];
+
+    NSUInteger numberPages = self.viewControllers.count;
+    
+    self.sharpMaster.urlString = kSharpUrlString;
+    self.sharpMaster.headerString = @"SHARP";
+    self.sharpMaster.shouldPreload = YES;
+    self.gearMaster.urlString = kGearUrlString;
+    self.gearMaster.headerString = @"Gear";
+    self.sharpMaster.shouldPreload = YES;
     
     for (LBMGNoRotateViewController *c in self.viewControllers) {
         c.mainVC = self;
@@ -104,7 +119,7 @@
 
 - (void)loadScrollViewWithPage:(NSUInteger)page
 {
-    if (page >= self.contentList.count)
+    if (page >= self.viewControllers.count)
         return;
     
     // replace the placeholder if necessary
@@ -138,11 +153,10 @@
 // at the end of scroll animation, reset the boolean used when scrolls originate from the UIPageControl
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    DLog(@"scrollViewDidEndDecelerating");
     // switch the indicator when more than 50% of the previous/next page is visible
     CGFloat pageWidth = CGRectGetWidth(self.scrollView.frame);
     NSUInteger page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
-    DLog(@"page = %d", page);
+
     if (page != self.pageControl.currentPage) {   // Only if the page has changed
         self.pageControl.currentPage = page;
         
@@ -161,7 +175,6 @@
 
 - (void)scootToPage:(NSInteger)page
 {
-    DLog(@"scootOver to page %d", page);
     if (page != self.pageControl.currentPage) {   // Only if the page has changed
         self.pageControl.currentPage = page;
         
@@ -174,6 +187,11 @@
         
         // find currentPage
         LBMGNoRotateViewController *controller = [self.viewControllers objectAtIndex:page];
+//        // HACK: the pages pre-load and clean snipe uses alerts, that can't be displayed until after the page is in view
+//        // hence this junk show;
+//        if (page == 4) {
+//            [[(LBMGWebViewVC *)controller webView] loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:[(LBMGWebViewVC *)controller urlString]]]];
+//        }
         [controller scrolledIntoView];
         
         [self gotoPage:YES];
@@ -309,5 +327,22 @@
     }
     return _calendarMaster;
 }
+
+- (LBMGWebViewVC *)sharpMaster
+{
+    if (!_sharpMaster) {
+        _sharpMaster = [LBMGWebViewVC new];
+    }
+    return _sharpMaster;
+}
+
+- (LBMGWebViewVC *)gearMaster
+{
+    if (!_gearMaster) {
+        _gearMaster = [LBMGWebViewVC new];
+    }
+    return _gearMaster;
+}
+
 
 @end

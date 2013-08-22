@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class LBMGCalendarMasterVC, LBMGNavTableVC, LBMGTourLibraryMasterPageVC, LBMGAroundMeMasterPageVC;
+@class LBMGCalendarMasterVC, LBMGNavTableVC, LBMGTourLibraryMasterPageVC, LBMGAroundMeMasterPageVC, LBMGWebViewVC;
 
 @interface LBMGMainMasterPageVC : LBMGNoRotateViewController <UIScrollViewDelegate>
 
@@ -23,6 +23,8 @@
 @property (nonatomic, strong) LBMGTourLibraryMasterPageVC *tourLibraryMaster;
 @property (nonatomic, strong) LBMGAroundMeMasterPageVC *aroundMeMaster;
 @property (nonatomic, strong) LBMGCalendarMasterVC *calendarMaster;
+@property (nonatomic, strong) LBMGWebViewVC *sharpMaster;
+@property (nonatomic, strong) LBMGWebViewVC *gearMaster;
 @property (strong, nonatomic) LBMGNavTableVC *navTableVC;
 
 - (void)scootToPage:(NSInteger)page;

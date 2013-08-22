@@ -25,7 +25,7 @@ static NSString *CellIdentifier = @"NavCell";
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.navList = [NSArray arrayWithObjects:@"Tours", @"Around Me", @"Calendar", @"SHARP", @"Your Content", nil];
+        self.navList = [NSArray arrayWithObjects:@"Tours", @"Around Me", @"Calendar", @"SHARP", @"Gear", @"Your Content", nil];
     }
     return self;
 }
@@ -83,9 +83,8 @@ static NSString *CellIdentifier = @"NavCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.row == 3) { return; }
     // Hack to deal with personal library
-    if (indexPath.row == 4) {
+    if (indexPath.row == 5) {
         LBMGYourLibraryTBVC *yourLibrary = [LBMGYourLibraryTBVC new];
         yourLibrary.availableTours = self.masterVC.tourLibraryMaster.tourList;
         yourLibrary.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
