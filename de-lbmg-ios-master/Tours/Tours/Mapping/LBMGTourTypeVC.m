@@ -113,8 +113,8 @@
 - (IBAction)realTimeTourButtonPressed:(id)sender {
     if (self.currentTour.route.tourPoints.count != 0) {
         self.currentTour.isRealTour = YES;
-        
-        [self testForRetart:self.realTour];
+        LBMGRealTourMapVC *testTour = self.realTour;
+        [self testForRetart:testTour];
 //        [self addChildViewController:self.virtualTour];
 //        [self.scroller addSubview:self.realTour.view];
 //        [self push];
