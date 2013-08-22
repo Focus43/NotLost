@@ -16,7 +16,7 @@
 #import "PoiPoint.h"
 
 @interface LBMGRealTourMapVC ()
-
+- (void)zoomToShowCurrentAndNextLocation;
 @end
 
 @implementation LBMGRealTourMapVC
@@ -31,8 +31,6 @@
     if (self.currentTour.lastPointPassedIndex > -1) {  // Tour already started
         [self hideGuideToTourView];
         self.messageLabel.text = ((TourPoint *)[self.currentTour.route.tourPoints objectAtIndex:self.currentTour.lastPointPassedIndex]).directionText;
-        
-        // zoom to show current section and current user position
     }
     else {
 //        self.messageLabel.text = @"seeking Location...";
@@ -65,6 +63,12 @@
         self.mapView.delegate = self;
         self.locationSetup = TRUE;
     }
+    
+    if (self.currentTour.lastPointPassedIndex > -1) {  // Tour already started
+        // add zooming to next point and current location here
+        [self zoomToShowCurrentAndNextLocation];
+    }
+    
     [UIApplication sharedApplication].idleTimerDisabled = YES;
 }
 
@@ -72,6 +76,39 @@
     [self setMessageLabel:nil];
     [self setDirectionsContainer:nil];
     [super viewDidUnload];
+}
+
+- (void)zoomToShowCurrentAndNextLocation
+{
+    
+    CLLocationDegrees nextLatitude  = [((TourPoint *)[self.currentTour.route.tourPoints objectAtIndex:self.currentTour.lastPointPassedIndex+1]).latitude doubleValue];
+    CLLocationDegrees nextLongitude = [((TourPoint *)[self.currentTour.route.tourPoints objectAtIndex:self.currentTour.lastPointPassedIndex+1]).longitude doubleValue];
+    CLLocationCoordinate2D nextPoint = CLLocationCoordinate2DMake(nextLatitude, nextLongitude);
+    MKMapPoint nextMapPoint = MKMapPointForCoordinate(nextPoint);
+    
+    CLLocationDegrees userLatitude = self.locationManager.location.coordinate.latitude;
+    CLLocationDegrees userLongitude = self.locationManager.location.coordinate.longitude;
+    CLLocationCoordinate2D userPoint = CLLocationCoordinate2DMake(userLatitude, userLongitude);
+    MKMapPoint userMapPoint = MKMapPointForCoordinate(userPoint);
+    
+    
+    MKMapRect mapRectangle = MKMapRectMake (fmin(nextMapPoint.x, userMapPoint.x),
+                                            fmin(nextMapPoint.y, userMapPoint.y),
+                                            fabs(nextMapPoint.x - userMapPoint.x),
+                                            fabs(nextMapPoint.y - userMapPoint.y));
+    
+    // calculating padding to get a zoom level that is zoomed out enough to still get mao images
+    CGFloat xpad = (self.mapView.bounds.size.width - fabs(nextMapPoint.x - userMapPoint.x)) / 2;
+    CGFloat ypad = (self.mapView.bounds.size.height - fabs(nextMapPoint.y - userMapPoint.y)) / 2;
+    // make sure we still get padding for icons/nav bars
+    if (xpad < 21) xpad = 21;
+    if (ypad < 90) ypad = 90;
+    
+    // accounting for size of icons and top and bottom bar here
+    // plus adding a little extra, (90, 21, 60, 21), to account for the user's current point needing time ot be exaclty calculated
+    // That could of course, be unreliable... Maybe later we add code to map view delegate that uses userLocationVisible, and re-draws if NO.
+    [self.mapView setVisibleMapRect:mapRectangle edgePadding:UIEdgeInsetsMake(ypad, xpad, ypad, xpad) animated:YES];
+    
 }
 
 #pragma mark - Section functions

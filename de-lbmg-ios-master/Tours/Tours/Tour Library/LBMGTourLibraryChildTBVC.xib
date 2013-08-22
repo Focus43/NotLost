@@ -46,7 +46,6 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrameSize">{320, 40}</string>
 								<reference key="NSSuperview" ref="337747604"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="620327042"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor" id="315705823">
@@ -60,7 +59,6 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{0, 468}, {320, 60}}</string>
 								<reference key="NSSuperview" ref="337747604"/>
-								<reference key="NSWindow"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<reference key="IBUIBackgroundColor" ref="315705823"/>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -68,7 +66,6 @@
 						</array>
 						<string key="NSFrame">{{0, 40}, {320, 528}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="1014733522"/>
 						<string key="NSReuseIdentifierKey">_NS:10</string>
 						<reference key="IBUIBackgroundColor" ref="315705823"/>
@@ -94,7 +91,6 @@
 								<array class="NSMutableArray" key="NSSubviews"/>
 								<string key="NSFrame">{{0, 120}, {320, 448}}</string>
 								<reference key="NSSuperview" ref="227049304"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="337747604"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor">
@@ -108,7 +104,6 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{0, 10}, {320, 118}}</string>
 								<reference key="NSSuperview" ref="227049304"/>
-								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="46919669"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<reference key="IBUIBackgroundColor" ref="315705823"/>
@@ -122,7 +117,6 @@
 						</array>
 						<string key="NSFrameSize">{320, 568}</string>
 						<reference key="NSSuperview" ref="191373211"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="418270207"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<reference key="IBUIBackgroundColor" ref="315705823"/>
@@ -136,7 +130,6 @@
 				</array>
 				<string key="NSFrameSize">{320, 568}</string>
 				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="IBUIBackgroundColor" ref="315705823"/>
 				<reference key="IBUISimulatedDestinationMetrics" ref="421970329"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -321,45 +314,7 @@
 			<nil key="sourceID"/>
 			<int key="maxID">41</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes">
-			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
-				<object class="IBPartialClassDescription">
-					<string key="className">LBMGNoRotateViewController</string>
-					<string key="superclassName">UIViewController</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/LBMGNoRotateViewController.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">LBMGTourLibraryChildTBVC</string>
-					<string key="superclassName">LBMGNoRotateViewController</string>
-					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="maskingLayerView">UIView</string>
-						<string key="tableViewController">UITableViewController</string>
-						<string key="toursTableView">UITableView</string>
-					</dictionary>
-					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="maskingLayerView">
-							<string key="name">maskingLayerView</string>
-							<string key="candidateClassName">UIView</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="tableViewController">
-							<string key="name">tableViewController</string>
-							<string key="candidateClassName">UITableViewController</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="toursTableView">
-							<string key="name">toursTableView</string>
-							<string key="candidateClassName">UITableView</string>
-						</object>
-					</dictionary>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/LBMGTourLibraryChildTBVC.h</string>
-					</object>
-				</object>
-			</array>
-		</object>
+		<object class="IBClassDescriber" key="IBDocument.Classes"/>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
