@@ -44,7 +44,6 @@
 						<string key="NSFrame">{{5, 5}, {310, 538}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">5</int>
@@ -52,7 +51,7 @@
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
 							<string key="NSClassName">NSImage</string>
-							<string key="NSResourceName">tour_mainbkgrdimage.png</string>
+							<string key="NSResourceName">tour_mainbkgrdimage5.png</string>
 						</object>
 					</object>
 					<object class="IBUIScrollView" id="170270691">
@@ -80,7 +79,7 @@
 								<string key="NSFrame">{{269, 6}, {45, 39}}</string>
 								<reference key="NSSuperview" ref="170270691"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
+								<reference key="NSNextKeyView" ref="636196629"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -463,7 +462,7 @@
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="Refresh.png">{30, 30}</string>
-			<string key="tour_mainbkgrdimage.png">{320, 548}</string>
+			<string key="tour_mainbkgrdimage5.png">{630, 1126}</string>
 			<string key="tour_whitefade_bottom.png">{320, 118}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">2083</string>

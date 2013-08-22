@@ -537,6 +537,7 @@
 		E3A7DC1717C452B100AD674C /* start_pin_poi.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A7DC1617C452B100AD674C /* start_pin_poi.png */; };
 		E3A7DC1B17C5834000AD674C /* LBMGWebViewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E3A7DC1917C5833F00AD674C /* LBMGWebViewVC.m */; };
 		E3A7DC1C17C5834000AD674C /* LBMGWebViewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3A7DC1A17C5833F00AD674C /* LBMGWebViewVC.xib */; };
+		E3AA74C317C69BD300497B4A /* tour_mainbkgrdimage5.png in Resources */ = {isa = PBXBuildFile; fileRef = E3AA74C217C69BD300497B4A /* tour_mainbkgrdimage5.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1287,6 +1288,7 @@
 		E3A7DC1817C5833F00AD674C /* LBMGWebViewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBMGWebViewVC.h; sourceTree = "<group>"; };
 		E3A7DC1917C5833F00AD674C /* LBMGWebViewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBMGWebViewVC.m; sourceTree = "<group>"; };
 		E3A7DC1A17C5833F00AD674C /* LBMGWebViewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBMGWebViewVC.xib; sourceTree = "<group>"; };
+		E3AA74C217C69BD300497B4A /* tour_mainbkgrdimage5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tour_mainbkgrdimage5.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1643,6 +1645,7 @@
 				6D07834916FBB7F20029FAA4 /* tour_info_on.png */,
 				6D07834116FBB7F20029FAA4 /* tour_info_on@2x.png */,
 				6D078443170225C30029FAA4 /* tour_mainbkgrdimage.png */,
+				E3AA74C217C69BD300497B4A /* tour_mainbkgrdimage5.png */,
 				6D078442170225C30029FAA4 /* tour_mainbkgrdimage@2x.png */,
 				6D07834B16FBB7F20029FAA4 /* tour_personal.png */,
 				6D07834316FBB7F20029FAA4 /* tour_personal@2x.png */,
@@ -2974,6 +2977,7 @@
 				E3A7DC1517C4529300AD674C /* start_pin_poi@2x.png in Resources */,
 				E3A7DC1717C452B100AD674C /* start_pin_poi.png in Resources */,
 				E3A7DC1C17C5834000AD674C /* LBMGWebViewVC.xib in Resources */,
+				E3AA74C317C69BD300497B4A /* tour_mainbkgrdimage5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

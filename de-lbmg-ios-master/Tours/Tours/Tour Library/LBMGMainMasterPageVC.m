@@ -16,7 +16,7 @@
 #import "LBMGWebViewVC.h"
 
 #define kSharpUrlString @"http://notlost.hostsrvr.com/SHARP/"
-#define kGearUrlString @"http://notlost.hostsrvr.com/deals/"
+#define kGearUrlString @"http://notlost.hostsrvr.com/gear/"
 
 //static NSString *kNameKey = @"nameKey";
 //static NSString *kImageKey = @"imageKey";
