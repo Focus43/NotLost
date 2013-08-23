@@ -41,6 +41,7 @@
 @interface LBMGBaseTourMapVC ()
 
 @property (assign, nonatomic) BOOL testMode;
+@property (strong, nonatomic) NSMutableArray *playedAudioPoints;
 
 @end
 
@@ -88,6 +89,15 @@
     self.currentUserContent = [[NSMutableArray alloc] init];
     
     self.navIndex = 0;
+    
+    NSString *keyStr = [NSString stringWithFormat:@"playedAudio_%@", [self.currentTour.tourID stringValue]];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSMutableArray *playedArray = [userDefaults objectForKey:keyStr];
+    if (playedArray) {
+        self.playedAudioPoints = playedArray;
+    } else {
+        self.playedAudioPoints = [NSMutableArray arrayWithCapacity:3];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -103,6 +113,12 @@
 }
 
 - (void)viewDidUnload {
+    NSString *keyStr = [NSString stringWithFormat:@"playedAudio_%@", [self.currentTour.tourID stringValue]];
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:self.playedAudioPoints
+                     forKey:keyStr];
+    [userDefaults synchronize];
+    
     [self setProgressBar:nil];
     [self setProgressContainer:nil];
     [super viewDidUnload];
@@ -452,8 +468,8 @@
 }
 
 - (void)processMediaLocation:(CLLocation *)newLocation {
-    
     if (self.currentMediaCircle) {
+        DLog(@"is currentMediaCircle");
         if (![self mapCircleContainsPoint:self.currentMediaCircle withPoint:newLocation]) {
             self.previousMediaPoint = self.currentMediaPoint;
             self.currentMediaCircle = nil;
@@ -547,9 +563,22 @@
     if (point.audio) {
         NSString *audioPoint = [[LBMGUtilities audioPathForTourID:self.currentTour.tourID] stringByAppendingPathComponent:point.audio];
         if ([point.type isEqualToString:@"AudioPoint"] && self.currentTour.isRealTour) {
+            for (NSNumber *pointIdx in self.playedAudioPoints) {
+                if ([pointIdx isEqualToNumber:point.index]) {
+                    return;
+                }
+            }
             [self playMediaAudioFileNamed:audioPoint];
+            [self.playedAudioPoints addObject:point.index];
+            
         } else {
+            for (NSNumber *pointIdx in self.playedAudioPoints) {
+                if ([pointIdx isEqualToNumber:point.index]) {
+                    return;
+                }
+            }
             [self playAudioFileNamed:audioPoint];
+            [self.playedAudioPoints addObject:point.index];
         }
     }
     
@@ -566,7 +595,6 @@
         [self.progressBar setValue:1.0];
         self.currentTour.lastPointPassedIndex = -1;
         NSString *tagString = [NSString stringWithFormat:@"tour_complete-%@",[self.tourMC.tourID stringValue]];
-        DLog(@"%@", tagString);
         [[UAPush shared] addTagToCurrentDevice:tagString];
         [[UAPush shared] updateRegistration];
     }
@@ -582,9 +610,7 @@
 }
 
 - (void)updateAnnotations {
-    
-    self.currentTour.lastPointPassedIndex = 8;
-    
+        
     BOOL startWasFound = NO;
     self.mapView.delegate = self;
     [self.mapView removeAnnotations:[self.mapView annotations]];
@@ -704,7 +730,6 @@
 
 #pragma mark - Media Functions
 - (void)playAudioFileNamed:(NSString *)name {
-    
     DLog(@"play Audio - %@", name);
     NSURL *url = [NSURL fileURLWithPath:name];
     
@@ -722,6 +747,7 @@
         self.isPlayingNavAudio = YES;
         self.playingAudioName = name;
         if (self.isPlayingMediaAudio) {
+            DLog(@"isPlayingMediaAudio");
             [self.mediaAudioPlayer fadeToVolume:0.0 duration:0.3 completion:^{
                 [self.mediaAudioPlayer pause];
                 [self.audioPlayer play];
@@ -734,14 +760,18 @@
 }
 
 - (void)playMediaAudioFileNamed:(NSString *)name {
-    
     DLog(@"play Audio - %@", name);
     NSURL *url = [NSURL fileURLWithPath:name];
     
     if (self.isPlayingMediaAudio && [self.playingAudioName isEqualToString:name]) {
-        DLog(@"trying to play twice");
         return;
     }
+//    for (NSString *audioFile in self.playedAudioPoints) {
+//        if ([audioFile isEqualToString:name]) {
+//            DLog(@"played already");
+//            return;
+//        }
+//    }
     
     [self.mediaAudioPlayer pause];
     self.mediaAudioPlayer = nil;
@@ -1143,10 +1173,9 @@
     [self updateProgressForNRBTour];
 }
 
-- (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view {
-    DLog(@"didDeselectAnnotationView");
-    
-}
+//- (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view {
+//    
+//}
 
 #pragma mark - Debug view
 - (IBAction)toggleDebugView:(id)sender {
