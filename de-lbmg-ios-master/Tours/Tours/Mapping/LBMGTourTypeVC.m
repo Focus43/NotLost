@@ -191,7 +191,7 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
     NSNumber *storedIndex = [userDefaults objectForKey:[self.currentTour.tourID stringValue]];
-    
+    DLog(@"self.currentTour.touchedPoints = %@", self.currentTour.touchedPoints);
     BOOL touched = NO;
     for (NSNumber *touchedPoint in self.currentTour.touchedPoints) {
         if ([touchedPoint boolValue]) {
@@ -217,6 +217,7 @@
 {
     [self addChildViewController:controller];
     [self.scroller addSubview:controller.view];
+//    controller.view.frame = CGRectOffset(self.view.bounds, 320, 0);
     [self push];
 
 }
