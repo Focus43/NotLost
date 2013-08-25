@@ -1,7 +1,16 @@
-{
-	"APP_STORE_OR_AD_HOC_BUILD" = YES;
-	"DEVELOPMENT_APP_KEY" = "GqSovmrATEW1Wv9s7FJb6g";
-	"DEVELOPMENT_APP_SECRET" = "JsH7qVziRGmDHqVzp15xUw";
-	"PRODUCTION_APP_KEY" = "HkvtpQo9Rl26aCnJ-ps7LA";
-	"PRODUCTION_APP_SECRET" = "UtavJQ89RRmTkeuSgOwCug";
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>inProduction</key>
+	<true/>
+	<key>developmentAppKey</key>
+	<string>HkvtpQo9Rl26aCnJ-ps7LA</string>
+	<key>developmentAppSecret</key>
+	<string>UtavJQ89RRmTkeuSgOwCug</string>
+	<key>productionAppKey</key>
+	<string>GqSovmrATEW1Wv9s7FJb6g</string>
+	<key>productionAppSecret</key>
+	<string>JsH7qVziRGmDHqVzp15xUw</string>
+</dict>
+</plist>

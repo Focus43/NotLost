@@ -226,6 +226,8 @@
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     [userDefaults removeObjectForKey:[self.tourID stringValue]];
+    NSString *keyStr = [NSString stringWithFormat:@"playedAudio_%@", [self.currentTour.tourID stringValue]];
+    [userDefaults removeObjectForKey:keyStr];
     [LBMGUtilities deleteTouchedPoisForID:self.tourID];
     if (self.currentTour.isRealTour) {
         [self.currentTour loadAndBuildData];

@@ -22,7 +22,6 @@
 #import <MobileCoreServices/MobileCoreServices.h>
 #import "XCRPointAnnotation.h"
 #import "Photo.h"
-//#import "Tour.h"
 #import "TourPoint.h"
 #import "TourData.h"
 #import "MediaPoint.h"
@@ -35,7 +34,12 @@
 #import "LBMGAddCommentVC.h"
 #import "LBMGVideoVC.h"
 #import "LBMGTourTypeVC.h"
+
+#import "UAConfig.h"
+#import "UAirship.h"
 #import "UAPush.h"
+#import "UAAnalytics.h"
+
 #import "UIToggleButton.h"
 
 @interface LBMGBaseTourMapVC ()
