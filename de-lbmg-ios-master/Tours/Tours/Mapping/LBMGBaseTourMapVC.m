@@ -781,7 +781,7 @@
         self.isPlayingNavAudio = YES;
         self.playingAudioName = name;
         if (self.isPlayingMediaAudio) {
-            TFLog(@"isPlayingMediaAudio");
+            TFLog(@"isPlayingMediaAudio - if mediaAudioPlayer is going it should fade out");
             [self.mediaAudioPlayer fadeToVolume:0.0 duration:0.3 completion:^{
                 [self.mediaAudioPlayer pause];
                 [self.audioPlayer play];
@@ -803,12 +803,6 @@
     if (self.isPlayingMediaAudio && [self.playingAudioName isEqualToString:name]) {
         return;
     }
-//    for (NSString *audioFile in self.playedAudioPoints) {
-//        if ([audioFile isEqualToString:name]) {
-//            DLog(@"played already");
-//            return;
-//        }
-//    }
     
     [self.mediaAudioPlayer pause];
     self.mediaAudioPlayer = nil;
@@ -820,6 +814,7 @@
         self.playingAudioName = name;
         [self.mediaAudioPlayer play];
         if (self.isPlayingNavAudio) {
+            TFLog(@"in playMediaAudioFileNamed --- isPlayingNavAudio=>mediaAudioPlayer pauses");
             [self.mediaAudioPlayer pause];
         }
     }
