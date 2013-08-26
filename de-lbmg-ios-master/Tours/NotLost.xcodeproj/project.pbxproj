@@ -512,9 +512,6 @@
 		A9C97F041700937500F0BC9C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C97F031700937500F0BC9C /* QuartzCore.framework */; };
 		A9C97F061700937F00F0BC9C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C97F051700937F00F0BC9C /* CoreLocation.framework */; };
 		A9C97F081700938500F0BC9C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C97F071700938500F0BC9C /* MapKit.framework */; };
-		A9C97F4A1700951200F0BC9C /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C97F341700951200F0BC9C /* libTestFlight.a */; };
-		A9C97F4B1700951200F0BC9C /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = A9C97F351700951200F0BC9C /* README.md */; };
-		A9C97F4C1700951200F0BC9C /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = A9C97F361700951200F0BC9C /* release_notes.md */; };
 		A9C97F561700962E00F0BC9C /* PRPAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C97EEC1700929B00F0BC9C /* PRPAlertView.m */; };
 		A9C97F581700962E00F0BC9C /* XCRPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C97EEE170092DB00F0BC9C /* XCRPointAnnotation.m */; };
 		A9C97F6C17009AC700F0BC9C /* testRoutes.json in Resources */ = {isa = PBXBuildFile; fileRef = A9C97F5F17009A5100F0BC9C /* testRoutes.json */; };
@@ -529,6 +526,9 @@
 		E343565917B9C157000409CE /* LBMGNavTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E343565717B9C157000409CE /* LBMGNavTableVC.xib */; };
 		E343565C17B9CE9A000409CE /* LBMGNavTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E343565B17B9CE9A000409CE /* LBMGNavTableCell.m */; };
 		E343565E17B9CED7000409CE /* LBMGNavTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E343565D17B9CED7000409CE /* LBMGNavTableCell.xib */; };
+		E34E50C617CBEB0400304AAD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E34E50C017CBEB0400304AAD /* README.md */; };
+		E34E50C717CBEB0400304AAD /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = E34E50C117CBEB0400304AAD /* release_notes.md */; };
+		E34E50C817CBEB2C00304AAD /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E34E50BF17CBEB0400304AAD /* libTestFlight.a */; };
 		E376EA3D17BD614300E2399F /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = E376EA3B17BD614300E2399F /* menu.png */; };
 		E376EA3E17BD614300E2399F /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E376EA3C17BD614300E2399F /* menu@2x.png */; };
 		E3A7DC1517C4529300AD674C /* start_pin_poi@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E3A7DC1417C4529300AD674C /* start_pin_poi@2x.png */; };
@@ -1263,10 +1263,6 @@
 		A9C97F031700937500F0BC9C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A9C97F051700937F00F0BC9C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A9C97F071700938500F0BC9C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		A9C97F341700951200F0BC9C /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
-		A9C97F351700951200F0BC9C /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		A9C97F361700951200F0BC9C /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
-		A9C97F371700951200F0BC9C /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		A9C97F5B1700965400F0BC9C /* Dlog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dlog.h; sourceTree = "<group>"; };
 		A9C97F5F17009A5100F0BC9C /* testRoutes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = testRoutes.json; sourceTree = "<group>"; };
 		A9C97F861700ACDA00F0BC9C /* denverParker.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = denverParker.gpx; sourceTree = "<group>"; };
@@ -1282,6 +1278,12 @@
 		E343565A17B9CE9A000409CE /* LBMGNavTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LBMGNavTableCell.h; path = Navigation/LBMGNavTableCell.h; sourceTree = "<group>"; };
 		E343565B17B9CE9A000409CE /* LBMGNavTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LBMGNavTableCell.m; path = Navigation/LBMGNavTableCell.m; sourceTree = "<group>"; };
 		E343565D17B9CED7000409CE /* LBMGNavTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LBMGNavTableCell.xib; path = Navigation/LBMGNavTableCell.xib; sourceTree = "<group>"; };
+		E34E50BF17CBEB0400304AAD /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		E34E50C017CBEB0400304AAD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		E34E50C117CBEB0400304AAD /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		E34E50C217CBEB0400304AAD /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		E34E50C317CBEB0400304AAD /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		E34E50C417CBEB0400304AAD /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		E376EA3B17BD614300E2399F /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		E376EA3C17BD614300E2399F /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		E3A7DC1417C4529300AD674C /* start_pin_poi@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "start_pin_poi@2x.png"; sourceTree = "<group>"; };
@@ -1430,6 +1432,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E34E50C817CBEB2C00304AAD /* libTestFlight.a in Frameworks */,
 				E3AA75B517C8029700497B4A /* AudioToolbox.framework in Frameworks */,
 				E3AA74E417C7FC1000497B4A /* libUAirship-2.0.2.a in Frameworks */,
 				6DC2FBED176F822100CEC4E0 /* CoreTelephony.framework in Frameworks */,
@@ -1451,7 +1454,6 @@
 				6D0782D316FB8FBD0029FAA4 /* SystemConfiguration.framework in Frameworks */,
 				6D0781E316F78D6F0029FAA4 /* Foundation.framework in Frameworks */,
 				6D0781E516F78D6F0029FAA4 /* CoreGraphics.framework in Frameworks */,
-				A9C97F4A1700951200F0BC9C /* libTestFlight.a in Frameworks */,
 				6D18815217B1F4C0001DCAB7 /* libGoogleAdMobAds.a in Frameworks */,
 				6D18815717B1F4C0001DCAB7 /* libTapItVAST.a in Frameworks */,
 				E3AA757C17C7FD8F00497B4A /* libUAirship-2.0.2.a in Frameworks */,
@@ -1883,6 +1885,7 @@
 		6D0782AD16FB8D690029FAA4 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				E34E50BE17CBEB0400304AAD /* TestFlightSDK2.0.0 */,
 				E3AA74E517C7FD8F00497B4A /* Airship */,
 				6D18805917B1F48F001DCAB7 /* TapIt */,
 				A94DBA7F1728852000B3E1F7 /* SDWebImage */,
@@ -1890,7 +1893,6 @@
 				A91B2042171320A400E1B608 /* ALRadial */,
 				A99ECFC4170DBEA900977452 /* BDAPAudioPlayer */,
 				6D3A836B170C8B7B009F75F1 /* SSZIP */,
-				A9C97F331700951200F0BC9C /* TestFlightSDK1 */,
 				6D0782AE16FB8E910029FAA4 /* MKNetworkKit */,
 			);
 			path = "Third Party";
@@ -2536,17 +2538,6 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		A9C97F331700951200F0BC9C /* TestFlightSDK1 */ = {
-			isa = PBXGroup;
-			children = (
-				A9C97F341700951200F0BC9C /* libTestFlight.a */,
-				A9C97F351700951200F0BC9C /* README.md */,
-				A9C97F361700951200F0BC9C /* release_notes.md */,
-				A9C97F371700951200F0BC9C /* TestFlight.h */,
-			);
-			path = TestFlightSDK1;
-			sourceTree = "<group>";
-		};
 		E343565417B9C08C000409CE /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
@@ -2558,6 +2549,19 @@
 				E343565D17B9CED7000409CE /* LBMGNavTableCell.xib */,
 			);
 			name = Navigation;
+			sourceTree = "<group>";
+		};
+		E34E50BE17CBEB0400304AAD /* TestFlightSDK2.0.0 */ = {
+			isa = PBXGroup;
+			children = (
+				E34E50BF17CBEB0400304AAD /* libTestFlight.a */,
+				E34E50C017CBEB0400304AAD /* README.md */,
+				E34E50C117CBEB0400304AAD /* release_notes.md */,
+				E34E50C217CBEB0400304AAD /* TestFlight+AsyncLogging.h */,
+				E34E50C317CBEB0400304AAD /* TestFlight+ManualSessions.h */,
+				E34E50C417CBEB0400304AAD /* TestFlight.h */,
+			);
+			path = TestFlightSDK2.0.0;
 			sourceTree = "<group>";
 		};
 		E3AA74E517C7FD8F00497B4A /* Airship */ = {
@@ -3045,8 +3049,6 @@
 				6D07843C16FD14D00029FAA4 /* white_backarrow.png in Resources */,
 				6D07843D16FD14D00029FAA4 /* tour_yourcontent_text.png in Resources */,
 				6D07843E16FD14D00029FAA4 /* tour_yourcontent_text@2x.png in Resources */,
-				A9C97F4B1700951200F0BC9C /* README.md in Resources */,
-				A9C97F4C1700951200F0BC9C /* release_notes.md in Resources */,
 				A9C97F8D1700ACEC00F0BC9C /* denverParker.gpx in Resources */,
 				A9C97F8E1700ACEC00F0BC9C /* fort.gpx in Resources */,
 				A9C97F8F1700ACEC00F0BC9C /* home.gpx in Resources */,
@@ -3318,6 +3320,8 @@
 				E3AA75B117C7FD8F00497B4A /* UAPushSettingsTokenView.xib in Resources */,
 				E3AA75B217C7FD8F00497B4A /* UAPushSettingsUserInfoView.xib in Resources */,
 				E3AA75B317C7FD8F00497B4A /* UAPushSettingsView.xib in Resources */,
+				E34E50C617CBEB0400304AAD /* README.md in Resources */,
+				E34E50C717CBEB0400304AAD /* release_notes.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3535,6 +3539,7 @@
 					"\"$(SRCROOT)/Tours/Third Party/Lib/GoogleAdMobAdsSDK/Add-ons/GoogleAnalyticsiOS_2.0beta3/Library\"",
 					"\"$(SRCROOT)/Tours/Third Party/Lib/GoogleAdMobAdsSDK\"",
 					"\"$(SRCROOT)/Tours/Third Party/Lib\"",
+					"\"$(SRCROOT)/Tours/Third Party/TestFlightSDK2.0.0\"",
 				);
 				PRODUCT_NAME = NotLost;
 				PROVISIONING_PROFILE = "E6E6301F-18B3-40A4-A780-C0F3EDEE8D02";
@@ -3617,6 +3622,7 @@
 					"\"$(SRCROOT)/Tours/Third Party/Lib/GoogleAdMobAdsSDK/Add-ons/GoogleAnalyticsiOS_2.0beta3/Library\"",
 					"\"$(SRCROOT)/Tours/Third Party/Lib/GoogleAdMobAdsSDK\"",
 					"\"$(SRCROOT)/Tours/Third Party/Lib\"",
+					"\"$(SRCROOT)/Tours/Third Party/TestFlightSDK2.0.0\"",
 				);
 				PRODUCT_NAME = NotLost;
 				PROVISIONING_PROFILE = "45CCCA30-C76D-4B2D-9C2F-B485182EB492";
@@ -3643,6 +3649,7 @@
 					"\"$(SRCROOT)/Tours/Third Party/Lib/GoogleAdMobAdsSDK/Add-ons/GoogleAnalyticsiOS_2.0beta3/Library\"",
 					"\"$(SRCROOT)/Tours/Third Party/Lib/GoogleAdMobAdsSDK\"",
 					"\"$(SRCROOT)/Tours/Third Party/Lib\"",
+					"\"$(SRCROOT)/Tours/Third Party/TestFlightSDK2.0.0\"",
 				);
 				PRODUCT_NAME = NotLost;
 				PROVISIONING_PROFILE = "";
