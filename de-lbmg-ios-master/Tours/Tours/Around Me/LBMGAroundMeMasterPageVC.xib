@@ -188,6 +188,7 @@
 						<string key="NSFrame">{{35, 492}, {251, 44}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">4</int>
@@ -287,6 +288,7 @@
 						<string key="NSFrame">{{0, 80}, {320, 488}}</string>
 						<reference key="NSSuperview" ref="824175175"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -329,6 +331,7 @@
 						<string key="NSFrame">{{0, 44}, {320, 504}}</string>
 						<reference key="NSSuperview" ref="27435349"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -897,7 +900,7 @@
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
-			<string key="around_backgroundimage5.png">{630, 1126}</string>
+			<string key="around_backgroundimage5.png">{620, 1076}</string>
 			<string key="aroundme_searchfield.png">{252, 30}</string>
 			<string key="aroundme_searchicon.png">{31, 32}</string>
 			<string key="aroundme_tinygraysearchicon.png">{14, 15}</string>
