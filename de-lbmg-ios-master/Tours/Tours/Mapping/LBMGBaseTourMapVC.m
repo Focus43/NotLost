@@ -450,13 +450,16 @@
 #pragma mark - New Location Handlers
 - (void)processPOILocation:(CLLocation *)newLocation
 {
+    TFLog(@"processPOILocation");
     BOOL passedThroughPOI = FALSE;
     int i = 0;
     for (PoiPoint *point in self.currentTour.route.poiPoints) {
+        TFLog(@"poiPoints -> point name = %@ on route? %c", point.name, point.onRoute);
         MKCircle *poiCircle = [self getCircleForLatitude:point.latitude andLogitude:point.longitude andMeters:point.radius];
         
         if (!point.onRoute && [self mapCircleContainsPoint:poiCircle withPoint:newLocation]) {
             // trigger poi stuff
+            TFLog(@"contains point -> point name = %@", point.name);
             int index = [self.currentTour.route.poiPoints indexOfObject:point];
             NSNumber *visited = [self.currentTour.touchedPoints objectAtIndex:index];
             if (![visited boolValue]) {
@@ -465,8 +468,13 @@
                 [LBMGUtilities storeTouchedPois:self.currentTour.touchedPoints forId:self.currentTour.tourID];
                 
                 // point should open the info view
-                point.isOpen = YES;
+//                TFLog(@"point shoud be open %@", point.name);
+//                point.isOpen = YES;
             }
+            
+            // point should open the info view
+//            TFLog(@"point shoud be open %@", point.name);
+//            point.isOpen = YES;
             
             [self showPOIMessageForNRBTours:[self.currentTour.route.poiPoints objectAtIndex:index]];
         }
@@ -588,7 +596,7 @@
             
         } else {
             for (NSNumber *pointIdx in self.playedAudioPoints) {
-                if ([pointIdx isEqualToNumber:point.index]) {
+                if ([pointIdx isEqualToNumber:point.index] && ![point.type isEqualToString:@"NavigationPoint"]) {
                     TFLog(@"no play 2");
                     return;
                 }
@@ -622,6 +630,7 @@
 
 - (BOOL)mapCircleContainsPoint:(MKCircle *)circle withPoint:(CLLocation *)point {
     float meters = MKMetersBetweenMapPoints(MKMapPointForCoordinate(circle.coordinate), MKMapPointForCoordinate(point.coordinate));
+    TFLog(@"mapCircleContainsPoint = %d", (meters <= circle.radius));
     return (meters <= circle.radius);
 }
 

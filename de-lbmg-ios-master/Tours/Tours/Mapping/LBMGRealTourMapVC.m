@@ -451,7 +451,7 @@
 //        DLogS(@"last point - %d", self.currentTour.lastPointPassedIndex);
         TFLog(@"last point - %d", self.currentTour.lastPointPassedIndex);
         self.withinPointRadius = FALSE;
-        self.currentlySelectedAnnotation = NULL;
+//        self.currentlySelectedAnnotation = NULL;
 
     }
 }
