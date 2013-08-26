@@ -188,10 +188,11 @@
 
 - (void)testForRetart:(UIViewController *)controller
 {
+    TFLog(@"testForRetart");
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
     NSNumber *storedIndex = [userDefaults objectForKey:[self.currentTour.tourID stringValue]];
-    DLog(@"self.currentTour.touchedPoints = %@", self.currentTour.touchedPoints);
+    TFLog(@"self.currentTour.touchedPoints = %@", self.currentTour.touchedPoints);
     BOOL touched = NO;
     for (NSNumber *touchedPoint in self.currentTour.touchedPoints) {
         if ([touchedPoint boolValue]) {

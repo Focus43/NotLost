@@ -402,6 +402,7 @@
 
 
 - (void)processOnRouteLocation:(CLLocation *)newLocation {
+    TFLog(@"in processOnRouteLocation and lastPointPassedIndex = %d", self.currentTour.lastPointPassedIndex);
     // not off route
     // check if user is at the next point
     if (self.currentTour.lastPointPassedIndex + 1 >=  self.currentTour.route.tourPoints.count) {
@@ -429,7 +430,7 @@
     }
     if (distFromNext <= nextPointRadius) {
         self.withinPointRadius = TRUE;
-        DLog(@"Point Detected - %@", nextPoint.name);
+        TFLog(@"Point Detected - %@", nextPoint.name);
         // sets the progress bar
         [self updateProgressBarIfRouteBased];
         
@@ -447,7 +448,8 @@
     }
     else if (distTraveled >= [previousPoint.radius doubleValue] && self.withinPointRadius) {
         DLog(@"Left a radius");
-        DLogS(@"last point - %d", self.currentTour.lastPointPassedIndex);
+//        DLogS(@"last point - %d", self.currentTour.lastPointPassedIndex);
+        TFLog(@"last point - %d", self.currentTour.lastPointPassedIndex);
         self.withinPointRadius = FALSE;
     }
 }

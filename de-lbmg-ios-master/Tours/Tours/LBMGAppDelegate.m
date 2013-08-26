@@ -101,7 +101,7 @@
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     
-    UA_LINFO(@"Received remote notification (in appDelegate): %@", userInfo);
+//    UA_LINFO(@"Received remote notification (in appDelegate): %@", userInfo);
     
     // Optionally provide a delegate that will be used to handle notifications received while the app is running
     // [UAPush shared].delegate = your custom push delegate class conforming to the UAPushNotificationDelegate protocol

@@ -182,6 +182,8 @@ NSString * const LBMGUtilitiesDownloadProgress = @"LBMGUtilitiesDownloadProgress
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
     [userDefaults removeObjectForKey:[tourID stringValue]];
+    NSString *keyStr = [NSString stringWithFormat:@"playedAudio_%@", [tourID stringValue]];
+    [userDefaults removeObjectForKey:keyStr];
 
 }
 

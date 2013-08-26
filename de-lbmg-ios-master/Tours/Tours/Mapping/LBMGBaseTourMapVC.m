@@ -103,6 +103,7 @@
     } else {
         self.playedAudioPoints = [NSMutableArray arrayWithCapacity:3];
     }
+    TFLog(@"LBMGBaseTourMapVC viewDIdLoad - self.playedAudioPoints = %@", self.playedAudioPoints);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -570,11 +571,15 @@
 #pragma mark - Location Helpers
 // handles the activation of the media for a waypoint
 - (void)activateWayPoint:(TourPoint *)point {
+    TFLog(@"activateWayPoint");
+    TFLog(@"point.index = %@, point.type = %@, point.audio = %@", point.index, point.type, point.audio);
     if (point.audio) {
         NSString *audioPoint = [[LBMGUtilities audioPathForTourID:self.currentTour.tourID] stringByAppendingPathComponent:point.audio];
+        
         if ([point.type isEqualToString:@"AudioPoint"] && self.currentTour.isRealTour) {
             for (NSNumber *pointIdx in self.playedAudioPoints) {
                 if ([pointIdx isEqualToNumber:point.index]) {
+                    TFLog(@"no play 1");
                     return;
                 }
             }
@@ -584,6 +589,7 @@
         } else {
             for (NSNumber *pointIdx in self.playedAudioPoints) {
                 if ([pointIdx isEqualToNumber:point.index]) {
+                    TFLog(@"no play 2");
                     return;
                 }
             }
@@ -748,11 +754,11 @@
 
 #pragma mark - Media Functions
 - (void)playAudioFileNamed:(NSString *)name {
-    DLog(@"play Audio - %@", name);
+    TFLog (@"in playAudioFileNamed --- play Audio - %@", name);
     NSURL *url = [NSURL fileURLWithPath:name];
     
     if (self.isPlayingNavAudio && [self.playingAudioName isEqualToString:name]) {
-        DLog(@"trying to play twice");
+        TFLog(@"trying to play twice");
         return;
     }
 
@@ -760,12 +766,13 @@
     self.audioPlayer = nil;
     NSError *error;
     self.audioPlayer = [[BDAPAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    TFLog(@"self.audioPlayer = %@", self.audioPlayer);
     self.audioPlayer.delegate = self;
     if (!error) {
         self.isPlayingNavAudio = YES;
         self.playingAudioName = name;
         if (self.isPlayingMediaAudio) {
-            DLog(@"isPlayingMediaAudio");
+            TFLog(@"isPlayingMediaAudio");
             [self.mediaAudioPlayer fadeToVolume:0.0 duration:0.3 completion:^{
                 [self.mediaAudioPlayer pause];
                 [self.audioPlayer play];
@@ -773,12 +780,15 @@
         } else {
             [self.audioPlayer play];
         }
+    } else {
+        TFLog(@"audio error: %@ - %@", error, error.userInfo);
     }
-//    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Starting New Audio - %@", name]];
+    
+    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Starting New Audio - %@", name]];
 }
 
 - (void)playMediaAudioFileNamed:(NSString *)name {
-    DLog(@"play Audio - %@", name);
+    TFLog(@"in playMediaAudioFileNamed --- play Audio - %@", name);
     NSURL *url = [NSURL fileURLWithPath:name];
     
     if (self.isPlayingMediaAudio && [self.playingAudioName isEqualToString:name]) {
@@ -804,7 +814,7 @@
             [self.mediaAudioPlayer pause];
         }
     }
-    [TestFlight passCheckpoint:[NSString stringWithFormat:@"Starting New Audio - %@", name]];
+    [TestFlight passCheckpoint:[NSString stringWithFormat:@"playMediaAudioFileNamed: Starting New Audio - %@", name]];
 }
 
 #pragma mark - AVAudioPlayer
