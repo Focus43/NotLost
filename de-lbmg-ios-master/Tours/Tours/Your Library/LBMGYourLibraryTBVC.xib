@@ -47,7 +47,7 @@
 						<reference key="NSNextKeyView" ref="500905568"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIClipsSubviews">YES</bool>
-						<int key="IBUIContentMode">5</int>
+						<int key="IBUIContentMode">2</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<object class="NSCustomResource" key="IBUIImage">
@@ -164,7 +164,6 @@
 						<string key="NSFrame">{{0, 411}, {320, 132}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<reference key="IBUIBackgroundColor" ref="394897539"/>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -466,7 +465,7 @@
 		<dictionary class="NSMutableDictionary" key="IBDocument.LastKnownImageSizes">
 			<string key="buytour_subheader.png">{320, 25}</string>
 			<string key="close_x.png">{32, 33}</string>
-			<string key="tour_mainbkgrdimage.png">{320, 548}</string>
+			<string key="tour_mainbkgrdimage.png">{312, 470}</string>
 			<string key="tour_yourcontent_text.png">{209, 21}</string>
 		</dictionary>
 		<string key="IBCocoaTouchPluginVersion">2083</string>
