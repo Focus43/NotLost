@@ -1464,7 +1464,6 @@
 		6D0781D416F78D6F0029FAA4 = {
 			isa = PBXGroup;
 			children = (
-				E3AA75B417C8029600497B4A /* AudioToolbox.framework */,
 				E3AA74E317C7FC1000497B4A /* libUAirship-2.0.2.a */,
 				6DB2222B178F4F0700F97D10 /* customer.xcconfig */,
 				6D14538D170B37C100BB0E1A /* DataModel */,
@@ -1486,6 +1485,7 @@
 		6D0781DF16F78D6F0029FAA4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E3AA75B417C8029600497B4A /* AudioToolbox.framework */,
 				6DC2FBEA176F821500CEC4E0 /* libsqlite3.dylib */,
 				6DC2FBEC176F822100CEC4E0 /* CoreTelephony.framework */,
 				6DFDFA9217556E5500395C4B /* EventKit.framework */,

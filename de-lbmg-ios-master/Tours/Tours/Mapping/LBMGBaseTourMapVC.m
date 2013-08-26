@@ -91,6 +91,7 @@
     self.radialMenu.delegate = self;
     
     self.currentUserContent = [[NSMutableArray alloc] init];
+    self.poiPins = [[NSMutableArray alloc] init];
     
     self.navIndex = 0;
     
@@ -367,6 +368,8 @@
                 pinView.centerOffset = CGPointMake(0, -22);
                 pinView.image = [UIImage imageNamed:@"tour_pin_todo"];
                 
+                annotate.pinView = pinView;
+                
                 UIToggleButton *annotationToggle = [[UIToggleButton alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
                 [annotationToggle setToggleOffImage:[UIImage imageNamed:@"tour_annotation_checkbox_off"] andToggleOnImage:[UIImage imageNamed:@"tour_annotation_checkbox_on"]];
                 [annotationToggle addTarget:self action:@selector(toggleAnnotation) forControlEvents:UIControlEventTouchUpInside];
@@ -374,9 +377,9 @@
                 
                 pinView.leftCalloutAccessoryView = annotationToggle;
                 
-                if (annotate.isStart) {
-                    pinView.image = [UIImage imageNamed:@"start_pin_poi"];
-                }
+//                if (annotate.isStart) {
+//                    pinView.image = [UIImage imageNamed:@"start_pin_poi"];
+//                }
                 
                 return pinView;
             }
@@ -401,9 +404,9 @@
                 
                 pinView.leftCalloutAccessoryView = annotationToggle;
                 
-                if (annotate.isStart) {
-                    pinView.image = [UIImage imageNamed:@"start_pin_poi"];
-                }
+//                if (annotate.isStart) {
+//                    pinView.image = [UIImage imageNamed:@"start_pin_poi"];
+//                }
                 
                 return pinView;
             }
@@ -444,7 +447,8 @@
 }
 
 #pragma mark - New Location Handlers
-- (void)processPOILocation:(CLLocation *)newLocation {
+- (void)processPOILocation:(CLLocation *)newLocation
+{
     BOOL passedThroughPOI = FALSE;
     int i = 0;
     for (PoiPoint *point in self.currentTour.route.poiPoints) {
@@ -458,9 +462,11 @@
                 passedThroughPOI = TRUE;
                 [self.currentTour.touchedPoints replaceObjectAtIndex:[self.currentTour.route.poiPoints indexOfObject:point] withObject:[NSNumber numberWithBool:YES]]; 
                 [LBMGUtilities storeTouchedPois:self.currentTour.touchedPoints forId:self.currentTour.tourID];
+                
+                // point should open the info view
+                point.isOpen = YES;
             }
             
-            [TestFlight passCheckpoint:@"POI detected"];
             [self showPOIMessageForNRBTours:[self.currentTour.route.poiPoints objectAtIndex:index]];
         }
         i++;
@@ -663,6 +669,14 @@
         
         
         [self.mapView addAnnotation:pin];
+        
+        if (way.isOpen) {
+            NSUInteger annotationIdx = [[self.mapView annotations] indexOfObject:pin];
+            [self.mapView selectAnnotation:[[self.mapView annotations] objectAtIndex:annotationIdx] animated:YES];
+        }
+        
+        [self.poiPins addObject:pin];
+        
         i++;
     }
     

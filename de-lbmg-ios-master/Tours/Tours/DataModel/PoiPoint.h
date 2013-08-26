@@ -13,6 +13,7 @@
 @property (nonatomic, copy) NSString *type;
 @property (nonatomic, copy) NSString *labelText;
 @property (nonatomic) BOOL onRoute;
+@property (nonatomic) BOOL isOpen;
 
 + (PoiPoint *)instanceFromDictionary:(NSDictionary *)aDictionary;
 - (void)setAttributesFromDictionary:(NSDictionary *)aDictionary;

@@ -44,6 +44,8 @@ typedef enum {
 @property (strong, nonatomic) NSMutableArray *mediaCircles;
 @property (strong, nonatomic) NSMutableArray *poiCircles;
 
+@property (strong, nonatomic) NSMutableArray *poiPins;
+
 @property (nonatomic, strong) MKPolyline* navLine;
 @property (nonatomic, strong) MKPolygon* pathRect;
 
