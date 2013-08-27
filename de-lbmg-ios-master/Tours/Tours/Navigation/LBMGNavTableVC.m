@@ -25,7 +25,7 @@ static NSString *CellIdentifier = @"NavCell";
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.navList = [NSArray arrayWithObjects:@"Tours", @"Around Me", @"Calendar", @"SHARP", @"Gear", @"Your Content", nil];
+        self.navList = [NSArray arrayWithObjects:@"Tours", @"Around Me", @"Calendar", @"Get Help", @"Gear", @"Your Content", nil];
     }
     return self;
 }

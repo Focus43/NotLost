@@ -343,17 +343,17 @@
 - (void)processOutOfAreaLocation:(CLLocation *)newLocation
 {
     // deselect any annotations taht might be open
-    NSArray *selectedAnnotations = self.mapView.selectedAnnotations;
-    if ( [selectedAnnotations count] > 0 ) {
-        for (XCRPointAnnotation *annotation in selectedAnnotations) {
-            [self.mapView deselectAnnotation:annotation animated:YES];
-            
-            PoiPoint *point = [self.currentTour.route.poiPoints objectAtIndex:[[self.mapView annotations] indexOfObject:annotation]];
-            point.isOpen = NO;
-        }
-        self.currentlySelectedAnnotation = NULL;
-    }
-        
+//    NSArray *selectedAnnotations = self.mapView.selectedAnnotations;
+//    if ( [selectedAnnotations count] > 0 ) {
+//        for (XCRPointAnnotation *annotation in selectedAnnotations) {
+//            [self.mapView deselectAnnotation:annotation animated:YES];
+//            
+//            PoiPoint *point = [self.currentTour.route.poiPoints objectAtIndex:[[self.mapView annotations] indexOfObject:annotation]];
+//            point.isOpen = NO;
+//        }
+//        self.currentlySelectedAnnotation = NULL;
+//    }
+    
     if (self.currentTour.lastPointPassedIndex != -1)
         [self handleOutOfArea:newLocation];
     // check direction of travel

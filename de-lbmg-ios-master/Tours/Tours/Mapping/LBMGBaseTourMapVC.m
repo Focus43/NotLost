@@ -687,7 +687,7 @@
         
         if (way.isOpen) {
             NSUInteger annotationIdx = [[self.mapView annotations] indexOfObject:pin];
-            [self.mapView selectAnnotation:[[self.mapView annotations] objectAtIndex:annotationIdx] animated:YES];
+//            [self.mapView selectAnnotation:[[self.mapView annotations] objectAtIndex:annotationIdx] animated:YES];
         }
         
         [self.poiPins addObject:pin];
