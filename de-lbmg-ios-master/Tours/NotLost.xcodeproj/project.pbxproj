@@ -13,7 +13,6 @@
 		6D0781EB16F78D6F0029FAA4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6D0781E916F78D6F0029FAA4 /* InfoPlist.strings */; };
 		6D0781ED16F78D6F0029FAA4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0781EC16F78D6F0029FAA4 /* main.m */; };
 		6D0781F116F78D6F0029FAA4 /* LBMGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0781F016F78D6F0029FAA4 /* LBMGAppDelegate.m */; };
-		6D0781F316F78D6F0029FAA4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0781F216F78D6F0029FAA4 /* Default.png */; };
 		6D0781F716F78D6F0029FAA4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D0781F616F78D6F0029FAA4 /* Default-568h@2x.png */; };
 		6D0782AA16FB8D060029FAA4 /* LBMGMainMasterPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D0782A816FB8D060029FAA4 /* LBMGMainMasterPageVC.m */; };
 		6D0782AB16FB8D060029FAA4 /* LBMGMainMasterPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6D0782A916FB8D060029FAA4 /* LBMGMainMasterPageVC.xib */; };
@@ -2909,7 +2908,6 @@
 			files = (
 				A9C97F6C17009AC700F0BC9C /* testRoutes.json in Resources */,
 				6D0781EB16F78D6F0029FAA4 /* InfoPlist.strings in Resources */,
-				6D0781F316F78D6F0029FAA4 /* Default.png in Resources */,
 				6D0781F716F78D6F0029FAA4 /* Default-568h@2x.png in Resources */,
 				6D0782AB16FB8D060029FAA4 /* LBMGMainMasterPageVC.xib in Resources */,
 				6D0782DA16FBB6AF0029FAA4 /* LBMGTourLibraryChildTBVC.xib in Resources */,
@@ -3634,7 +3632,7 @@
 		6D07820216F78D6F0029FAA4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Katharine Lee (5G2W494B9G)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Katharine Lee (5G2W494B9G)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tours/NotLost-Prefix.pch";
@@ -3652,8 +3650,8 @@
 					"\"$(SRCROOT)/Tours/Third Party/TestFlightSDK2.0.0\"",
 				);
 				PRODUCT_NAME = NotLost;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D56A5811-EC34-4870-8DD4-9A966C46F826";
+				PROVISIONING_PROFILE = "378911B8-CF62-48C6-8715-85376D57B4F9";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "378911B8-CF62-48C6-8715-85376D57B4F9";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

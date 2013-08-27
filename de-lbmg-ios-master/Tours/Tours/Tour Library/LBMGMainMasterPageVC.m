@@ -55,7 +55,7 @@
     NSUInteger numberPages = self.viewControllers.count;
     
     self.sharpMaster.urlString = kSharpUrlString;
-    self.sharpMaster.headerString = @"SHARP";
+    self.sharpMaster.headerString = @"Get Help";
     self.sharpMaster.shouldPreload = YES;
     self.gearMaster.urlString = kGearUrlString;
     self.gearMaster.headerString = @"Gear";
