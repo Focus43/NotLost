@@ -1140,8 +1140,10 @@
         
         CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitudeValue, longitudeValue);
         
-        NSNumber *distance = [NSNumber numberWithDouble:[self getDistanceFromTourPoint:coordinate withPointIndex:self.personalContentIndexPassed]];
-        [videoDict setObject:distance forKey:@"distance"];
+        if ( self.personalContentIndexPassed > -1 ) {
+            NSNumber *distance = [NSNumber numberWithDouble:[self getDistanceFromTourPoint:coordinate withPointIndex:self.personalContentIndexPassed]];
+            [videoDict setObject:distance forKey:@"distance"];
+        }
         
         [LBMGUtilities updateUserContentForTour:self.currentTour.tourID withItem:videoDict];
     }
@@ -1170,9 +1172,10 @@
             
             CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(latitudeValue, longitudeValue);
             
-            float distance = [self getDistanceFromTourPoint:coordinate withPointIndex:self.personalContentIndexPassed];
-            
-            photoCaptionVC.pointDistance = distance;
+            if ( self.personalContentIndexPassed > -1 ) {
+                float distance = [self getDistanceFromTourPoint:coordinate withPointIndex:self.personalContentIndexPassed];
+                photoCaptionVC.pointDistance = distance;
+            }
             
             [self presentViewController:photoCaptionVC animated:YES completion:nil];
         }];
