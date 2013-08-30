@@ -95,6 +95,8 @@
     
     self.navIndex = 0;
     
+    self.annotationSelected = NO;
+    
     NSString *keyStr = [NSString stringWithFormat:@"playedAudio_%@", [self.currentTour.tourID stringValue]];
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     NSMutableArray *playedArray = [userDefaults objectForKey:keyStr];
@@ -103,7 +105,6 @@
     } else {
         self.playedAudioPoints = [NSMutableArray arrayWithCapacity:3];
     }
-    TFLog(@"LBMGBaseTourMapVC viewDIdLoad - self.playedAudioPoints = %@", self.playedAudioPoints);
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -328,6 +329,7 @@
             circleView.fillColor = [[UIColor alloc] initWithRed:255/255.0 green:0/255.0 blue:0/255.0 alpha:0.2];
         else if ([self.poiCircles containsObject:overlay])
             circleView.fillColor = [[UIColor alloc] initWithRed:0/255.0 green:0/255.0 blue:255/255.0 alpha:0.4];
+//                circleView.fillColor = [UIColor redColor];
         else
             circleView.fillColor = [[UIColor alloc] initWithRed:0/255.0 green:255/255.0 blue:0/255.0 alpha:0.4];
         return circleView;
@@ -378,10 +380,6 @@
                 
                 pinView.leftCalloutAccessoryView = annotationToggle;
                 
-//                if (annotate.isStart) {
-//                    pinView.image = [UIImage imageNamed:@"start_pin_poi"];
-//                }
-                
                 return pinView;
             }
             else if (annotate.poiState == Unvisited) {
@@ -405,9 +403,9 @@
                 
                 pinView.leftCalloutAccessoryView = annotationToggle;
                 
-//                if (annotate.isStart) {
+                if (annotate.isStart) {
 //                    pinView.image = [UIImage imageNamed:@"start_pin_poi"];
-//                }
+                }
                 
                 return pinView;
             }
@@ -450,31 +448,23 @@
 #pragma mark - New Location Handlers
 - (void)processPOILocation:(CLLocation *)newLocation
 {
-    TFLog(@"processPOILocation");
+//    TFLog(@"processPOILocation - base");
+    
     BOOL passedThroughPOI = FALSE;
     int i = 0;
     for (PoiPoint *point in self.currentTour.route.poiPoints) {
-        TFLog(@"poiPoints -> point name = %@ on route? %c", point.name, point.onRoute);
+                
         MKCircle *poiCircle = [self getCircleForLatitude:point.latitude andLogitude:point.longitude andMeters:point.radius];
         
         if (!point.onRoute && [self mapCircleContainsPoint:poiCircle withPoint:newLocation]) {
             // trigger poi stuff
-            TFLog(@"contains point -> point name = %@", point.name);
             int index = [self.currentTour.route.poiPoints indexOfObject:point];
             NSNumber *visited = [self.currentTour.touchedPoints objectAtIndex:index];
             if (![visited boolValue]) {
                 passedThroughPOI = TRUE;
                 [self.currentTour.touchedPoints replaceObjectAtIndex:[self.currentTour.route.poiPoints indexOfObject:point] withObject:[NSNumber numberWithBool:YES]]; 
                 [LBMGUtilities storeTouchedPois:self.currentTour.touchedPoints forId:self.currentTour.tourID];
-                
-                // point should open the info view
-//                TFLog(@"point shoud be open %@", point.name);
-//                point.isOpen = YES;
             }
-            
-            // point should open the info view
-//            TFLog(@"point shoud be open %@", point.name);
-//            point.isOpen = YES;
             
             [self showPOIMessageForNRBTours:[self.currentTour.route.poiPoints objectAtIndex:index]];
         }
@@ -482,6 +472,7 @@
     }
     
     if (passedThroughPOI) {
+        TFLog(@"passedThroughPOI - base --- updating annotations");
         [self updateAnnotations];
     }
 }
@@ -581,6 +572,7 @@
 - (void)activateWayPoint:(TourPoint *)point {
     TFLog(@"activateWayPoint");
     TFLog(@"point.index = %@, point.type = %@, point.audio = %@", point.index, point.type, point.audio);
+    
     if (point.audio) {
         NSString *audioPoint = [[LBMGUtilities audioPathForTourID:self.currentTour.tourID] stringByAppendingPathComponent:point.audio];
         
@@ -630,12 +622,12 @@
 
 - (BOOL)mapCircleContainsPoint:(MKCircle *)circle withPoint:(CLLocation *)point {
     float meters = MKMetersBetweenMapPoints(MKMapPointForCoordinate(circle.coordinate), MKMapPointForCoordinate(point.coordinate));
-    TFLog(@"mapCircleContainsPoint = %d", (meters <= circle.radius));
+//    TFLog(@"mapCircleContainsPoint = %d", (meters <= circle.radius));
     return (meters <= circle.radius);
 }
 
 - (void)updateAnnotations {
-        
+    TFLog(@"updateAnnotations");
     BOOL startWasFound = NO;
     self.mapView.delegate = self;
     [self.mapView removeAnnotations:[self.mapView annotations]];
@@ -667,27 +659,37 @@
         if ([self isKindOfClass:[LBMGVirtualTourMapVC class]]) {            
             LBMGVirtualTourMapVC *vc = (LBMGVirtualTourMapVC *)self;
             if ( [way matchesTourPoint:[self.currentTour.route.tourPoints objectAtIndex:vc.virtualPointPassedIndex+1]] ) {
-                pin.isStart = true;
+//                pin.isStart = YES;
+                way.isOpen = YES;
                 startWasFound = YES;
             }
-        } else if (self.currentTour.lastPointPassedIndex > -1) {
+        } else if (self.currentTour.lastPointPassedIndex > -1 && ![touched boolValue]) {
             if ( [way matchesTourPoint:[self.currentTour.route.tourPoints objectAtIndex:self.currentTour.lastPointPassedIndex+1]] ) {
-                pin.isStart = true;
+//                pin.isStart = YES;
+                way.isOpen = YES;
                 startWasFound = YES;
             }
         } else {
-            if ( [way matchesTourPoint:[self.currentTour.route.tourPoints objectAtIndex:0]] ) {
-                pin.isStart = true;
+            if ( [way matchesTourPoint:[self.currentTour.route.tourPoints objectAtIndex:0]] && ![touched boolValue] ) {
+//                pin.isStart = YES;
+                way.isOpen = YES;
                 startWasFound = YES;
             }
         }
         
-        
         [self.mapView addAnnotation:pin];
+        
+//        if (pin.isStart) {
+//            NSUInteger annotationIdx = [[self.mapView annotations] indexOfObject:pin];
+//            [self.mapView selectAnnotation:[[self.mapView annotations] objectAtIndex:annotationIdx] animated:YES];
+//        }
         
         if (way.isOpen) {
             NSUInteger annotationIdx = [[self.mapView annotations] indexOfObject:pin];
-//            [self.mapView selectAnnotation:[[self.mapView annotations] objectAtIndex:annotationIdx] animated:YES];
+            TFLog(@"point shoudl open, so I'm selecting the annotation. pin.poiIndex = %d, pin.title = %@", pin.poiIndex, pin.title);
+            [self.mapView selectAnnotation:pin animated:YES];
+            self.annotationSelected = TRUE;
+            way.isOpen = NO;
         }
         
         [self.poiPins addObject:pin];
@@ -709,18 +711,26 @@
         [self.progressBar setValue:progressValue animated:YES];
     }
     
-    if (!startWasFound && self.currentTour.lastPointPassedIndex > -1) {
-        
-        XCRPointAnnotation *pin = [XCRPointAnnotation new];
-        pin.type = poi;
-        pin.isStart = YES;
-        
-        TourPoint *way = (TourPoint *)[self.currentTour.route.tourPoints objectAtIndex:self.currentTour.lastPointPassedIndex+1];
-        pin.coordinate = CLLocationCoordinate2DMake([way.latitude doubleValue], [way.longitude doubleValue]);
-        
-        [self.mapView addAnnotation:pin];
-        startWasFound = YES;
-    }
+    // Mark next point even if not POI type
+//    if (!startWasFound && self.currentTour.lastPointPassedIndex > -1) {
+//        
+//        XCRPointAnnotation *pin = [XCRPointAnnotation new];
+//        pin.type = poi;
+//        pin.isStart = YES;
+//        
+//        TourPoint *way = (TourPoint *)[self.currentTour.route.tourPoints objectAtIndex:self.currentTour.lastPointPassedIndex+1];
+//        pin.coordinate = CLLocationCoordinate2DMake([way.latitude doubleValue], [way.longitude doubleValue]);
+//        
+//        [self.mapView addAnnotation:pin];
+//        
+//        if (pin.isStart) {
+//            NSUInteger annotationIdx = [[self.mapView annotations] indexOfObject:pin];
+//            [self.mapView selectAnnotation:[[self.mapView annotations] objectAtIndex:annotationIdx] animated:YES];
+//        }
+//        
+//        startWasFound = YES;
+//    }
+    
 }
 
 #pragma mark - Calculation Functions

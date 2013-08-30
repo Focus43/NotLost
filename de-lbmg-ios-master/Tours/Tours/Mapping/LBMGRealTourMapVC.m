@@ -184,17 +184,17 @@
             (oldLocation.coordinate.longitude == newLocation.coordinate.longitude))) {
             NSTimeInterval age = abs([newLocation.timestamp timeIntervalSinceNow]);
             if(age > 60){
-                DLogS(@" Old location just return.. ");
+//                DLogS(@" Old location just return.. ");
                 return;
             }
             
             if (signbit(newLocation.horizontalAccuracy)) {
                 // Negative accuracy means an invalid or unavailable measurement
-                DLogS(@" Bad accuracy, ignore…");
+//                DLogS(@" Bad accuracy, ignore…");
             }
             else {
                 // Valid measurement.
-                DLogS(@"New Valid Location=%@",newLocation);
+//                DLogS(@"New Valid Location=%@",newLocation);
                 if (!self.tourStarted && [self isUserOnStart:newLocation] && !self.atStartPoint) {
                     [self hideGuideToTourView];
                     [self showBeginTourView];
@@ -206,13 +206,14 @@
                     } else {
                         [self processNoneRouteLocation:newLocation];
                     }
+                    // TODO: shouldn't these 3 be called from the two above (if appropriate)?
                     [self processMediaLocation:newLocation];
                     [self processPOILocation:newLocation];
                     [self processPersonalContentLocation:newLocation];
                 }
             }
         } else {
-            DLogS(@"Rejected Location=%@",newLocation);
+//            DLogS(@"Rejected Location=%@",newLocation);
         }
     }
 }
@@ -291,6 +292,10 @@
     // if the user is off the route
     if (self.currentTour.lastPointPassedIndex < 0 ||  ([self checkForOutOfArea:newLocation] && !self.withinPointRadius)) {
         DLogS(@"processOutOfAreaLocation");
+        
+        // since we're no longer within a radius, we can deselect all annotations
+        [self deselectAllAnnotations];
+        
         [self processOutOfAreaLocation:newLocation];
         
     } else {
@@ -326,6 +331,7 @@
             self.currentTour.lastPointPassedIndex = i;
             //            self.waypointLabel.text = [NSString stringWithFormat:@"%i", self.currentTour.lastPointPassedIndex];
             self.withinPointRadius = YES;
+            // TODO: unnecessary call
             [self updateProgressBarIfRouteBased];
             [self activateWayPoint:point];
         }
@@ -333,8 +339,16 @@
             // trigger the starting point!
             self.currentTour.lastPointPassedIndex = 0;
 //            self.waypointLabel.text = [NSString stringWithFormat:@"%i", self.currentTour.lastPointPassedIndex];
+            // TODO: unnecessary call
             [self updateProgressBarIfRouteBased];
             [self activateWayPoint:point];
+        } else {
+            // since we're no longer within a radius, we can deselect all annotations
+            [self deselectAllAnnotations];
+            // also make sure no point is currently set to open
+            for (PoiPoint *point in self.currentTour.route.poiPoints) {
+                point.isOpen = NO;
+            }
         }
     }
 }
@@ -409,7 +423,6 @@
         return;
     }
     
-    
     TourPoint *nextPoint = [self.currentTour.route.tourPoints objectAtIndex:(self.currentTour.lastPointPassedIndex + 1)];
     CLLocationDegrees fromLatitude  = [nextPoint.latitude doubleValue];
     CLLocationDegrees fromLongitude = [nextPoint.longitude doubleValue];
@@ -448,17 +461,26 @@
     }
     else if (distTraveled >= [previousPoint.radius doubleValue] && self.withinPointRadius) {
         DLog(@"Left a radius");
-//        DLogS(@"last point - %d", self.currentTour.lastPointPassedIndex);
         TFLog(@"last point - %d", self.currentTour.lastPointPassedIndex);
         self.withinPointRadius = FALSE;
-//        self.currentlySelectedAnnotation = NULL;
-
+        // since we're no longer within a radius, we can deselect all annotations
+        [self deselectAllAnnotations];
     }
 }
 
 - (void)showPOIMessageForNRBTours:(PoiPoint *)currentPOI {
     if (!self.currentTour.isRouteBasedTour && ![self.messageLabel.text isEqualToString:currentPOI.labelText])
         self.messageLabel.text = currentPOI.labelText;
+}
+
+- (void)deselectAllAnnotations
+{    
+//    if (!self.annotationSelected) return;
+//    TFLog(@"deselectAllAnnotations");
+//    for (MKAnnotationView *av in [self.mapView annotations]) {
+//        [self.mapView deselectAnnotation:av animated:YES];
+//        self.annotationSelected = NO;
+//    }
 }
 
 #pragma mark - Location Helpers
@@ -491,6 +513,7 @@
 
 // handles on route poi activation
 - (void)activatePoiPointForCorrespondingTourPoint:(TourPoint *)tourPoint {
+    TFLog(@"activatePoiPointForCorrespondingTourPoint");
     BOOL passedThroughPOI = FALSE;
     for (PoiPoint *point in self.currentTour.route.poiPoints) {
         
@@ -504,12 +527,16 @@
                 [LBMGUtilities storeTouchedPois:self.currentTour.touchedPoints forId:self.currentTour.tourID];
             }
             
+            TFLog(@"point should be open %@", point.name);
+            point.isOpen = YES;
+            
             [TestFlight passCheckpoint:@"POI detected"];
             [self showPOIMessageForNRBTours:[self.currentTour.route.poiPoints objectAtIndex:index]];
         }
     }
     
     if (passedThroughPOI) {
+         TFLog(@"activatePoiPointForCorrespondingTourPoint - passedThroughPOI - updating annotations");
         [self updateAnnotations];
     }
 }

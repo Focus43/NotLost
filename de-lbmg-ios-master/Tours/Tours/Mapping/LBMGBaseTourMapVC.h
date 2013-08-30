@@ -122,6 +122,8 @@ typedef enum {
 
 // used to determine which annotation to show as ticked
 @property (nonatomic, strong) MKAnnotationView *currentlySelectedAnnotation;
+// used to determine if annotation open
+@property (nonatomic, assign) BOOL annotationSelected;
 
 // IBActions
 - (IBAction)exitButtonTouched:(id)sender;
