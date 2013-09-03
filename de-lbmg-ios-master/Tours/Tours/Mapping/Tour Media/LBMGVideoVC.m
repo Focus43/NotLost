@@ -28,23 +28,29 @@
     // Do any additional setup after loading the view from its nib.
     self.videoData = self.tourData.tourVideos;
     
+    if ([self.currentVideos count] > 0 )
+        self.videoData = self.currentVideos;
+    
     UINib *cellNib = [UINib nibWithNibName:@"LBMGVideoCell" bundle:nil];
     [self.collectionView registerNib:cellNib forCellWithReuseIdentifier:kVideoCell];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [self.videoData count];
-//    return [self.currentVideos count];
+    if ([self.currentVideos count] > 0 ) {
+        return [self.currentVideos count];
+    } else {
+        return [self.videoData count];
+    }
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     LBMGVideoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kVideoCell forIndexPath:indexPath];
     
-    NSString *currentVideo = [self.videoData objectAtIndex:indexPath.row];
-    if ([self.currentVideos containsObject:currentVideo])
-        [cell setCurrent:YES];
-    else
-        [cell setCurrent:NO];
+//    NSString *currentVideo = [self.videoData objectAtIndex:indexPath.row];
+//    if ([self.currentVideos containsObject:currentVideo])
+//        [cell setCurrent:YES];
+//    else
+//        [cell setCurrent:NO];
 
     return cell;
 }
@@ -54,7 +60,13 @@
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *videoName = [[self.videoData objectAtIndex:indexPath.row] objectForKey:@"video"];
+    NSString *videoName = @"";
+    if ( [self.currentVideos count] > 0 ) {
+        videoName = [[self.currentVideos objectAtIndex:indexPath.row] objectForKey:@"video"];
+    } else {
+        videoName = [[self.videoData objectAtIndex:indexPath.row] objectForKey:@"video"];
+    }
+    
 //    LBMGVideoDetailVC *detailVideoView = [LBMGVideoDetailVC new];
 //    detailVideoView.videoName = videoName;
 //    detailVideoView.videoPath = [LBMGUtilities videoPathForTourID:self.tourID];

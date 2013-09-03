@@ -47,6 +47,8 @@
 @property (assign, nonatomic) BOOL testMode;
 @property (strong, nonatomic) NSMutableArray *playedAudioPoints;
 
+@property (assign, nonatomic) BOOL calledFromViewDidAppear;
+
 @end
 
 @implementation LBMGBaseTourMapVC
@@ -110,6 +112,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     self.currentTour.userContent = [[NSMutableArray alloc] initWithContentsOfFile:[LBMGUtilities userDataPlistPathForTourID:self.currentTour.tourID]];
+    self.calledFromViewDidAppear = YES;
     [self updateAnnotations];
     
     if (self.currentTour.routeData.introAudio && !self.playedAudio) {
@@ -404,7 +407,7 @@
                 pinView.leftCalloutAccessoryView = annotationToggle;
                 
                 if (annotate.isStart) {
-//                    pinView.image = [UIImage imageNamed:@"start_pin_poi"];
+                    pinView.image = [UIImage imageNamed:@"start_pin_poi"];
                 }
                 
                 return pinView;
@@ -660,19 +663,20 @@
             LBMGVirtualTourMapVC *vc = (LBMGVirtualTourMapVC *)self;
             if ( [way matchesTourPoint:[self.currentTour.route.tourPoints objectAtIndex:vc.virtualPointPassedIndex+1]] ) {
 //                pin.isStart = YES;
-                way.isOpen = YES;
-                startWasFound = YES;
+//                way.isOpen = YES;
+//                startWasFound = YES;
             }
         } else if (self.currentTour.lastPointPassedIndex > -1 && ![touched boolValue]) {
+            // this makes the star move with you unless we use this hack flag
             if ( [way matchesTourPoint:[self.currentTour.route.tourPoints objectAtIndex:self.currentTour.lastPointPassedIndex+1]] ) {
 //                pin.isStart = YES;
-                way.isOpen = YES;
-                startWasFound = YES;
+//                way.isOpen = YES;
+//                startWasFound = YES;
             }
         } else {
             if ( [way matchesTourPoint:[self.currentTour.route.tourPoints objectAtIndex:0]] && ![touched boolValue] ) {
-//                pin.isStart = YES;
-                way.isOpen = YES;
+                pin.isStart = YES;
+//                way.isOpen = YES;
                 startWasFound = YES;
             }
         }
@@ -680,13 +684,13 @@
         [self.mapView addAnnotation:pin];
         
 //        if (pin.isStart) {
-//            NSUInteger annotationIdx = [[self.mapView annotations] indexOfObject:pin];
-//            [self.mapView selectAnnotation:[[self.mapView annotations] objectAtIndex:annotationIdx] animated:YES];
+//            [self.mapView selectAnnotation:pin animated:YES];
+//            self.annotationSelected = TRUE;
 //        }
         
         if (way.isOpen) {
-            NSUInteger annotationIdx = [[self.mapView annotations] indexOfObject:pin];
-            TFLog(@"point shoudl open, so I'm selecting the annotation. pin.poiIndex = %d, pin.title = %@", pin.poiIndex, pin.title);
+//            NSUInteger annotationIdx = [[self.mapView annotations] indexOfObject:pin];
+            TFLog(@"point should open, so I'm selecting the annotation. pin.poiIndex = %d, pin.title = %@", pin.poiIndex, pin.title);
             [self.mapView selectAnnotation:pin animated:YES];
             self.annotationSelected = TRUE;
             way.isOpen = NO;
@@ -711,9 +715,10 @@
         [self.progressBar setValue:progressValue animated:YES];
     }
     
-    // Mark next point even if not POI type
+    
 //    if (!startWasFound && self.currentTour.lastPointPassedIndex > -1) {
-//        
+    
+// Mark next point even if not POI type       
 //        XCRPointAnnotation *pin = [XCRPointAnnotation new];
 //        pin.type = poi;
 //        pin.isStart = YES;
@@ -864,6 +869,8 @@
     videoView.currentVideos = self.previousMediaPoint.videos;
     if (self.currentMediaPoint) {
         videoView.currentVideos = self.currentMediaPoint.videos;
+    } else {
+        videoView.currentVideos = NULL;
     }
     [self presentViewController:videoView animated:YES completion:nil];
 }
@@ -876,6 +883,8 @@
     photoView.currentPhotos = self.previousMediaPoint.photos;
     if (self.currentMediaPoint) {
         photoView.currentPhotos = self.currentMediaPoint.photos;
+    } else {
+        photoView.currentPhotos = NULL;
     }
     [self presentViewController:photoView animated:YES completion:nil];
 }

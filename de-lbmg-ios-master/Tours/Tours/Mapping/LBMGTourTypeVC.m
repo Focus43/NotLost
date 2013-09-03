@@ -198,7 +198,7 @@
         if ([touchedPoint boolValue]) {
             touched = YES;
             // TODO: break here to not keep going thru array
-        }
+        } 
     }
     if (touched) {
     

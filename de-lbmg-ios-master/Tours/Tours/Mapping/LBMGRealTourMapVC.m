@@ -233,7 +233,6 @@
 
 - (void)ZoomInOnCurrentLocationAndStart
 {
-    
     TourPoint *point = [self.currentTour.route.tourPoints objectAtIndex:0];
     CLLocationDegrees pointLatitude  = [point.latitude doubleValue];
     CLLocationDegrees pointLongitude = [point.longitude doubleValue];
@@ -259,8 +258,9 @@
     CGPoint area = CGPointMake(northEastPoint.x - southWestPoint.x, northEastPoint.y - southWestPoint.y);
     MKMapRect sectionRect = MKMapRectMake(southWestPoint.x, southWestPoint.y, area.x*1, area.y*1);
     
+    // TODO: should add zoom level checking here
 //    [self.mapView setVisibleMapRect:sectionRect animated:YES];
-    [self.mapView setVisibleMapRect:sectionRect edgePadding:UIEdgeInsetsMake(40, 30, 40, 30) animated:YES];
+    [self.mapView setVisibleMapRect:sectionRect edgePadding:UIEdgeInsetsMake(90, 30, 90, 30) animated:YES];
 }
 
 
@@ -292,7 +292,6 @@
     // if the user is off the route
     if (self.currentTour.lastPointPassedIndex < 0 ||  ([self checkForOutOfArea:newLocation] && !self.withinPointRadius)) {
         DLogS(@"processOutOfAreaLocation");
-        
         // since we're no longer within a radius, we can deselect all annotations
         [self deselectAllAnnotations];
         
