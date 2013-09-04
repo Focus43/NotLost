@@ -482,7 +482,7 @@
 
 - (void)processMediaLocation:(CLLocation *)newLocation {
     if (self.currentMediaCircle) {
-        DLog(@"is currentMediaCircle");
+        TFLog(@"is currentMediaCircle");
         if (![self mapCircleContainsPoint:self.currentMediaCircle withPoint:newLocation]) {
             self.previousMediaPoint = self.currentMediaPoint;
             self.currentMediaCircle = nil;
@@ -512,11 +512,16 @@
             if (mediaPoint.audio) {
                 [self playMediaAudioFileNamed:mediaPoint.audio];
             }
-            if ([mediaPoint.photos count] > 0) {
-                [self.photoButton setImage:[UIImage imageNamed:@"tour_photos_on"] forState:UIControlStateNormal];
-            }
-            if ([mediaPoint.videos count] > 0) {
-                [self.videoButton setImage:[UIImage imageNamed:@"tour_video_on"] forState:UIControlStateNormal];
+            
+            if ( [mediaPoint.photos count] > 0 || [mediaPoint.videos count] > 0 ) {
+                if ([mediaPoint.photos count] > 0) {
+                    [self.photoButton setImage:[UIImage imageNamed:@"tour_photos_on"] forState:UIControlStateNormal];
+                }
+                if ([mediaPoint.videos count] > 0) {
+                    [self.videoButton setImage:[UIImage imageNamed:@"tour_video_on"] forState:UIControlStateNormal];
+                }
+                TFLog(@"Will play alert now!");
+                AudioServicesPlayAlertSound(1008);
             }
             
             [TestFlight passCheckpoint:[NSString stringWithFormat:@"Detected MediaPoint - %@", mediaPoint.name]];

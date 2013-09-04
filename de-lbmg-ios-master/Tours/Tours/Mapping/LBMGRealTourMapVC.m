@@ -184,17 +184,14 @@
             (oldLocation.coordinate.longitude == newLocation.coordinate.longitude))) {
             NSTimeInterval age = abs([newLocation.timestamp timeIntervalSinceNow]);
             if(age > 60){
-//                DLogS(@" Old location just return.. ");
                 return;
             }
             
             if (signbit(newLocation.horizontalAccuracy)) {
                 // Negative accuracy means an invalid or unavailable measurement
-//                DLogS(@" Bad accuracy, ignore…");
             }
             else {
                 // Valid measurement.
-//                DLogS(@"New Valid Location=%@",newLocation);
                 if (!self.tourStarted && [self isUserOnStart:newLocation] && !self.atStartPoint) {
                     [self hideGuideToTourView];
                     [self showBeginTourView];
@@ -224,11 +221,7 @@
     [self showBeginTourView];
     self.atStartPoint = TRUE;
     
-    [self ZoomInOnCurrentLocationAndStart];
-    
-    // zoom to current location and start location
-    
-    
+    [self ZoomInOnCurrentLocationAndStart];    
 }
 
 - (void)ZoomInOnCurrentLocationAndStart
