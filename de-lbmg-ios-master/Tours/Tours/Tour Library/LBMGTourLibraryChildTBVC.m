@@ -39,7 +39,6 @@ static NSString *CellIdentifier = @"Cell";
     
     UINib *cellNib = [UINib nibWithNibName:@"LBMGTourLibraryTBVCell" bundle:nil];
     [self.tableViewController.tableView registerNib:cellNib forCellReuseIdentifier:CellIdentifier];
-    self.view.layer.mask = self.maskingLayerView.layer;
     
 }
 
@@ -82,8 +81,7 @@ static NSString *CellIdentifier = @"Cell";
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
+{    
     // find the array for next level of routes
     // 
     TourSection *section = self.tourList.tourData[indexPath.row];
