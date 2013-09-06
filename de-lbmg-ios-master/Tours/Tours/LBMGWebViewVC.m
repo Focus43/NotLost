@@ -29,6 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.header.text = self.headerString;
+    
 //    if (self.shouldPreload)
         [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.urlString]]];
 }
