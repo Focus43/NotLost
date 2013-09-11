@@ -11,6 +11,8 @@
 #import "LBMGMainMasterPageVC.h"
 #import "LBMGYourLibraryTBVC.h"
 #import "LBMGTourLibraryMasterPageVC.h"
+#import "LBMGPhotoDetailVC.h"
+#import "Photo.h"
 #import <QuartzCore/QuartzCore.h> 
 
 @interface LBMGNavTableVC ()
@@ -25,7 +27,7 @@ static NSString *CellIdentifier = @"NavCell";
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.navList = [NSArray arrayWithObjects:@"Tours", @"Around Me", @"Calendar", @"Get Help", @"Gear", @"Your Content", nil];
+        self.navList = [NSArray arrayWithObjects:@"Tours", @"Around Me", @"Calendar", @"Get Help", @"Gear", @"Your Content", @"How-To", nil];
     }
     return self;
 }
@@ -84,7 +86,7 @@ static NSString *CellIdentifier = @"NavCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Hack to deal with personal library
-    if (indexPath.row == 5) {
+    if ( indexPath.row == 5 ) {
         LBMGYourLibraryTBVC *yourLibrary = [LBMGYourLibraryTBVC new];
         yourLibrary.availableTours = self.masterVC.tourLibraryMaster.tourList;
         yourLibrary.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
@@ -92,6 +94,27 @@ static NSString *CellIdentifier = @"NavCell";
         [self.masterVC presentViewController:yourLibrary animated:YES completion:^{
             // move nav and scrollview back to left under the modal
             [self.masterVC hideNavTable];            
+        }];
+    } else if ( indexPath.row == 6 ) {
+        LBMGPhotoDetailVC *tutorial = [LBMGPhotoDetailVC new];
+
+        tutorial.isTutorial = YES;
+        tutorial.photoDirectory = [NSString stringWithFormat:@"%@/tutorial_images", [[NSBundle mainBundle] resourcePath]];
+        
+        // TODO: move, so this is done only once
+        NSArray *photoPaths = [NSBundle pathsForResourcesOfType:@".png" inDirectory:tutorial.photoDirectory];
+        NSMutableArray *photos = [[NSMutableArray alloc] init];
+        
+        for (NSString *path in photoPaths) {
+            Photo *photo = [Photo instanceFromDictionary:[NSDictionary dictionaryWithObject:path forKey:@"photo"]];
+            [photos addObject:photo];
+        }
+        tutorial.photos = photos;
+        tutorial.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+                
+        [self.masterVC presentViewController:tutorial animated:YES completion:^{
+            // move nav and scrollview back to left under the modal
+            [self.masterVC hideNavTable];
         }];
     } else {
         [self.masterVC hideNavTable];

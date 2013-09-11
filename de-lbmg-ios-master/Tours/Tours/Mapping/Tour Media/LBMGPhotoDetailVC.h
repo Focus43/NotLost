@@ -29,6 +29,8 @@
 @property LBMGPhotoDetailCell *currentCell;
 @property (nonatomic) BOOL singleTapped;
 
+@property (nonatomic) BOOL isTutorial;
+
 - (IBAction)exitButtonPressed:(id)sender;
 - (IBAction)shareButtonPressed:(id)sender;
 - (void)singleTapped:(BOOL)showItems withDuration:(float)duration;

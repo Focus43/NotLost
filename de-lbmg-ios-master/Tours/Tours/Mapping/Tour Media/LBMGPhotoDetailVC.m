@@ -34,6 +34,10 @@
     flowLayout.minimumLineSpacing = 0;
     flowLayout.minimumInteritemSpacing = 0;
     self.collectionView.collectionViewLayout = flowLayout;
+    
+    if (self.isTutorial) {
+        self.shareButton.hidden = YES;
+    }
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -82,7 +86,13 @@
         cell.imagePath = currentPhoto.url;
     }
     if ([currentPhoto.photo length] > 0) {
-        imagePath = [self.photoDirectory stringByAppendingPathComponent:currentPhoto.photo];
+        if (self.isTutorial) {
+            imagePath = currentPhoto.photo;
+            cell.labelContainer.hidden = YES;
+        } else {
+            imagePath = [self.photoDirectory stringByAppendingPathComponent:currentPhoto.photo];
+        }
+        
         cell.photoImageView.image = [UIImage imageWithContentsOfFile:imagePath];
         cell.currentImage = [UIImage imageWithContentsOfFile:imagePath];
         [cell configureZoom];

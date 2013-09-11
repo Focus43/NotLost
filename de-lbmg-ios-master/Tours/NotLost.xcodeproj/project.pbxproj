@@ -592,6 +592,7 @@
 		E3AA75B217C7FD8F00497B4A /* UAPushSettingsUserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3AA757A17C7FD8F00497B4A /* UAPushSettingsUserInfoView.xib */; };
 		E3AA75B317C7FD8F00497B4A /* UAPushSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3AA757B17C7FD8F00497B4A /* UAPushSettingsView.xib */; };
 		E3AA75B517C8029700497B4A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AA75B417C8029600497B4A /* AudioToolbox.framework */; };
+		E3F690FB17DE8115000461D6 /* tutorial_images in Resources */ = {isa = PBXBuildFile; fileRef = E3F690FA17DE8115000461D6 /* tutorial_images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1420,6 +1421,7 @@
 		E3AA757A17C7FD8F00497B4A /* UAPushSettingsUserInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UAPushSettingsUserInfoView.xib; sourceTree = "<group>"; };
 		E3AA757B17C7FD8F00497B4A /* UAPushSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UAPushSettingsView.xib; sourceTree = "<group>"; };
 		E3AA75B417C8029600497B4A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E3F690FA17DE8115000461D6 /* tutorial_images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tutorial_images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1579,6 +1581,7 @@
 		6D0782AC16FB8D450029FAA4 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E3F690FA17DE8115000461D6 /* tutorial_images */,
 				E3A7DC1617C452B100AD674C /* start_pin_poi.png */,
 				E3A7DC1417C4529300AD674C /* start_pin_poi@2x.png */,
 				E376EA3B17BD614300E2399F /* menu.png */,
@@ -3312,6 +3315,7 @@
 				E37E085E17D6808000ED9B0F /* Default-568h@2x.png in Resources */,
 				E37E086017D6809A00ED9B0F /* Default@2x.png in Resources */,
 				E37E086217D680A300ED9B0F /* Default.png in Resources */,
+				E3F690FB17DE8115000461D6 /* tutorial_images in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
