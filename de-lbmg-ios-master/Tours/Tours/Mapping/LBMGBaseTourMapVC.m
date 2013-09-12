@@ -107,6 +107,34 @@
     } else {
         self.playedAudioPoints = [NSMutableArray arrayWithCapacity:3];
     }
+    
+    // To be notified of changes to the playback state of a movie player, register for the MPMoviePlayerPlaybackStateDidChangeNotification notification.
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(videoPlaybackChanged:)
+                                                 name:MPMoviePlayerPlaybackStateDidChangeNotification
+                                               object:nil];
+}
+
+-(void) videoPlaybackChanged:(NSNotification*)notification
+{
+    MPMoviePlayerController *moviePlayer = notification.object;
+    MPMoviePlaybackState playbackState = moviePlayer.playbackState;
+    
+    if ( !(self.isPlayingMediaAudio || self.isPlayingNavAudio) )
+        return;
+    
+    if ( playbackState == MPMoviePlaybackStateStopped || playbackState == MPMoviePlaybackStatePaused || playbackState == MPMoviePlaybackStateInterrupted ) {
+        NSLog(@"MPMoviePlaybackStateStopped or MPMoviePlaybackStatePaused or MPMoviePlaybackStateInterrupted => re-start audio");
+        if (self.mediaAudioPlayer)
+            [self.mediaAudioPlayer play];
+        if (self.audioPlayer)
+            [self.audioPlayer play];
+    } else if(playbackState == MPMoviePlaybackStatePlaying) {
+        NSLog(@"MPMoviePlaybackStatePlaying");
+        [self.mediaAudioPlayer pause];
+        [self.audioPlayer pause];
+    }
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated {

@@ -79,8 +79,13 @@
     movieViewController.moviePlayer.scalingMode = MPMovieScalingModeAspectFit;
     movieViewController.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     
-    // Self is the UIViewController you are presenting the movie player from.
     [self presentMoviePlayerViewControllerAnimated:movieViewController];
+    
+    // THis won't work
+//    if(movieViewController.moviePlayer.playbackState == MPMoviePlaybackStatePlaying)
+//        NSLog(@"Yes Playing");
+//    else
+//        NSLog(@"Not Playing");
 }
 
 - (IBAction)backButtonPressed:(id)sender {
