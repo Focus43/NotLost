@@ -133,6 +133,10 @@
     if(cell != nil){
         self.currentlyShowingIndex = [collectionView indexPathForCell:currentCell].row;
     }
+    
+    if (self.isTutorial) {
+        self.pageControl.currentPage = self.currentlyShowingIndex;
+    }
 }
 
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
