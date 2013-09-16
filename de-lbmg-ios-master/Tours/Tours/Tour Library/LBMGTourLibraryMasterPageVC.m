@@ -42,7 +42,12 @@ const float autoRefreshInterval = 300.0;
                                              selector:@selector(downloadComplete:)
                                                  name:LBMGUtilitiesDownloadComplete
                                                object:nil];
-    [self loadInterstitial];
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];    
+    if ( [[userDefaults objectForKey:@"hasBeenOfferedTutorial"] isEqualToString:@"YES"] ) {
+        [self loadInterstitial];
+    }
+
 }
 
 - (void)loadInterstitial

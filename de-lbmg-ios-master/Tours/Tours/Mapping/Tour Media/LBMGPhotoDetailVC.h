@@ -18,6 +18,7 @@
 
 @interface LBMGPhotoDetailVC : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIActionSheetDelegate, LBMGPhotoDetailProtocol>
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (weak, nonatomic) IBOutlet UIPageControl *pageControl;
 @property (strong, nonatomic) NSString *photoDirectory;
 @property (strong, nonatomic) NSArray *photos;
 @property (nonatomic) int currentPhoto;

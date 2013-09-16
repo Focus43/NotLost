@@ -10,3 +10,5 @@ certs_profiles/*
 de-lbmg-ios-master/Tours/NotLost.xcodeproj/xcuserdata/superrunt.xcuserdatad/xcdebugger/Breakpoints.xcbkptlist
 
 de-lbmg-ios-master/Tours/NotLost.xcodeproj/xcuserdata/superrunt.xcuserdatad/xcdebugger/Breakpoints.xcbkptlist
+
+*.xcscheme

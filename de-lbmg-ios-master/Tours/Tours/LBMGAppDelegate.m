@@ -45,9 +45,6 @@
                                          UIRemoteNotificationTypeSound |
                                          UIRemoteNotificationTypeAlert);
     
-    NSString *yourAlias = @"Stine's test";
-    [UAPush shared].alias = yourAlias;
-    
     [UALocationService setAirshipLocationServiceEnabled:YES];
     UALocationService *locationService = [[UAirship shared] locationService];
     locationService.backgroundLocationServiceEnabled = NO;

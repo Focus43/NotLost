@@ -14,6 +14,8 @@
 #import "LBMGBaseTourMapVC.h"
 #import "LBMGNavTableVC.h"
 #import "LBMGWebViewVC.h"
+#import "LBMGPhotoDetailVC.h"
+#import "Photo.h"
 
 #define kSharpUrlString @"http://notlost.hostsrvr.com/SHARP/"
 #define kGearUrlString @"http://notlost.hostsrvr.com/gear/"
@@ -86,6 +88,49 @@
     [self loadScrollViewWithPage:0];
     [self loadScrollViewWithPage:1];
     
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    if ( ![[userDefaults objectForKey:@"hasBeenOfferedTutorial"] isEqualToString:@"YES"] ) {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Welcome!" message:@"Would you like a quick tour of the app?" delegate:self cancelButtonTitle:@"Yes" otherButtonTitles:@"No", nil];
+        [alert show];
+        
+    }
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0){
+        
+        LBMGPhotoDetailVC *tutorial = [LBMGPhotoDetailVC new];
+        
+        tutorial.isTutorial = YES;
+        tutorial.photoDirectory = [NSString stringWithFormat:@"%@/tutorial_images", [[NSBundle mainBundle] resourcePath]];
+        
+        // TODO: move, so this is done only once
+        NSArray *photoPaths = [NSBundle pathsForResourcesOfType:@".png" inDirectory:tutorial.photoDirectory];
+        NSMutableArray *photos = [[NSMutableArray alloc] init];
+        
+        for (NSString *path in photoPaths) {
+            Photo *photo = [Photo instanceFromDictionary:[NSDictionary dictionaryWithObject:path forKey:@"photo"]];
+            [photos addObject:photo];
+        }
+        tutorial.photos = photos;
+        tutorial.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+        
+        [self.tourLibraryMaster presentViewController:tutorial animated:YES completion:^{
+            // move nav and scrollview back to left under the modal
+            [self hideNavTable];
+        }];
+        
+    } else if (buttonIndex == 1){
+        //reset clicked
+    }
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults setObject:@"YES" forKey:@"hasBeenOfferedTutorial"];
+    [userDefaults synchronize];
 }
 
 //- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation

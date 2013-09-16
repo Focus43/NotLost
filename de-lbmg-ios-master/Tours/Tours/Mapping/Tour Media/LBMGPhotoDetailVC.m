@@ -37,6 +37,9 @@
     
     if (self.isTutorial) {
         self.shareButton.hidden = YES;
+        self.pageControl.hidden = NO;
+        self.pageControl.numberOfPages = [self.photos count];
+        self.pageControl.currentPage = 0;
     }
 }
 
@@ -71,7 +74,8 @@
     return [self.photos count];
 }
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
     LBMGPhotoDetailCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kPhotoDetailCell forIndexPath:indexPath];
     Photo *currentPhoto = [self.photos objectAtIndex:indexPath.row];
     
@@ -85,6 +89,7 @@
         [SVProgressHUD showWithStatus:@"Loading Picture"];
         cell.imagePath = currentPhoto.url;
     }
+    
     if ([currentPhoto.photo length] > 0) {
         if (self.isTutorial) {
             imagePath = currentPhoto.photo;
