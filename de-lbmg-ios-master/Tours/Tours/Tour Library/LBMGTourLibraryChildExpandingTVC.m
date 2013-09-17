@@ -116,6 +116,41 @@ static NSString *DetailCellIdentifier = @"DetailCell";
 
 #pragma mark - Table view delegate
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if ([self.displayArray[indexPath.row] isKindOfClass:[TourPlace class]]) {
+        return NO;
+    }
+    
+    if (self.displayArray.count != 0 &&  indexPath.row <= (self.displayArray.count - 1)) {
+        TourDetail *tour = self.displayArray[indexPath.row];
+        BOOL exists = [LBMGUtilities tourExistsForID:tour.tourDetailId];
+        if ( ![LBMGUtilities tourDownloadingForID:tour.tourDetailId] && exists ) {    // Not currently, but previously Downloading tour
+            return YES;
+        }
+    }
+    return NO;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    TourDetail *tour = self.displayArray[indexPath.row];
+    if (![LBMGUtilities tourDownloadingForID:tour.tourDetailId]) {    // Not currently Downloading tour
+        
+        if (editingStyle == UITableViewCellEditingStyleDelete) {
+            TourDetail *rowToDelete = self.displayArray[indexPath.row];
+            [LBMGUtilities deleteTourWithId:rowToDelete.tourDetailId];
+            [LBMGUtilities removeTourDetails:tour];
+            
+            LBMGTourLibraryDetailTBVCell *cell = [self.toursTableView cellForRowAtIndexPath:indexPath];
+            cell.typeIcon.image = [UIImage imageNamed:@"downloadicon"];
+            
+            [self.toursTableView reloadData];
+        }
+    }
+}
+
+
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ([self.displayArray[indexPath.row] isKindOfClass:[TourPlace class]]) {
