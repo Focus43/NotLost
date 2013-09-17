@@ -27,7 +27,7 @@ static NSString *CellIdentifier = @"NavCell";
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.navList = [NSArray arrayWithObjects:@"Tours", @"Around Me", @"Calendar", @"Get Help", @"Gear", @"Your Content", @"How-To", nil];
+        self.navList = [NSArray arrayWithObjects:@"Tours", @"Around Me", @"Calendar", @"Get Help", @"Gear", @"NotLost Tutorial", nil];
     }
     return self;
 }
@@ -85,17 +85,19 @@ static NSString *CellIdentifier = @"NavCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Hack to deal with personal library
+    // Hack to deal with personal library and/or tutorial
+//    if ( indexPath.row == 5 ) {
+//        LBMGYourLibraryTBVC *yourLibrary = [LBMGYourLibraryTBVC new];
+//        yourLibrary.availableTours = self.masterVC.tourLibraryMaster.tourList;
+//        yourLibrary.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+//        yourLibrary.locationManager = self.masterVC.tourLibraryMaster.locationManager;
+//        [self.masterVC presentViewController:yourLibrary animated:YES completion:^{
+//            // move nav and scrollview back to left under the modal
+//            [self.masterVC hideNavTable];            
+//        }];
+//    } else
+    
     if ( indexPath.row == 5 ) {
-        LBMGYourLibraryTBVC *yourLibrary = [LBMGYourLibraryTBVC new];
-        yourLibrary.availableTours = self.masterVC.tourLibraryMaster.tourList;
-        yourLibrary.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-        yourLibrary.locationManager = self.masterVC.tourLibraryMaster.locationManager;
-        [self.masterVC presentViewController:yourLibrary animated:YES completion:^{
-            // move nav and scrollview back to left under the modal
-            [self.masterVC hideNavTable];            
-        }];
-    } else if ( indexPath.row == 6 ) {
         LBMGPhotoDetailVC *tutorial = [LBMGPhotoDetailVC new];
 
         tutorial.isTutorial = YES;
