@@ -136,7 +136,7 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
             
             cell.tourNameLabel.text = event.name;
 //            cell.tourAddress.text = event.descriptionText;
-            if ( event.longitude && event.latitude)
+            if ( event.longitude != nil && event.latitude != nil)
                 cell.tourAddress.text = [NSString stringWithFormat:@"%3.2f miles", [self distanceToEvent:event]];
             return cell;
             

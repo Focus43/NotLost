@@ -288,33 +288,11 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
             LBMGAroundMeFeaturedCell *cell = [tableView dequeueReusableCellWithIdentifier:FeaturedCellIdentifier forIndexPath:indexPath];
             
             cell.tourNameLabel.text = event.name;
-//            cell.tourAddress.text = [NSString stringWithFormat:@"%3.1f miles", [event.distance floatValue]];
-            if ( event.longitude && event.latitude)
-                cell.tourAddress.text = [NSString stringWithFormat:@"%3.2f miles", [self distanceToEvent:event]];
+            cell.tourAddress.text = [NSString stringWithFormat:@"%3.1f miles", [event.distance floatValue]*0.00062137119];
             return cell;
             
         }
     }    
-}
-
-- (float)distanceToEvent:(EventDescription *)event
-{
-    CLLocationDegrees fromLatitude  = self.locationManager.location.coordinate.latitude;
-    CLLocationDegrees fromLongitude = self.locationManager.location.coordinate.longitude;
-    CLLocationCoordinate2D fromPoint = CLLocationCoordinate2DMake(fromLatitude, fromLongitude);
-    
-    CLLocationDegrees toLatitude  = [event.latitude doubleValue];
-    CLLocationDegrees toLongitude = [event.longitude doubleValue];
-    CLLocationCoordinate2D toPoint = CLLocationCoordinate2DMake(toLatitude, toLongitude);
-    
-    float distanceMeters = MKMetersBetweenMapPoints(MKMapPointForCoordinate(fromPoint), MKMapPointForCoordinate(toPoint));
-    
-    return distanceMeters * 0.00062137119;
-    
-    //    double bearing = [self.currentTour calculateCourseFromLocation:fromPoint toLocation:toPoint];
-    //    CLLocationCoordinate2D projectedPoint = [self coordinateFromCoord:fromPoint atDistanceM:distanceMeters atBearingDegrees:bearing];
-    //
-    //    float meters = MKMetersBetweenMapPoints(MKMapPointForCoordinate(newLocation.coordinate), MKMapPointForCoordinate(projectedPoint));
 }
 
 #pragma mark - Table view delegate
