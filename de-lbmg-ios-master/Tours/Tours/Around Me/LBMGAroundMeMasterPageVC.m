@@ -281,7 +281,7 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
             LBMGTourLibraryDetailTBVCell *cell = [tableView dequeueReusableCellWithIdentifier:DetailCellIdentifier forIndexPath:indexPath];
             
             cell.tourNameLabel.text = event.name;
-            cell.tourAddress.text = [NSString stringWithFormat:@"%3.1f miles", [event.distance floatValue]];
+            cell.tourAddress.text = [NSString stringWithFormat:@"%3.1f miles", [event.distance floatValue]*0.00062137119];
             cell.typeIcon.image = [UIImage imageNamed:@"disclosureicon"];
             return cell;
         } else {

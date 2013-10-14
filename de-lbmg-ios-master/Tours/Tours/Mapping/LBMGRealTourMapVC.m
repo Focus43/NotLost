@@ -24,6 +24,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.mapView.showsUserLocation = YES;
+    
     [self showGuideToTourView];
     if (self.currentTour.isRouteBasedTour) {
         [self.mapView addOverlay:self.currentTour.routeLine];
@@ -284,14 +286,14 @@
 {
     // if the user is off the route
     if (self.currentTour.lastPointPassedIndex < 0 ||  ([self checkForOutOfArea:newLocation] && !self.withinPointRadius)) {
-        DLogS(@"processOutOfAreaLocation");
+//        DLogS(@"processOutOfAreaLocation");
         // since we're no longer within a radius, we can deselect all annotations
         [self deselectAllAnnotations];
         
         [self processOutOfAreaLocation:newLocation];
         
     } else {
-        DLogS(@"processOnRouteLocation");
+//        DLogS(@"processOnRouteLocation");
        [self processOnRouteLocation:newLocation];
     }
 }
@@ -534,7 +536,6 @@
 }
 
 - (void)handleOutOfArea:(CLLocation *)newLocation {
-    DLog(@"OUT OF AREA");
     self.messageLabel.text = @"Off route!";
 }
 

@@ -329,16 +329,70 @@
 }
 
 #pragma mark - MapKit
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    NSLog(@"didUpdateUserLocation and userlocation = %@", userLocation);
+    if (userLocation) {
+        NSLog(@"userlocation lat = %f", userLocation.location.coordinate.latitude);
+        NSLog(@"userlocation updating?  %hhd", userLocation.updating);
+    }
+    
+}
+
+#ifndef __IPHONE_7_0
 - (MKOverlayView *)mapView:(MKMapView *)mapView viewForOverlay:(id <MKOverlay>)overlay
 {
-	MKOverlayView* overlayView = nil;
+    MKOverlayView* overlayView = nil;
+    
+    if(overlay == self.currentTour.routeLine)
+    {
+        //if we have not yet created an overlay view for this overlay, create it now.
+        if(nil == self.routeLineView)
+        {
+            self.routeLineView = [[MKPolylineView alloc] initWithPolyline:self.currentTour.routeLine];
+            self.routeLineView.strokeColor = [UIColor colorWithRed:0.000 green:0.000 blue:1.000 alpha:0.500];
+            self.routeLineView.lineWidth = 10;
+        }
+        overlayView = self.routeLineView;
+        
+    }
+    // used to add a section line
+    else if(overlay == self.navLine) {
+        
+        self.navLineView = [[MKPolylineView alloc] initWithPolyline:self.navLine];
+        self.navLineView.strokeColor = [UIColor colorWithRed:0.000 green:0.502 blue:0.000 alpha:0.600];
+        self.navLineView.lineWidth = 14;
+        overlayView = self.navLineView;
+        
+    }
+    else if (self.testMode) {
+        MKCircleView *circleView = [[MKCircleView alloc] initWithCircle:(MKCircle *)overlay];
+        if ([self.mediaCircles containsObject:overlay])
+            circleView.fillColor = [[UIColor alloc] initWithRed:255/255.0 green:0/255.0 blue:0/255.0 alpha:0.2];
+        else if ([self.poiCircles containsObject:overlay])
+            circleView.fillColor = [[UIColor alloc] initWithRed:0/255.0 green:0/255.0 blue:255/255.0 alpha:0.4];
+        //                circleView.fillColor = [UIColor redColor];
+        else
+            circleView.fillColor = [[UIColor alloc] initWithRed:0/255.0 green:255/255.0 blue:0/255.0 alpha:0.4];
+        return circleView;
+    }
+    
+    return overlayView;
+}
+#endif
+
+#ifdef __IPHONE_7_0
+- (MKOverlayRenderer *)mapView:(MKMapView *)mapView rendererForOverlay:(id <MKOverlay>)overlay
+{
+	MKOverlayRenderer* overlayView = nil;
 	
 	if(overlay == self.currentTour.routeLine)
 	{
 		//if we have not yet created an overlay view for this overlay, create it now.
 		if(nil == self.routeLineView)
 		{
-			self.routeLineView = [[MKPolylineView alloc] initWithPolyline:self.currentTour.routeLine];
+			self.routeLineView = [[MKPolylineRenderer alloc] initWithPolyline:self.currentTour.routeLine];
 			self.routeLineView.strokeColor = [UIColor colorWithRed:0.000 green:0.000 blue:1.000 alpha:0.500];
 			self.routeLineView.lineWidth = 10;
 		}
@@ -348,19 +402,19 @@
     // used to add a section line
     else if(overlay == self.navLine) {
         
-        self.navLineView = [[MKPolylineView alloc] initWithPolyline:self.navLine];
+        self.navLineView = [[MKPolylineRenderer alloc] initWithPolyline:self.navLine];
         self.navLineView.strokeColor = [UIColor colorWithRed:0.000 green:0.502 blue:0.000 alpha:0.600];
         self.navLineView.lineWidth = 14;
 		overlayView = self.navLineView;
         
 	}
     else if (self.testMode) {
-        MKCircleView *circleView = [[MKCircleView alloc] initWithCircle:(MKCircle *)overlay];
+        MKCircleRenderer *circleView = [[MKCircleRenderer alloc] initWithCircle:(MKCircle *)overlay];
         if ([self.mediaCircles containsObject:overlay])
             circleView.fillColor = [[UIColor alloc] initWithRed:255/255.0 green:0/255.0 blue:0/255.0 alpha:0.2];
         else if ([self.poiCircles containsObject:overlay])
             circleView.fillColor = [[UIColor alloc] initWithRed:0/255.0 green:0/255.0 blue:255/255.0 alpha:0.4];
-//                circleView.fillColor = [UIColor redColor];
+        //                circleView.fillColor = [UIColor redColor];
         else
             circleView.fillColor = [[UIColor alloc] initWithRed:0/255.0 green:255/255.0 blue:0/255.0 alpha:0.4];
         return circleView;
@@ -368,12 +422,15 @@
     
 	return overlayView;
 }
+#endif
 
-- (void)locationManager:(CLLocationManager *)manager
-    didUpdateToLocation:(CLLocation *)newLocation
-           fromLocation:(CLLocation *)oldLocation
+//- (void)locationManager:(CLLocationManager *)manager
+//    didUpdateToLocation:(CLLocation *)newLocation
+//           fromLocation:(CLLocation *)oldLocation
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    [self handleNewLocation:manager didUpdateToLocation:newLocation fromLocation:oldLocation];
+    CLLocation *oldLoc = (locations.count > 1) ? locations[1] : [[CLLocation  alloc] initWithLatitude:0.0 longitude:0.0];
+    [self handleNewLocation:manager didUpdateToLocation:locations[0] fromLocation:oldLoc];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView
@@ -435,6 +492,7 @@
                 pinView.leftCalloutAccessoryView = annotationToggle;
                 
                 if (annotate.isStart) {
+                    pinView.image = nil;
                     pinView.image = [UIImage imageNamed:@"start_pin_poi"];
                 }
                 
@@ -707,7 +765,7 @@
 //                startWasFound = YES;
             }
         } else {
-            if ( [way matchesTourPoint:[self.currentTour.route.tourPoints objectAtIndex:0]] && ![touched boolValue] ) {
+            if ( [way matchesTourPoint:[self.currentTour.route.tourPoints objectAtIndex:0]] && ![touched boolValue] && self.currentTour.isRouteBasedTour ) {
                 pin.isStart = YES;
 //                way.isOpen = YES;
                 startWasFound = YES;
