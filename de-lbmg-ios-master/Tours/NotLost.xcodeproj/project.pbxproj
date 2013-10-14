@@ -238,8 +238,6 @@
 		6D3D0D3C172061A000193DCC /* TourPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D0D37172061A000193DCC /* TourPlace.m */; };
 		6D3D0D3D172061A000193DCC /* TourDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D0D38172061A000193DCC /* TourDetail.m */; };
 		6D3D0D3E172061A000193DCC /* TourSection.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D0D3B172061A000193DCC /* TourSection.m */; };
-		6D3D0D45172083CC00193DCC /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6D3D0D42172083CC00193DCC /* SVProgressHUD.bundle */; };
-		6D3D0D46172083CC00193DCC /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D3D0D44172083CC00193DCC /* SVProgressHUD.m */; };
 		6D435B3F173048C300F5E374 /* tempSearchButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D435B3E173048C300F5E374 /* tempSearchButton.png */; };
 		6D435B431731CCAA00F5E374 /* around_backgroundimage.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D435B401731CCAA00F5E374 /* around_backgroundimage.png */; };
 		6D435B441731CCAA00F5E374 /* around_backgroundimage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D435B411731CCAA00F5E374 /* around_backgroundimage@2x.png */; };
@@ -559,6 +557,9 @@
 		E3AA75B317C7FD8F00497B4A /* UAPushSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3AA757B17C7FD8F00497B4A /* UAPushSettingsView.xib */; };
 		E3AA75B517C8029700497B4A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AA75B417C8029600497B4A /* AudioToolbox.framework */; };
 		E3F690FB17DE8115000461D6 /* tutorial_images in Resources */ = {isa = PBXBuildFile; fileRef = E3F690FA17DE8115000461D6 /* tutorial_images */; };
+		E3FDC270180C695E0058B987 /* alert_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E3FDC26F180C695E0058B987 /* alert_icon.png */; };
+		E3FDC278180C75DD0058B987 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E3FDC275180C75DD0058B987 /* SVProgressHUD.bundle */; };
+		E3FDC279180C75DD0058B987 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FDC277180C75DD0058B987 /* SVProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -892,9 +893,6 @@
 		6D3D0D39172061A000193DCC /* TourDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourDetail.h; sourceTree = "<group>"; };
 		6D3D0D3A172061A000193DCC /* TourSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourSection.h; sourceTree = "<group>"; };
 		6D3D0D3B172061A000193DCC /* TourSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourSection.m; sourceTree = "<group>"; };
-		6D3D0D42172083CC00193DCC /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
-		6D3D0D43172083CC00193DCC /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
-		6D3D0D44172083CC00193DCC /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		6D435B3E173048C300F5E374 /* tempSearchButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tempSearchButton.png; sourceTree = "<group>"; };
 		6D435B401731CCAA00F5E374 /* around_backgroundimage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = around_backgroundimage.png; sourceTree = "<group>"; };
 		6D435B411731CCAA00F5E374 /* around_backgroundimage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "around_backgroundimage@2x.png"; sourceTree = "<group>"; };
@@ -1354,6 +1352,11 @@
 		E3AA757B17C7FD8F00497B4A /* UAPushSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UAPushSettingsView.xib; sourceTree = "<group>"; };
 		E3AA75B417C8029600497B4A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		E3F690FA17DE8115000461D6 /* tutorial_images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tutorial_images; sourceTree = "<group>"; };
+		E3FDC26F180C695E0058B987 /* alert_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert_icon.png; sourceTree = "<group>"; };
+		E3FDC274180C75DD0058B987 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		E3FDC275180C75DD0058B987 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		E3FDC276180C75DD0058B987 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		E3FDC277180C75DD0058B987 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1513,6 +1516,7 @@
 			isa = PBXGroup;
 			children = (
 				E3F690FA17DE8115000461D6 /* tutorial_images */,
+				E3FDC26F180C695E0058B987 /* alert_icon.png */,
 				E3A7DC1617C452B100AD674C /* start_pin_poi.png */,
 				E3A7DC1417C4529300AD674C /* start_pin_poi@2x.png */,
 				E376EA3B17BD614300E2399F /* menu.png */,
@@ -1800,11 +1804,11 @@
 		6D0782AD16FB8D690029FAA4 /* Third Party */ = {
 			isa = PBXGroup;
 			children = (
+				E3FDC273180C75DD0058B987 /* SVProgressHUD */,
 				E34E50BE17CBEB0400304AAD /* TestFlightSDK2.0.0 */,
 				E3AA74E517C7FD8F00497B4A /* Airship */,
 				6D18805917B1F48F001DCAB7 /* TapIt */,
 				A94DBA7F1728852000B3E1F7 /* SDWebImage */,
-				6D3D0D41172083CC00193DCC /* SVProgressHUD */,
 				A91B2042171320A400E1B608 /* ALRadial */,
 				A99ECFC4170DBEA900977452 /* BDAPAudioPlayer */,
 				6D3A836B170C8B7B009F75F1 /* SSZIP */,
@@ -2160,16 +2164,6 @@
 				6D1E5DA717330EA600C9707D /* ArialBlackLabel.m */,
 			);
 			path = Utilities;
-			sourceTree = "<group>";
-		};
-		6D3D0D41172083CC00193DCC /* SVProgressHUD */ = {
-			isa = PBXGroup;
-			children = (
-				6D3D0D42172083CC00193DCC /* SVProgressHUD.bundle */,
-				6D3D0D43172083CC00193DCC /* SVProgressHUD.h */,
-				6D3D0D44172083CC00193DCC /* SVProgressHUD.m */,
-			);
-			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
 		6DD0737D170E0CDC0085E7B6 /* Tour List */ = {
@@ -2739,6 +2733,17 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		E3FDC273180C75DD0058B987 /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				E3FDC274180C75DD0058B987 /* SVProgressHUD-Prefix.pch */,
+				E3FDC275180C75DD0058B987 /* SVProgressHUD.bundle */,
+				E3FDC276180C75DD0058B987 /* SVProgressHUD.h */,
+				E3FDC277180C75DD0058B987 /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2854,6 +2859,7 @@
 				6D07837D16FBB7F20029FAA4 /* tour_vt_nextpin@2x.png in Resources */,
 				6D07837E16FBB7F20029FAA4 /* tour_vt_nextpin.png in Resources */,
 				6D07837F16FBB7F20029FAA4 /* tour_vt_previouspin.png in Resources */,
+				E3FDC278180C75DD0058B987 /* SVProgressHUD.bundle in Resources */,
 				6D07838016FBB7F20029FAA4 /* tour_rt_button@2x.png in Resources */,
 				6D07838116FBB7F20029FAA4 /* tour_homebutton@2x.png in Resources */,
 				6D07838216FBB7F20029FAA4 /* tour_vt_button@2x.png in Resources */,
@@ -3024,7 +3030,6 @@
 				A99D31F2171DA0F800AAEC04 /* cal_eventicon.png in Resources */,
 				A99D31F3171DA0F800AAEC04 /* cal_personalicon@2x.png in Resources */,
 				A99D31F4171DA0F800AAEC04 /* cal_personalicon.png in Resources */,
-				6D3D0D45172083CC00193DCC /* SVProgressHUD.bundle in Resources */,
 				A94DBA551726E95E00B3E1F7 /* LBMGTourEndVC.xib in Resources */,
 				6D4A31B11726F7B80049E1E6 /* notethumbnail_highlighted@2x.png in Resources */,
 				6D4A31B21726F7B80049E1E6 /* notethumbnail_highlighted.png in Resources */,
@@ -3134,6 +3139,7 @@
 				E343565917B9C157000409CE /* LBMGNavTableVC.xib in Resources */,
 				E343565E17B9CED7000409CE /* LBMGNavTableCell.xib in Resources */,
 				E376EA3D17BD614300E2399F /* menu.png in Resources */,
+				E3FDC270180C695E0058B987 /* alert_icon.png in Resources */,
 				E376EA3E17BD614300E2399F /* menu@2x.png in Resources */,
 				E3A7DC1517C4529300AD674C /* start_pin_poi@2x.png in Resources */,
 				E3A7DC1717C452B100AD674C /* start_pin_poi.png in Resources */,
@@ -3245,6 +3251,7 @@
 				A91B2062171320A500E1B608 /* ALRadialMenu.m in Sources */,
 				A91B207F1713532600E1B608 /* LBMGPhotoCaptionVC.m in Sources */,
 				A91B208B1713636600E1B608 /* LBMGUserContentVC.m in Sources */,
+				E3FDC279180C75DD0058B987 /* SVProgressHUD.m in Sources */,
 				A91B20901714615100E1B608 /* LBMGAddCommentVC.m in Sources */,
 				A91B20961714678D00E1B608 /* LBMGCommentCell.m in Sources */,
 				A91B209C17146C7E00E1B608 /* LBMGCommentVC.m in Sources */,
@@ -3260,7 +3267,6 @@
 				6D3D0D3C172061A000193DCC /* TourPlace.m in Sources */,
 				6D3D0D3D172061A000193DCC /* TourDetail.m in Sources */,
 				6D3D0D3E172061A000193DCC /* TourSection.m in Sources */,
-				6D3D0D46172083CC00193DCC /* SVProgressHUD.m in Sources */,
 				A94DBA541726E95E00B3E1F7 /* LBMGTourEndVC.m in Sources */,
 				A94DBA5B17272F7800B3E1F7 /* UIToggleButton.m in Sources */,
 				A94DBA5E1728249F00B3E1F7 /* Event.m in Sources */,
@@ -3378,8 +3384,9 @@
 		6D011C57172AF52B00ECCD91 /* AdHoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Katharine Lee (7D723E6F5B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Katharine Lee (7D723E6F5B)";
+				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tours/NotLost-Prefix.pch";
 				HEADER_SEARCH_PATHS = "../Airship/**";
@@ -3396,8 +3403,8 @@
 					"\"$(SRCROOT)/Tours/Third Party/TestFlightSDK2.0.0\"",
 				);
 				PRODUCT_NAME = NotLost;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "15D244F0-3CDA-4506-AA15-6B8476BA44AB";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "15D244F0-3CDA-4506-AA15-6B8476BA44AB";
 				WRAPPER_EXTENSION = app;
 			};
 			name = AdHoc;
@@ -3461,8 +3468,9 @@
 		6D07820116F78D6F0029FAA4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Katharine Lee (7D723E6F5B)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Katharine Lee (7D723E6F5B)";
+				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tours/NotLost-Prefix.pch";
 				HEADER_SEARCH_PATHS = "../Airship/**";
@@ -3479,8 +3487,8 @@
 					"\"$(SRCROOT)/Tours/Third Party/TestFlightSDK2.0.0\"",
 				);
 				PRODUCT_NAME = NotLost;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "45CCCA30-C76D-4B2D-9C2F-B485182EB492";
+				PROVISIONING_PROFILE = "7B8D53BE-3C91-4C0B-92D1-BBDD064C9C64";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7B8D53BE-3C91-4C0B-92D1-BBDD064C9C64";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -3488,8 +3496,9 @@
 		6D07820216F78D6F0029FAA4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Katharine Lee (5G2W494B9G)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Katharine Lee (5G2W494B9G)";
+				COMPRESS_PNG_FILES = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tours/NotLost-Prefix.pch";
 				HEADER_SEARCH_PATHS = "../Airship/**";
@@ -3506,7 +3515,7 @@
 					"\"$(SRCROOT)/Tours/Third Party/TestFlightSDK2.0.0\"",
 				);
 				PRODUCT_NAME = NotLost;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "378911B8-CF62-48C6-8715-85376D57B4F9";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "378911B8-CF62-48C6-8715-85376D57B4F9";
 				WRAPPER_EXTENSION = app;
 			};

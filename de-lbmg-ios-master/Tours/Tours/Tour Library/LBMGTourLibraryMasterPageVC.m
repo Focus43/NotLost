@@ -24,9 +24,10 @@ const float autoRefreshInterval = 300.0;
 @interface LBMGTourLibraryMasterPageVC ()
 
 @property (strong, nonatomic) LBMGTourLibraryChildTBVC *routeTBVC;
-//@property (strong, nonatomic) TourList *tourList;
-
 @property (strong, nonatomic) TapItInterstitialAd *interstitialAd;
+@property (nonatomic) BOOL eventHudIsShowing;
+
+- (void)handleSimultaneousListingHUD:(NSNotification *)note;
 
 @end
 
@@ -41,6 +42,16 @@ const float autoRefreshInterval = 300.0;
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(downloadComplete:)
                                                  name:LBMGUtilitiesDownloadComplete
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleSimultaneousListingHUD:)
+                                                 name:SVProgressHUDWillAppearNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleSimultaneousListingHUD:)
+                                                 name:SVProgressHUDWillDisappearNotification
                                                object:nil];
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];    
@@ -126,7 +137,9 @@ const float autoRefreshInterval = 300.0;
 
 -(void)getData
 {
-    [SVProgressHUD showWithStatus:@"Loading Tours"];
+    if ( !_eventHudIsShowing )
+        [SVProgressHUD showWithStatus:@"Loading Tours"];
+    
     [ApplicationDelegate.lbmgEngine getNearbyToursWithLatitude:self.locationManager.location.coordinate.latitude andLongitude:self.locationManager.location.coordinate.longitude contentBlock:^(NSArray *responseArray) {
 //        NSLog(@"%@", responseArray);
         [SVProgressHUD dismiss];
@@ -176,6 +189,16 @@ const float autoRefreshInterval = 300.0;
 - (void)dealloc
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)handleSimultaneousListingHUD:(NSNotification *)note
+{
+    if ( [note.name isEqualToString:@"SVProgressHUDWillAppearNotification"] && [[note.userInfo objectForKey:@"SVProgressHUDStatusUserInfoKey" ] isEqualToString:@"Loading Events"] ) {
+        _eventHudIsShowing = YES;
+    } else if ( [note.name isEqualToString:@"SVProgressHUDWillDisappearNotification"] && [[note.userInfo objectForKey:@"SVProgressHUDStatusUserInfoKey" ] isEqualToString:@"Loading Events"] ) {
+       _eventHudIsShowing = NO;
+    }
+        
 }
 
 #pragma mark - scrolview delegates
