@@ -187,7 +187,8 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
         // hide main nav button, since it interferes with the current page nav
         self.mainVC.mainNavButton.hidden = YES;
         [self.view  addSubview:self.searchViewContainer];
-        self.searchTextView.text = @"";
+        self.searchTextView.text = @"Bldg. #, address, etc...";
+        self.clearSearchTextButton.hidden = NO;
         self.suggestionsArray = nil;
         self.searchResultArray = nil;
         [self.searchTableView reloadData];

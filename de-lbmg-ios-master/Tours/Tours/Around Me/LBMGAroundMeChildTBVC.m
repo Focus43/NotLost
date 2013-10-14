@@ -41,7 +41,6 @@ static NSString *CellIdentifier = @"Cell";
 
 #pragma mark - Tableview delegate/datasource
 
-//
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.eventsArray.count;
@@ -56,9 +55,8 @@ static NSString *CellIdentifier = @"Cell";
     if ([events.distance intValue] < 1000) {
         cell.tourDistance = events.distance;
     }
-//    cell.tourTime.text = [NSString stringWithFormat:@"%@ miles", self.times[indexPath.row]];
     
-    [cell animateForDuration:1-1.0/indexPath.row];
+    [cell animateForDuration:1.0+(indexPath.row+1.0)/10];
     
     return cell;
 }
