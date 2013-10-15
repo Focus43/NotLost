@@ -11,7 +11,7 @@
 
 @class LBMGAroundMeMasterPageVC;
 
-@interface LBMGAroundMeChildTBVC : LBMGNoRotateViewController <TapItBannerAdViewDelegate>
+@interface LBMGAroundMeChildTBVC : LBMGNoRotateViewController
 
 @property (strong, nonatomic) IBOutlet UITableView *eventsTableView;
 

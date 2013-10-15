@@ -7,12 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TapItAdDelegates.h"
 
 @class ArialBlackLabel;
 @class LBMGDayView;
 
-@interface LBMGCalendarMasterVC : LBMGNoRotateViewController <UITableViewDataSource, UITableViewDelegate, TapItInterstitialAdDelegate>
+@interface LBMGCalendarMasterVC : LBMGNoRotateViewController <UITableViewDataSource, UITableViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *calenderViewContainer;
 @property (weak, nonatomic) IBOutlet UILabel *weekDayRangeLabel;

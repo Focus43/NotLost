@@ -12,7 +12,6 @@
 #import "UAPush.h"
 #import "UALocationService.h"
 #import "UAConfig.h"
-#import "TapItAppTracker.h"
 
 @implementation LBMGAppDelegate
 
@@ -50,9 +49,6 @@
     locationService.backgroundLocationServiceEnabled = NO;
     [locationService startReportingSignificantLocationChanges];
     
-    TapItAppTracker *appTracker = [TapItAppTracker sharedAppTracker];
-    [appTracker reportApplicationOpen];
-
     return YES;
 }
 

@@ -24,16 +24,6 @@
 #import "LBMGMainMasterPageVC.h"
 #import "LBMGAroundMeFeaturedCell.h"
 #import "LBMGTourLibraryDetailTBVCell.h"
-#import "TapIt.h"
-
-// This is the TEST zone id for the Interstitial Example
-// go to http://ads.tapit.com/ to get your's
-#define ZONE_ID_INT @"30785"
-
-
-// This is the zone id for the BannerAd Example
-// go to http://ads.tapit.com/ to get one for your app.
-#define ZONE_ID @"30790" // for example use only, don't use this zone in your app!
 
 @interface LBMGAroundMeMasterPageVC ()
 
@@ -42,7 +32,6 @@
 @property (nonatomic, strong) NSArray *detailArray;
 @property (nonatomic, strong) NSArray *suggestionsArray;
 @property (nonatomic, strong) NSArray *searchResultArray;
-@property (strong, nonatomic) TapItInterstitialAd *interstitialAd;
 
 - (void)handleSwipeClosed:(UISwipeGestureRecognizer *)recognizer;
 
@@ -94,16 +83,6 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getData) name:favoritesUpdatedNotification object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(searchTextDidChange) name:UITextFieldTextDidChangeNotification object:nil];
-    
-    if (!self.tapitAd) {
-        // don't re-define if we used IB to init the banner...
-        CGRect parentFrame = self.view.frame;
-        self.tapitAd = [[TapItBannerAdView alloc] initWithFrame:CGRectMake(0, parentFrame.size.height-50, 320, 50)];
-        [self.view addSubview:self.tapitAd];
-    }
-    [self.tapitAd startServingAdsForRequest:[TapItRequest requestWithAdZone:ZONE_ID]];
-    self.tapitAd.hidden = YES;
-    self.tapitAd.alpha = 0;
 
 }
 
@@ -116,28 +95,6 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
     }
     
 }
-
-- (void)scrolledIntoView
-{
-    [self loadInterstitial];
-}
-
-- (void)loadInterstitial
-{
-    self.interstitialAd = [[TapItInterstitialAd alloc] init];
-    self.interstitialAd.delegate = self;
-    self.interstitialAd.animated = YES;
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-                            //                            @"test", @"mode", // enable test mode to test banner ads in your app
-                            nil];
-    TapItRequest *request = [TapItRequest requestWithAdZone:ZONE_ID_INT andCustomParameters:params];
-    //    AppDelegate *myAppDelegate = (AppDelegate *)([[UIApplication sharedApplication] delegate]);
-    //    [request updateLocation:myAppDelegate.locationManager.location];
-    [self.interstitialAd loadInterstitialForRequest:request];
-}
-
-
-
 
 - (void)startLocationServices {
     self.locationManager = [[CLLocationManager alloc] init];
@@ -168,6 +125,10 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
         [SVProgressHUD showErrorWithStatus:@"Events Unavailable"];
         NSLog(@"ERROR");
     }];
+}
+
+- (void)scrolledIntoView
+{
 }
 
 - (IBAction)yourLibraryTouched:(id)sender {
@@ -361,42 +322,6 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
     } errorBlock:^(NSError *error) {
         [SVProgressHUD showErrorWithStatus:@"Events Unavailable"];
     }];
-}
-
-#pragma mark -
-#pragma mark TapItInterstitialAdDelegate methods
-
-- (void)tapitInterstitialAd:(TapItInterstitialAd *)interstitialAd didFailWithError:(NSError *)error {
-    NSLog(@"Error: %@", error.localizedDescription);
-    //    [self updateUIWithState:StateError];
-}
-
-- (void)tapitInterstitialAdDidUnload:(TapItInterstitialAd *)interstitialAd {
-    NSLog(@"Ad did unload");
-    //    [self updateUIWithState:StateNone];
-    self.interstitialAd = nil; // don't reuse interstitial ad!
-}
-
-- (void)tapitInterstitialAdWillLoad:(TapItInterstitialAd *)interstitialAd {
-    NSLog(@"Ad will load");
-}
-
-- (void)tapitInterstitialAdDidLoad:(TapItInterstitialAd *)interstitialAd {
-    NSLog(@"Ad did load");
-    //    [self.interstitialAd presentFromViewController:self];
-    if (!interstitialAd.presentingController) {
-        [self.interstitialAd presentFromViewController:self];
-    }
-    //    [self updateUIWithState:StateReady];
-}
-
-- (BOOL)tapitInterstitialAdActionShouldBegin:(TapItInterstitialAd *)interstitialAd willLeaveApplication:(BOOL)willLeave {
-    NSLog(@"Ad action should begin");
-    return YES;
-}
-
-- (void)tapitInterstitialAdActionDidFinish:(TapItInterstitialAd *)interstitialAd {
-    NSLog(@"Ad action did finish");
 }
 
 #pragma mark swipe navigation closed

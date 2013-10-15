@@ -19,11 +19,6 @@
 #import "EventDescription.h"
 #import "LBMGMainMasterPageVC.h"
 #import "LBMGEngine.h"
-#import "TapIt.h"
-
-// This is the TEST zone id for the Interstitial Example
-// go to http://ads.tapit.com/ to get your's
-#define ZONE_ID @"30792"
 
 @interface LBMGCalendarMasterVC ()
 
@@ -38,7 +33,6 @@
 @property (strong, nonatomic) NSDictionary *weeksFavorites;
 @property (assign, nonatomic) BOOL hasCalendarAccess;
 @property (assign, nonatomic) int openDay;
-@property (strong, nonatomic) TapItInterstitialAd *interstitialAd;
 
 @end
 
@@ -92,30 +86,6 @@ static NSString *CellIdentifier = @"Cell";
     }
     
 }
-
-
-
-- (void)scrolledIntoView
-{
-    [self loadInterstitial];
-}
-
-
-- (void)loadInterstitial
-{
-    self.interstitialAd = [[TapItInterstitialAd alloc] init];
-    self.interstitialAd.delegate = self;
-    self.interstitialAd.animated = YES;
-    NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
-                            //                            @"test", @"mode", // enable test mode to test banner ads in your app
-                            nil];
-    TapItRequest *request = [TapItRequest requestWithAdZone:ZONE_ID andCustomParameters:params];
-    //    AppDelegate *myAppDelegate = (AppDelegate *)([[UIApplication sharedApplication] delegate]);
-    //    [request updateLocation:myAppDelegate.locationManager.location];
-    [self.interstitialAd loadInterstitialForRequest:request];
-    
-}
-
 
 - (void)updateDateSpecificItems
 {
@@ -528,43 +498,5 @@ static NSString *CellIdentifier = @"Cell";
     }
     
 }
-
-#pragma mark -
-#pragma mark TapItInterstitialAdDelegate methods
-
-- (void)tapitInterstitialAd:(TapItInterstitialAd *)interstitialAd didFailWithError:(NSError *)error {
-    NSLog(@"Error: %@", error.localizedDescription);
-    //    [self updateUIWithState:StateError];
-}
-
-- (void)tapitInterstitialAdDidUnload:(TapItInterstitialAd *)interstitialAd {
-    NSLog(@"Ad did unload");
-    //    [self updateUIWithState:StateNone];
-    self.interstitialAd = nil; // don't reuse interstitial ad!
-}
-
-- (void)tapitInterstitialAdWillLoad:(TapItInterstitialAd *)interstitialAd {
-    NSLog(@"Ad will load");
-}
-
-- (void)tapitInterstitialAdDidLoad:(TapItInterstitialAd *)interstitialAd {
-    NSLog(@"Ad did load");
-    //    [self.interstitialAd presentFromViewController:self];
-    if (!interstitialAd.presentingController) {
-        [self.interstitialAd presentFromViewController:self];
-    }
-    //    [self updateUIWithState:StateReady];
-}
-
-- (BOOL)tapitInterstitialAdActionShouldBegin:(TapItInterstitialAd *)interstitialAd willLeaveApplication:(BOOL)willLeave {
-    NSLog(@"Ad action should begin");
-    return YES;
-}
-
-- (void)tapitInterstitialAdActionDidFinish:(TapItInterstitialAd *)interstitialAd {
-    NSLog(@"Ad action did finish");
-}
-
-
 
 @end

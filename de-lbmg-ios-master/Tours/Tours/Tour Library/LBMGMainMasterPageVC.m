@@ -213,8 +213,8 @@
         // a possible optimization would be to unload the views+controllers which are no longer visible
         
         // find currentPage
-        LBMGNoRotateViewController *controller = [self.viewControllers objectAtIndex:page];
-        [controller scrolledIntoView];
+//        LBMGNoRotateViewController *controller = [self.viewControllers objectAtIndex:page];
+//        [controller scrolledIntoView];
     }
 }
 

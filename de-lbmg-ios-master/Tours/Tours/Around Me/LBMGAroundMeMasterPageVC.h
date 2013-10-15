@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "TapIt.h"
 #import "LBMGMainMasterPageVC.h"
 
 @interface LBMGAroundMeMasterPageVC : UIViewController <UITableViewDataSource, UITableViewDelegate>
@@ -20,7 +19,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UIButton *clearSearchTextButton;
 @property (strong, nonatomic) IBOutlet UIButton *searchButton;
-@property (retain, nonatomic) TapItBannerAdView *tapitAd;
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 
@@ -29,6 +27,7 @@
 @property (nonatomic, strong) UIView *swipeClosedView;
 - (void)addCloseNavGesture;
 
+- (void)scrolledIntoView;
 - (IBAction)searchButtonTouched:(id)sender;
 - (IBAction)closeSearchButtonPressed:(id)sender;
 - (IBAction)clearTextButtonPressed:(id)sender;

@@ -16,7 +16,6 @@
 #import "TourDetail.h"
 #import "LBMGAroundMeCategoryCell.h"
 #import "LBMGTourTypeVC.h"
-//#import "TourPlace.h"
 #import "LBMGSponsoredEventVC.h"
 #import "Event.h"
 #import "Category.h"
@@ -46,11 +45,6 @@ static NSString *CellIdentifier = @"Cell";
     self.view.layer.mask = self.maskingLayerView.layer;
     
     self.favorites = [LBMGUtilities fetchFavorites];
-    self.masterPage.tapitAd.hidden = NO;
-    self.masterPage.tapitAd.alpha = 0;
-    [UIView animateWithDuration:0.25 animations:^{
-        self.masterPage.tapitAd.alpha = 1;
-    }];
 }
 
 //
@@ -123,7 +117,6 @@ static NSString *CellIdentifier = @"Cell";
     [UIView animateWithDuration:0.25 animations:^{
         self.scroller.contentOffset = CGPointMake(0, 0);
         self.masterPage.titleLabel.text = self.oldTitleText;
-        self.masterPage.tapitAd.alpha = 0;
         // un-hide main nav and search buttons
         self.masterPage.mainVC.mainNavButton.hidden = NO;
         self.masterPage.searchButton.hidden = NO;
