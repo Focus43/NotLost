@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Event.h"
-#import "TapItAdDelegates.h"
 
-@interface LBMGEventMasterVC : LBMGNoRotateViewController <TapItInterstitialAdDelegate>
+@interface LBMGEventMasterVC : LBMGNoRotateViewController
 
 @property (strong, nonatomic) Event *event;
 @property (weak, nonatomic) IBOutlet UIImageView *contentBackgroundImageView;

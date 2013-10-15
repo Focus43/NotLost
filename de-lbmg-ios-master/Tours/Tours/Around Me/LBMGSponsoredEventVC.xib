@@ -556,9 +556,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
     </objects>
     <resources>
         <image name="Backgroud_slither.png" width="300" height="1"/>
-        <image name="Backgroud_slither.png" width="300" height="1"/>
         <image name="event_farbackground5.png" width="640" height="1116"/>
-        <image name="event_goingbanner.png" width="64" height="80"/>
         <image name="event_goingbanner.png" width="64" height="80"/>
         <image name="event_header_photomask.png" width="300" height="81"/>
         <image name="event_headersmoke.png" width="300" height="82"/>

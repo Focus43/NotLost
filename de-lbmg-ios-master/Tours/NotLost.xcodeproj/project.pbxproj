@@ -204,27 +204,6 @@
 		6D1453A7170B405600BB0E1A /* Tour.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1453A4170B405500BB0E1A /* Tour.m */; };
 		6D1453A8170B405600BB0E1A /* TourData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1453A6170B405600BB0E1A /* TourData.m */; };
 		6D1453AB170B408800BB0E1A /* TourRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1453AA170B408800BB0E1A /* TourRoute.m */; };
-		6D18807C17B1F49E001DCAB7 /* TapIt.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6D18806517B1F49E001DCAB7 /* TapIt.bundle */; };
-		6D18807D17B1F49E001DCAB7 /* TapItAdManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18806717B1F49E001DCAB7 /* TapItAdManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6D18807E17B1F49E001DCAB7 /* TapItAdPrompt.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18806917B1F49E001DCAB7 /* TapItAdPrompt.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6D18807F17B1F49E001DCAB7 /* TapItAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18806B17B1F49E001DCAB7 /* TapItAdView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6D18808017B1F49E001DCAB7 /* TapItAppTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18806C17B1F49E001DCAB7 /* TapItAppTracker.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6D18808117B1F49E001DCAB7 /* TapItBannerAdView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18806D17B1F49E001DCAB7 /* TapItBannerAdView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6D18808217B1F49E001DCAB7 /* TapItBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18806F17B1F49E001DCAB7 /* TapItBrowserController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6D18808317B1F49E001DCAB7 /* TapItHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18807117B1F49E001DCAB7 /* TapItHelpers.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6D18808417B1F49E001DCAB7 /* TapItInterstitialAd.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18807217B1F49E001DCAB7 /* TapItInterstitialAd.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6D18808517B1F49E001DCAB7 /* TapItInterstitialAdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18807417B1F49E001DCAB7 /* TapItInterstitialAdViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6D18808617B1F49E001DCAB7 /* TapItMediationAdMob.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18807617B1F49E001DCAB7 /* TapItMediationAdMob.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6D18808717B1F49E001DCAB7 /* TapItMraidCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18807817B1F49E001DCAB7 /* TapItMraidCommand.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6D18808817B1F49E001DCAB7 /* TapItRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18807B17B1F49E001DCAB7 /* TapItRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6D18815217B1F4C0001DCAB7 /* libGoogleAdMobAds.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1880EF17B1F4C0001DCAB7 /* libGoogleAdMobAds.a */; };
-		6D18815317B1F4C0001DCAB7 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6D1880F017B1F4C0001DCAB7 /* README.txt */; };
-		6D18815517B1F4C0001DCAB7 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1880F417B1F4C0001DCAB7 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6D18815717B1F4C0001DCAB7 /* libTapItVAST.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D1880F617B1F4C0001DCAB7 /* libTapItVAST.a */; };
-		6D18815817B1F4C1001DCAB7 /* NSDictionary+QueryStringBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1880F817B1F4C0001DCAB7 /* NSDictionary+QueryStringBuilder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6D18815917B1F4C1001DCAB7 /* TapItOpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1880FB17B1F4C0001DCAB7 /* TapItOpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6D18816917B1F4C1001DCAB7 /* TapItReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18812117B1F4C0001DCAB7 /* TapItReachability.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6D18816A17B1F4C1001DCAB7 /* TapItAdMobStubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D18812217B1F4C0001DCAB7 /* TapItAdMobStubs.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6D1E5DA217330D2200C9707D /* ArialBlack.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6D1E5DA117330D2200C9707D /* ArialBlack.ttf */; };
 		6D1E5DA817330EA600C9707D /* ArialBlackLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D1E5DA717330EA600C9707D /* ArialBlackLabel.m */; };
 		6D23EA9F1745622100680451 /* Refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 6D23EA9D1745622100680451 /* Refresh.png */; };
@@ -800,75 +779,6 @@
 		6D1453A6170B405600BB0E1A /* TourData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourData.m; sourceTree = "<group>"; };
 		6D1453A9170B408800BB0E1A /* TourRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TourRoute.h; sourceTree = "<group>"; };
 		6D1453AA170B408800BB0E1A /* TourRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TourRoute.m; sourceTree = "<group>"; };
-		6D18805C17B1F49E001DCAB7 /* TapIt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapIt.h; sourceTree = "<group>"; };
-		6D18805D17B1F49E001DCAB7 /* TapItAdDelegates.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItAdDelegates.h; sourceTree = "<group>"; };
-		6D18805E17B1F49E001DCAB7 /* TapItAdMobStubs.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItAdMobStubs.h; sourceTree = "<group>"; };
-		6D18805F17B1F49E001DCAB7 /* TapItAdPrompt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItAdPrompt.h; sourceTree = "<group>"; };
-		6D18806017B1F49E001DCAB7 /* TapItAppTracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItAppTracker.h; sourceTree = "<group>"; };
-		6D18806117B1F49E001DCAB7 /* TapItBannerAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItBannerAdView.h; sourceTree = "<group>"; };
-		6D18806217B1F49E001DCAB7 /* TapItConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItConstants.h; sourceTree = "<group>"; };
-		6D18806317B1F49E001DCAB7 /* TapItInterstitialAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItInterstitialAd.h; sourceTree = "<group>"; };
-		6D18806417B1F49E001DCAB7 /* TapItRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItRequest.h; sourceTree = "<group>"; };
-		6D18806517B1F49E001DCAB7 /* TapIt.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TapIt.bundle; sourceTree = "<group>"; };
-		6D18806617B1F49E001DCAB7 /* TapItAdManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItAdManager.h; sourceTree = "<group>"; };
-		6D18806717B1F49E001DCAB7 /* TapItAdManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapItAdManager.m; sourceTree = "<group>"; };
-		6D18806817B1F49E001DCAB7 /* TapItAdManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItAdManagerDelegate.h; sourceTree = "<group>"; };
-		6D18806917B1F49E001DCAB7 /* TapItAdPrompt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapItAdPrompt.m; sourceTree = "<group>"; };
-		6D18806A17B1F49E001DCAB7 /* TapItAdView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItAdView.h; sourceTree = "<group>"; };
-		6D18806B17B1F49E001DCAB7 /* TapItAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapItAdView.m; sourceTree = "<group>"; };
-		6D18806C17B1F49E001DCAB7 /* TapItAppTracker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapItAppTracker.m; sourceTree = "<group>"; };
-		6D18806D17B1F49E001DCAB7 /* TapItBannerAdView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapItBannerAdView.m; sourceTree = "<group>"; };
-		6D18806E17B1F49E001DCAB7 /* TapItBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItBrowserController.h; sourceTree = "<group>"; };
-		6D18806F17B1F49E001DCAB7 /* TapItBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapItBrowserController.m; sourceTree = "<group>"; };
-		6D18807017B1F49E001DCAB7 /* TapItHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItHelpers.h; sourceTree = "<group>"; };
-		6D18807117B1F49E001DCAB7 /* TapItHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapItHelpers.m; sourceTree = "<group>"; };
-		6D18807217B1F49E001DCAB7 /* TapItInterstitialAd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapItInterstitialAd.m; sourceTree = "<group>"; };
-		6D18807317B1F49E001DCAB7 /* TapItInterstitialAdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItInterstitialAdViewController.h; sourceTree = "<group>"; };
-		6D18807417B1F49E001DCAB7 /* TapItInterstitialAdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapItInterstitialAdViewController.m; sourceTree = "<group>"; };
-		6D18807517B1F49E001DCAB7 /* TapItMediationAdMob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItMediationAdMob.h; sourceTree = "<group>"; };
-		6D18807617B1F49E001DCAB7 /* TapItMediationAdMob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapItMediationAdMob.m; sourceTree = "<group>"; };
-		6D18807717B1F49E001DCAB7 /* TapItMraidCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItMraidCommand.h; sourceTree = "<group>"; };
-		6D18807817B1F49E001DCAB7 /* TapItMraidCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapItMraidCommand.m; sourceTree = "<group>"; };
-		6D18807917B1F49E001DCAB7 /* TapItMRAIDDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItMRAIDDelegate.h; sourceTree = "<group>"; };
-		6D18807A17B1F49E001DCAB7 /* TapItPrivateConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItPrivateConstants.h; sourceTree = "<group>"; };
-		6D18807B17B1F49E001DCAB7 /* TapItRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapItRequest.m; sourceTree = "<group>"; };
-		6D18808D17B1F4C0001DCAB7 /* DFPBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPBannerView.h; sourceTree = "<group>"; };
-		6D18808E17B1F4C0001DCAB7 /* DFPExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPExtras.h; sourceTree = "<group>"; };
-		6D18808F17B1F4C0001DCAB7 /* DFPInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFPInterstitial.h; sourceTree = "<group>"; };
-		6D18809017B1F4C0001DCAB7 /* GADAdSizeDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSizeDelegate.h; sourceTree = "<group>"; };
-		6D18809117B1F4C0001DCAB7 /* GADAppEventDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAppEventDelegate.h; sourceTree = "<group>"; };
-		6D1880DA17B1F4C0001DCAB7 /* GADCustomEventBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventBanner.h; sourceTree = "<group>"; };
-		6D1880DB17B1F4C0001DCAB7 /* GADCustomEventBannerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventBannerDelegate.h; sourceTree = "<group>"; };
-		6D1880DC17B1F4C0001DCAB7 /* GADCustomEventExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventExtras.h; sourceTree = "<group>"; };
-		6D1880DD17B1F4C0001DCAB7 /* GADCustomEventInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitial.h; sourceTree = "<group>"; };
-		6D1880DE17B1F4C0001DCAB7 /* GADCustomEventInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventInterstitialDelegate.h; sourceTree = "<group>"; };
-		6D1880DF17B1F4C0001DCAB7 /* GADCustomEventRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADCustomEventRequest.h; sourceTree = "<group>"; };
-		6D1880E117B1F4C0001DCAB7 /* GADSearchBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADSearchBannerView.h; sourceTree = "<group>"; };
-		6D1880E217B1F4C0001DCAB7 /* GADSearchRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADSearchRequest.h; sourceTree = "<group>"; };
-		6D1880E317B1F4C0001DCAB7 /* GADAdMobExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdMobExtras.h; sourceTree = "<group>"; };
-		6D1880E417B1F4C0001DCAB7 /* GADAdNetworkExtras.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdNetworkExtras.h; sourceTree = "<group>"; };
-		6D1880E517B1F4C0001DCAB7 /* GADAdSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADAdSize.h; sourceTree = "<group>"; };
-		6D1880E617B1F4C0001DCAB7 /* GADBannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerView.h; sourceTree = "<group>"; };
-		6D1880E717B1F4C0001DCAB7 /* GADBannerViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADBannerViewDelegate.h; sourceTree = "<group>"; };
-		6D1880E817B1F4C0001DCAB7 /* GADInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitial.h; sourceTree = "<group>"; };
-		6D1880E917B1F4C0001DCAB7 /* GADInterstitialDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADInterstitialDelegate.h; sourceTree = "<group>"; };
-		6D1880EA17B1F4C0001DCAB7 /* GADMAdNetworkAdapterProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMAdNetworkAdapterProtocol.h; sourceTree = "<group>"; };
-		6D1880EB17B1F4C0001DCAB7 /* GADMAdNetworkConnectorProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMAdNetworkConnectorProtocol.h; sourceTree = "<group>"; };
-		6D1880EC17B1F4C0001DCAB7 /* GADMEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADMEnums.h; sourceTree = "<group>"; };
-		6D1880ED17B1F4C0001DCAB7 /* GADRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequest.h; sourceTree = "<group>"; };
-		6D1880EE17B1F4C0001DCAB7 /* GADRequestError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GADRequestError.h; sourceTree = "<group>"; };
-		6D1880EF17B1F4C0001DCAB7 /* libGoogleAdMobAds.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAdMobAds.a; sourceTree = "<group>"; };
-		6D1880F017B1F4C0001DCAB7 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
-		6D1880F317B1F4C0001DCAB7 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		6D1880F417B1F4C0001DCAB7 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
-		6D1880F617B1F4C0001DCAB7 /* libTapItVAST.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTapItVAST.a; sourceTree = "<group>"; };
-		6D1880F717B1F4C0001DCAB7 /* NSDictionary+QueryStringBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+QueryStringBuilder.h"; sourceTree = "<group>"; };
-		6D1880F817B1F4C0001DCAB7 /* NSDictionary+QueryStringBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+QueryStringBuilder.m"; sourceTree = "<group>"; };
-		6D1880FA17B1F4C0001DCAB7 /* TapItOpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItOpenUDID.h; sourceTree = "<group>"; };
-		6D1880FB17B1F4C0001DCAB7 /* TapItOpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapItOpenUDID.m; sourceTree = "<group>"; };
-		6D18812017B1F4C0001DCAB7 /* TapItReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TapItReachability.h; sourceTree = "<group>"; };
-		6D18812117B1F4C0001DCAB7 /* TapItReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapItReachability.m; sourceTree = "<group>"; };
-		6D18812217B1F4C0001DCAB7 /* TapItAdMobStubs.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TapItAdMobStubs.m; sourceTree = "<group>"; };
 		6D1E5DA117330D2200C9707D /* ArialBlack.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ArialBlack.ttf; sourceTree = "<group>"; };
 		6D1E5DA617330EA600C9707D /* ArialBlackLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArialBlackLabel.h; sourceTree = "<group>"; };
 		6D1E5DA717330EA600C9707D /* ArialBlackLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArialBlackLabel.m; sourceTree = "<group>"; };
@@ -1386,8 +1296,6 @@
 				6D0782D316FB8FBD0029FAA4 /* SystemConfiguration.framework in Frameworks */,
 				6D0781E316F78D6F0029FAA4 /* Foundation.framework in Frameworks */,
 				6D0781E516F78D6F0029FAA4 /* CoreGraphics.framework in Frameworks */,
-				6D18815217B1F4C0001DCAB7 /* libGoogleAdMobAds.a in Frameworks */,
-				6D18815717B1F4C0001DCAB7 /* libTapItVAST.a in Frameworks */,
 				E3AA757C17C7FD8F00497B4A /* libUAirship-2.0.2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1807,7 +1715,6 @@
 				E3FDC273180C75DD0058B987 /* SVProgressHUD */,
 				E34E50BE17CBEB0400304AAD /* TestFlightSDK2.0.0 */,
 				E3AA74E517C7FD8F00497B4A /* Airship */,
-				6D18805917B1F48F001DCAB7 /* TapIt */,
 				A94DBA7F1728852000B3E1F7 /* SDWebImage */,
 				A91B2042171320A400E1B608 /* ALRadial */,
 				A99ECFC4170DBEA900977452 /* BDAPAudioPlayer */,
@@ -1960,170 +1867,6 @@
 			);
 			name = DataModel;
 			path = Tours/DataModel;
-			sourceTree = "<group>";
-		};
-		6D18805917B1F48F001DCAB7 /* TapIt */ = {
-			isa = PBXGroup;
-			children = (
-				6D18808917B1F4C0001DCAB7 /* Lib */,
-				6D18805A17B1F49E001DCAB7 /* TapItSDK */,
-			);
-			name = TapIt;
-			sourceTree = "<group>";
-		};
-		6D18805A17B1F49E001DCAB7 /* TapItSDK */ = {
-			isa = PBXGroup;
-			children = (
-				6D18805B17B1F49E001DCAB7 /* Headers */,
-				6D18806517B1F49E001DCAB7 /* TapIt.bundle */,
-				6D18806617B1F49E001DCAB7 /* TapItAdManager.h */,
-				6D18806717B1F49E001DCAB7 /* TapItAdManager.m */,
-				6D18806817B1F49E001DCAB7 /* TapItAdManagerDelegate.h */,
-				6D18806917B1F49E001DCAB7 /* TapItAdPrompt.m */,
-				6D18806A17B1F49E001DCAB7 /* TapItAdView.h */,
-				6D18806B17B1F49E001DCAB7 /* TapItAdView.m */,
-				6D18806C17B1F49E001DCAB7 /* TapItAppTracker.m */,
-				6D18806D17B1F49E001DCAB7 /* TapItBannerAdView.m */,
-				6D18806E17B1F49E001DCAB7 /* TapItBrowserController.h */,
-				6D18806F17B1F49E001DCAB7 /* TapItBrowserController.m */,
-				6D18807017B1F49E001DCAB7 /* TapItHelpers.h */,
-				6D18807117B1F49E001DCAB7 /* TapItHelpers.m */,
-				6D18807217B1F49E001DCAB7 /* TapItInterstitialAd.m */,
-				6D18807317B1F49E001DCAB7 /* TapItInterstitialAdViewController.h */,
-				6D18807417B1F49E001DCAB7 /* TapItInterstitialAdViewController.m */,
-				6D18807517B1F49E001DCAB7 /* TapItMediationAdMob.h */,
-				6D18807617B1F49E001DCAB7 /* TapItMediationAdMob.m */,
-				6D18807717B1F49E001DCAB7 /* TapItMraidCommand.h */,
-				6D18807817B1F49E001DCAB7 /* TapItMraidCommand.m */,
-				6D18807917B1F49E001DCAB7 /* TapItMRAIDDelegate.h */,
-				6D18807A17B1F49E001DCAB7 /* TapItPrivateConstants.h */,
-				6D18807B17B1F49E001DCAB7 /* TapItRequest.m */,
-			);
-			path = TapItSDK;
-			sourceTree = "<group>";
-		};
-		6D18805B17B1F49E001DCAB7 /* Headers */ = {
-			isa = PBXGroup;
-			children = (
-				6D18805C17B1F49E001DCAB7 /* TapIt.h */,
-				6D18805D17B1F49E001DCAB7 /* TapItAdDelegates.h */,
-				6D18805E17B1F49E001DCAB7 /* TapItAdMobStubs.h */,
-				6D18805F17B1F49E001DCAB7 /* TapItAdPrompt.h */,
-				6D18806017B1F49E001DCAB7 /* TapItAppTracker.h */,
-				6D18806117B1F49E001DCAB7 /* TapItBannerAdView.h */,
-				6D18806217B1F49E001DCAB7 /* TapItConstants.h */,
-				6D18806317B1F49E001DCAB7 /* TapItInterstitialAd.h */,
-				6D18806417B1F49E001DCAB7 /* TapItRequest.h */,
-			);
-			path = Headers;
-			sourceTree = "<group>";
-		};
-		6D18808917B1F4C0001DCAB7 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-				6D18808A17B1F4C0001DCAB7 /* GoogleAdMobAdsSDK */,
-				6D1880F117B1F4C0001DCAB7 /* JSONKit */,
-				6D1880F617B1F4C0001DCAB7 /* libTapItVAST.a */,
-				6D1880F717B1F4C0001DCAB7 /* NSDictionary+QueryStringBuilder.h */,
-				6D1880F817B1F4C0001DCAB7 /* NSDictionary+QueryStringBuilder.m */,
-				6D1880F917B1F4C0001DCAB7 /* OpenUDID */,
-				6D1880FC17B1F4C0001DCAB7 /* Reachability */,
-				6D18812217B1F4C0001DCAB7 /* TapItAdMobStubs.m */,
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
-		6D18808A17B1F4C0001DCAB7 /* GoogleAdMobAdsSDK */ = {
-			isa = PBXGroup;
-			children = (
-				6D18808B17B1F4C0001DCAB7 /* Add-ons */,
-				6D1880E317B1F4C0001DCAB7 /* GADAdMobExtras.h */,
-				6D1880E417B1F4C0001DCAB7 /* GADAdNetworkExtras.h */,
-				6D1880E517B1F4C0001DCAB7 /* GADAdSize.h */,
-				6D1880E617B1F4C0001DCAB7 /* GADBannerView.h */,
-				6D1880E717B1F4C0001DCAB7 /* GADBannerViewDelegate.h */,
-				6D1880E817B1F4C0001DCAB7 /* GADInterstitial.h */,
-				6D1880E917B1F4C0001DCAB7 /* GADInterstitialDelegate.h */,
-				6D1880EA17B1F4C0001DCAB7 /* GADMAdNetworkAdapterProtocol.h */,
-				6D1880EB17B1F4C0001DCAB7 /* GADMAdNetworkConnectorProtocol.h */,
-				6D1880EC17B1F4C0001DCAB7 /* GADMEnums.h */,
-				6D1880ED17B1F4C0001DCAB7 /* GADRequest.h */,
-				6D1880EE17B1F4C0001DCAB7 /* GADRequestError.h */,
-				6D1880EF17B1F4C0001DCAB7 /* libGoogleAdMobAds.a */,
-				6D1880F017B1F4C0001DCAB7 /* README.txt */,
-			);
-			path = GoogleAdMobAdsSDK;
-			sourceTree = "<group>";
-		};
-		6D18808B17B1F4C0001DCAB7 /* Add-ons */ = {
-			isa = PBXGroup;
-			children = (
-				6D18808C17B1F4C0001DCAB7 /* DoubleClick */,
-				6D1880D917B1F4C0001DCAB7 /* Mediation */,
-				6D1880E017B1F4C0001DCAB7 /* Search */,
-			);
-			path = "Add-ons";
-			sourceTree = "<group>";
-		};
-		6D18808C17B1F4C0001DCAB7 /* DoubleClick */ = {
-			isa = PBXGroup;
-			children = (
-				6D18808D17B1F4C0001DCAB7 /* DFPBannerView.h */,
-				6D18808E17B1F4C0001DCAB7 /* DFPExtras.h */,
-				6D18808F17B1F4C0001DCAB7 /* DFPInterstitial.h */,
-				6D18809017B1F4C0001DCAB7 /* GADAdSizeDelegate.h */,
-				6D18809117B1F4C0001DCAB7 /* GADAppEventDelegate.h */,
-			);
-			path = DoubleClick;
-			sourceTree = "<group>";
-		};
-		6D1880D917B1F4C0001DCAB7 /* Mediation */ = {
-			isa = PBXGroup;
-			children = (
-				6D1880DA17B1F4C0001DCAB7 /* GADCustomEventBanner.h */,
-				6D1880DB17B1F4C0001DCAB7 /* GADCustomEventBannerDelegate.h */,
-				6D1880DC17B1F4C0001DCAB7 /* GADCustomEventExtras.h */,
-				6D1880DD17B1F4C0001DCAB7 /* GADCustomEventInterstitial.h */,
-				6D1880DE17B1F4C0001DCAB7 /* GADCustomEventInterstitialDelegate.h */,
-				6D1880DF17B1F4C0001DCAB7 /* GADCustomEventRequest.h */,
-			);
-			path = Mediation;
-			sourceTree = "<group>";
-		};
-		6D1880E017B1F4C0001DCAB7 /* Search */ = {
-			isa = PBXGroup;
-			children = (
-				6D1880E117B1F4C0001DCAB7 /* GADSearchBannerView.h */,
-				6D1880E217B1F4C0001DCAB7 /* GADSearchRequest.h */,
-			);
-			path = Search;
-			sourceTree = "<group>";
-		};
-		6D1880F117B1F4C0001DCAB7 /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				6D1880F317B1F4C0001DCAB7 /* JSONKit.h */,
-				6D1880F417B1F4C0001DCAB7 /* JSONKit.m */,
-			);
-			path = JSONKit;
-			sourceTree = "<group>";
-		};
-		6D1880F917B1F4C0001DCAB7 /* OpenUDID */ = {
-			isa = PBXGroup;
-			children = (
-				6D1880FA17B1F4C0001DCAB7 /* TapItOpenUDID.h */,
-				6D1880FB17B1F4C0001DCAB7 /* TapItOpenUDID.m */,
-			);
-			path = OpenUDID;
-			sourceTree = "<group>";
-		};
-		6D1880FC17B1F4C0001DCAB7 /* Reachability */ = {
-			isa = PBXGroup;
-			children = (
-				6D18812017B1F4C0001DCAB7 /* TapItReachability.h */,
-				6D18812117B1F4C0001DCAB7 /* TapItReachability.m */,
-			);
-			path = Reachability;
 			sourceTree = "<group>";
 		};
 		6D3A836B170C8B7B009F75F1 /* SSZIP */ = {
@@ -3132,8 +2875,6 @@
 				A906119717A3148F00A94E88 /* blankPlaceHolder.png in Resources */,
 				6DA8424B17B00EA6003FA743 /* disclosureiconBack.png in Resources */,
 				6DA8424C17B00EA6003FA743 /* disclosureiconBack@2x.png in Resources */,
-				6D18807C17B1F49E001DCAB7 /* TapIt.bundle in Resources */,
-				6D18815317B1F4C0001DCAB7 /* README.txt in Resources */,
 				6DDE14C817B419060007CF8A /* Greybutton.png in Resources */,
 				6DDE14C917B419060007CF8A /* Greybutton@2x.png in Resources */,
 				E343565917B9C157000409CE /* LBMGNavTableVC.xib in Resources */,
@@ -3295,23 +3036,6 @@
 				A98B1C71177CA15F003CDED2 /* LBMGNoRotateViewController.m in Sources */,
 				A902402E17A044C5003BF935 /* LBMGTopTourCell.m in Sources */,
 				A902403317A1795D003BF935 /* ThumbnailPhoto.m in Sources */,
-				6D18807D17B1F49E001DCAB7 /* TapItAdManager.m in Sources */,
-				6D18807E17B1F49E001DCAB7 /* TapItAdPrompt.m in Sources */,
-				6D18807F17B1F49E001DCAB7 /* TapItAdView.m in Sources */,
-				6D18808017B1F49E001DCAB7 /* TapItAppTracker.m in Sources */,
-				6D18808117B1F49E001DCAB7 /* TapItBannerAdView.m in Sources */,
-				6D18808217B1F49E001DCAB7 /* TapItBrowserController.m in Sources */,
-				6D18808317B1F49E001DCAB7 /* TapItHelpers.m in Sources */,
-				6D18808417B1F49E001DCAB7 /* TapItInterstitialAd.m in Sources */,
-				6D18808517B1F49E001DCAB7 /* TapItInterstitialAdViewController.m in Sources */,
-				6D18808617B1F49E001DCAB7 /* TapItMediationAdMob.m in Sources */,
-				6D18808717B1F49E001DCAB7 /* TapItMraidCommand.m in Sources */,
-				6D18808817B1F49E001DCAB7 /* TapItRequest.m in Sources */,
-				6D18815517B1F4C0001DCAB7 /* JSONKit.m in Sources */,
-				6D18815817B1F4C1001DCAB7 /* NSDictionary+QueryStringBuilder.m in Sources */,
-				6D18815917B1F4C1001DCAB7 /* TapItOpenUDID.m in Sources */,
-				6D18816917B1F4C1001DCAB7 /* TapItReachability.m in Sources */,
-				6D18816A17B1F4C1001DCAB7 /* TapItAdMobStubs.m in Sources */,
 				E343565817B9C157000409CE /* LBMGNavTableVC.m in Sources */,
 				E343565C17B9CE9A000409CE /* LBMGNavTableCell.m in Sources */,
 				E3A7DC1B17C5834000AD674C /* LBMGWebViewVC.m in Sources */,

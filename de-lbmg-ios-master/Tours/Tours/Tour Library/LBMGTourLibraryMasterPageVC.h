@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
-#import "TapItAdDelegates.h"
 
 @class TourList;
 
-@interface LBMGTourLibraryMasterPageVC : LBMGNoRotateViewController <UIScrollViewDelegate, TapItInterstitialAdDelegate>
+@interface LBMGTourLibraryMasterPageVC : LBMGNoRotateViewController <UIScrollViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIView *maskingLayerView;
 @property (strong, nonatomic) IBOutlet UIScrollView *pagedScrollView;

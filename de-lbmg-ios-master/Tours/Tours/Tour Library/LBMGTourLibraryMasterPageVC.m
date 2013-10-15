@@ -12,11 +12,6 @@
 #import "TourList.h"
 #import "LBMGYourLibraryTBVC.h"
 
-// This is the TEST zone id for the Interstitial Example
-// go to http://ads.tapit.com/ to get your's
-#define ZONE_ID @"30784"
-
-
 // refreshes every 5 minutes = 300 seconds
 const float autoRefreshInterval = 300.0;
 
