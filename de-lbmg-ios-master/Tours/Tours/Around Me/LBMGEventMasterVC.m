@@ -41,6 +41,7 @@
     
     if (selectedDate && self.event.sponsored && self.event.endDate) {
         selectedDate = self.event.endDate;
+        self.imGoingButton.selected = YES;
     }
     if (selectedDate) {
         NSDateComponents *otherDay = [[NSCalendar currentCalendar] components:NSEraCalendarUnit|NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit fromDate:selectedDate];
@@ -188,7 +189,7 @@
 {
     if (self.event.selectedDate) {
         // alert to clarify deselect
-        [PRPAlertView showWithTitle:@"Remove Event?" message:@"Do you want to remove this event from the calendar?"
+        [PRPAlertView showWithTitle:@"Favorite?" message:@"Do you want to remove this from your favorites?"
                         cancelTitle:@"NO" cancelBlock:^{
 
                         } otherTitle:@"YES" otherBlock:^{
@@ -210,10 +211,13 @@
                 self.event.selectedDate = [NSDate date];
                 [LBMGUtilities addNewCalendarEvent:self.event];
             }
-        }
-        else {
+        } else {
+            self.imGoingButton.selected = YES;
+            self.event.selectedDate = [NSDate date];
+            
+            [LBMGUtilities addNewCalendarEvent:self.event];
             // Ask for date/Time of event.
-            [self askUserForDateAndTime];
+            //[self askUserForDateAndTime];
         }
     }
 }

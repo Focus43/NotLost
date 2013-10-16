@@ -49,7 +49,7 @@
     self.viewControllers = [NSArray arrayWithObjects:
                             self.aroundMeMaster,
                             self.tourLibraryMaster,
-                            self.calendarMaster,
+//                            self.calendarMaster,
                             self.sharpMaster,
                             self.gearMaster,
                             nil];

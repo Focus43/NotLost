@@ -27,7 +27,7 @@ static NSString *CellIdentifier = @"NavCell";
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.navList = [NSArray arrayWithObjects:@"Location Search", @"Tours", @"Calendar", @"Get Help", @"Gear", @"NotLost Tutorial", nil];
+        self.navList = [NSArray arrayWithObjects:@"Location Search", @"Tours", @"Get Help", @"Gear", @"NotLost Tutorial", nil];
     }
     return self;
 }
@@ -97,7 +97,7 @@ static NSString *CellIdentifier = @"NavCell";
 //        }];
 //    } else
     
-    if ( indexPath.row == 5 ) {
+    if ( indexPath.row == 4 ) {
         LBMGPhotoDetailVC *tutorial = [LBMGPhotoDetailVC new];
 
         tutorial.isTutorial = YES;

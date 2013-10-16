@@ -535,10 +535,10 @@
 		E3AA75B217C7FD8F00497B4A /* UAPushSettingsUserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3AA757A17C7FD8F00497B4A /* UAPushSettingsUserInfoView.xib */; };
 		E3AA75B317C7FD8F00497B4A /* UAPushSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3AA757B17C7FD8F00497B4A /* UAPushSettingsView.xib */; };
 		E3AA75B517C8029700497B4A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AA75B417C8029600497B4A /* AudioToolbox.framework */; };
-		E3F690FB17DE8115000461D6 /* tutorial_images in Resources */ = {isa = PBXBuildFile; fileRef = E3F690FA17DE8115000461D6 /* tutorial_images */; };
 		E3FDC270180C695E0058B987 /* alert_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E3FDC26F180C695E0058B987 /* alert_icon.png */; };
 		E3FDC278180C75DD0058B987 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E3FDC275180C75DD0058B987 /* SVProgressHUD.bundle */; };
 		E3FDC279180C75DD0058B987 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FDC277180C75DD0058B987 /* SVProgressHUD.m */; };
+		E3FDC27B180DC2C40058B987 /* tutorial_images in Resources */ = {isa = PBXBuildFile; fileRef = E3FDC27A180DC2C40058B987 /* tutorial_images */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1261,12 +1261,12 @@
 		E3AA757A17C7FD8F00497B4A /* UAPushSettingsUserInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UAPushSettingsUserInfoView.xib; sourceTree = "<group>"; };
 		E3AA757B17C7FD8F00497B4A /* UAPushSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UAPushSettingsView.xib; sourceTree = "<group>"; };
 		E3AA75B417C8029600497B4A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		E3F690FA17DE8115000461D6 /* tutorial_images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tutorial_images; sourceTree = "<group>"; };
 		E3FDC26F180C695E0058B987 /* alert_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert_icon.png; sourceTree = "<group>"; };
 		E3FDC274180C75DD0058B987 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
 		E3FDC275180C75DD0058B987 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
 		E3FDC276180C75DD0058B987 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		E3FDC277180C75DD0058B987 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
+		E3FDC27A180DC2C40058B987 /* tutorial_images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tutorial_images; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1423,7 +1423,7 @@
 		6D0782AC16FB8D450029FAA4 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				E3F690FA17DE8115000461D6 /* tutorial_images */,
+				E3FDC27A180DC2C40058B987 /* tutorial_images */,
 				E3FDC26F180C695E0058B987 /* alert_icon.png */,
 				E3A7DC1617C452B100AD674C /* start_pin_poi.png */,
 				E3A7DC1417C4529300AD674C /* start_pin_poi@2x.png */,
@@ -2860,6 +2860,7 @@
 				6DB0DD5517739E370024EEE2 /* tour_whitefade_top.png in Resources */,
 				A9990831177A27D400348A6D /* tour_startbutton_on.png in Resources */,
 				A9990832177A27D400348A6D /* tour_startbutton_on@2x.png in Resources */,
+				E3FDC27B180DC2C40058B987 /* tutorial_images in Resources */,
 				A9990837177A28DB00348A6D /* tour_takemebutton_on.png in Resources */,
 				A9990838177A28DB00348A6D /* tour_takemebutton_on@2x.png in Resources */,
 				A9990839177A28DB00348A6D /* tour_takemebutton.png in Resources */,
@@ -2922,7 +2923,6 @@
 				E37E085E17D6808000ED9B0F /* Default-568h@2x.png in Resources */,
 				E37E086017D6809A00ED9B0F /* Default@2x.png in Resources */,
 				E37E086217D680A300ED9B0F /* Default.png in Resources */,
-				E3F690FB17DE8115000461D6 /* tutorial_images in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3127,8 +3127,8 @@
 					"\"$(SRCROOT)/Tours/Third Party/TestFlightSDK2.0.0\"",
 				);
 				PRODUCT_NAME = NotLost;
-				PROVISIONING_PROFILE = "15D244F0-3CDA-4506-AA15-6B8476BA44AB";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "15D244F0-3CDA-4506-AA15-6B8476BA44AB";
+				PROVISIONING_PROFILE = "5A41FC4B-F7CD-47E1-B08D-2FE2B26BF914";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5A41FC4B-F7CD-47E1-B08D-2FE2B26BF914";
 				WRAPPER_EXTENSION = app;
 			};
 			name = AdHoc;

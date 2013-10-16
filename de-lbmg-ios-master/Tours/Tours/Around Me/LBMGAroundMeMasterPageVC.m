@@ -28,10 +28,10 @@
 @interface LBMGAroundMeMasterPageVC ()
 
 @property (strong, nonatomic) LBMGAroundMeChildTBVC *eventTBVC;
-//@property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) NSArray *detailArray;
 @property (nonatomic, strong) NSArray *suggestionsArray;
 @property (nonatomic, strong) NSArray *searchResultArray;
+@property (nonatomic) BOOL hasStartedTyping;
 
 - (void)handleSwipeClosed:(UISwipeGestureRecognizer *)recognizer;
 
@@ -143,11 +143,14 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
 
 - (IBAction)searchButtonTouched:(id)sender {
     
-    [self.searchTextView becomeFirstResponder];
+//    [self.searchTextView becomeFirstResponder];
     [UIView transitionWithView:self.view duration:0.25 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
         // hide main nav button, since it interferes with the current page nav
         self.mainVC.mainNavButton.hidden = YES;
         [self.view  addSubview:self.searchViewContainer];
+        
+        self.hasStartedTyping = NO;
+        self.searchTextView.clearsOnBeginEditing = YES;
         self.searchTextView.text = @"Bldg. #, address, etc...";
         self.clearSearchTextButton.hidden = NO;
         self.suggestionsArray = nil;
@@ -194,7 +197,6 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
     [ApplicationDelegate.lbmgEngine getListingSuggestionsWithString:suggestString contentBlock:^(NSArray *array) {
         self.suggestionsArray = array;
         [self.searchTableView reloadData];
-        DLog(@"Suggestions - %@", array);
     } errorBlock:^(NSError *error) {
         // non action necessary
     }];
