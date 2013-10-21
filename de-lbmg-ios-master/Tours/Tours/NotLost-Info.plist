@@ -32,9 +32,9 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>103p</string>
+	<string>105s</string>
 	<key>LBMGServer</key>
-	<string>lbmg-production.herokuapp.com</string>
+	<string>lbmg-dev.herokuapp.com</string>
 	<key>ShowLocationAreas</key>
 	<false/>
 	<key>UIAppFonts</key>

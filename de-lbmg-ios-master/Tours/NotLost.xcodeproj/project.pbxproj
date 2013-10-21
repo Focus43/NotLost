@@ -539,6 +539,10 @@
 		E3FDC278180C75DD0058B987 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E3FDC275180C75DD0058B987 /* SVProgressHUD.bundle */; };
 		E3FDC279180C75DD0058B987 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FDC277180C75DD0058B987 /* SVProgressHUD.m */; };
 		E3FDC27B180DC2C40058B987 /* tutorial_images in Resources */ = {isa = PBXBuildFile; fileRef = E3FDC27A180DC2C40058B987 /* tutorial_images */; };
+		E3FDC27E181598240058B987 /* tour_pause_on.png in Resources */ = {isa = PBXBuildFile; fileRef = E3FDC27C181598240058B987 /* tour_pause_on.png */; };
+		E3FDC27F181598240058B987 /* tour_pause.png in Resources */ = {isa = PBXBuildFile; fileRef = E3FDC27D181598240058B987 /* tour_pause.png */; };
+		E3FDC28218159D7E0058B987 /* tour_pause_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E3FDC28018159D7D0058B987 /* tour_pause_on@2x.png */; };
+		E3FDC28318159D7E0058B987 /* tour_pause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E3FDC28118159D7D0058B987 /* tour_pause@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1267,6 +1271,10 @@
 		E3FDC276180C75DD0058B987 /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
 		E3FDC277180C75DD0058B987 /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		E3FDC27A180DC2C40058B987 /* tutorial_images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tutorial_images; sourceTree = "<group>"; };
+		E3FDC27C181598240058B987 /* tour_pause_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tour_pause_on.png; sourceTree = "<group>"; };
+		E3FDC27D181598240058B987 /* tour_pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tour_pause.png; sourceTree = "<group>"; };
+		E3FDC28018159D7D0058B987 /* tour_pause_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tour_pause_on@2x.png"; sourceTree = "<group>"; };
+		E3FDC28118159D7D0058B987 /* tour_pause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tour_pause@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1613,6 +1621,10 @@
 				6D07834016FBB7F20029FAA4 /* tour_info@2x.png */,
 				6D07834916FBB7F20029FAA4 /* tour_info_on.png */,
 				6D07834116FBB7F20029FAA4 /* tour_info_on@2x.png */,
+				E3FDC27C181598240058B987 /* tour_pause_on.png */,
+				E3FDC27D181598240058B987 /* tour_pause.png */,
+				E3FDC28018159D7D0058B987 /* tour_pause_on@2x.png */,
+				E3FDC28118159D7D0058B987 /* tour_pause@2x.png */,
 				6D078443170225C30029FAA4 /* tour_mainbkgrdimage.png */,
 				E3AA74C217C69BD300497B4A /* tour_mainbkgrdimage5.png */,
 				6D078442170225C30029FAA4 /* tour_mainbkgrdimage@2x.png */,
@@ -2618,6 +2630,7 @@
 				6D07839016FBB7F20029FAA4 /* tour_whitefade_bottom@2x.png in Resources */,
 				6D07839116FBB7F20029FAA4 /* tour_whitefade_bottom.png in Resources */,
 				6D07839216FBB7F20029FAA4 /* tour_video@2x.png in Resources */,
+				E3FDC28318159D7E0058B987 /* tour_pause@2x.png in Resources */,
 				6D07839316FBB7F20029FAA4 /* tour_video_on@2x.png in Resources */,
 				6D07839416FBB7F20029FAA4 /* tour_photos_on@2x.png in Resources */,
 				6D07839516FBB7F20029FAA4 /* tour_photos@2x.png in Resources */,
@@ -2787,6 +2800,7 @@
 				6DE2E17F172880E700BBD9BF /* calendar_backgroundimage5.png in Resources */,
 				6DE2E180172880E700BBD9BF /* calendar_backgroundimage@2x.png in Resources */,
 				6DE2E181172880E700BBD9BF /* calendar_backgroundimage.png in Resources */,
+				E3FDC27E181598240058B987 /* tour_pause_on.png in Resources */,
 				6D88C83E172987C9003EE858 /* Icon.png in Resources */,
 				6D88C840172987D4003EE858 /* Icon@2x.png in Resources */,
 				A94DBAAD172EF9C600B3E1F7 /* LBMGFeaturedLinkCell.xib in Resources */,
@@ -2837,6 +2851,7 @@
 				6DA1A4C2175EF73300FB36DE /* aroundme_searchclose_on@2x.png in Resources */,
 				6DA1A4C3175EF73300FB36DE /* aroundme_searchclose@2x.png in Resources */,
 				6DA1A4C4175EF73300FB36DE /* aroundme_searchclose_on.png in Resources */,
+				E3FDC28218159D7E0058B987 /* tour_pause_on@2x.png in Resources */,
 				6DA1A4C5175EF73300FB36DE /* aroundme_searchclose.png in Resources */,
 				6DA1A4C6175EF73300FB36DE /* aroundme_tinygraysearchicon@2x.png in Resources */,
 				6DA1A4C7175EF73300FB36DE /* aroundme_tinygraysearchicon.png in Resources */,
@@ -2885,6 +2900,7 @@
 				E376EA3E17BD614300E2399F /* menu@2x.png in Resources */,
 				E3A7DC1517C4529300AD674C /* start_pin_poi@2x.png in Resources */,
 				E3A7DC1717C452B100AD674C /* start_pin_poi.png in Resources */,
+				E3FDC27F181598240058B987 /* tour_pause.png in Resources */,
 				E3A7DC1C17C5834000AD674C /* LBMGWebViewVC.xib in Resources */,
 				E3AA74C317C69BD300497B4A /* tour_mainbkgrdimage5.png in Resources */,
 				E3AA758817C7FD8F00497B4A /* check.png in Resources */,
@@ -3127,8 +3143,8 @@
 					"\"$(SRCROOT)/Tours/Third Party/TestFlightSDK2.0.0\"",
 				);
 				PRODUCT_NAME = NotLost;
-				PROVISIONING_PROFILE = "5A41FC4B-F7CD-47E1-B08D-2FE2B26BF914";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "5A41FC4B-F7CD-47E1-B08D-2FE2B26BF914";
+				PROVISIONING_PROFILE = "9B8961C3-233D-4853-9840-87AB7400DA38";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "9B8961C3-233D-4853-9840-87AB7400DA38";
 				WRAPPER_EXTENSION = app;
 			};
 			name = AdHoc;

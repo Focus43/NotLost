@@ -316,11 +316,11 @@
                         <action selector="showCurrentLocationButtonPressed:" destination="-1" eventType="touchUpInside" id="1535"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1045" userLabel="Button - check">
-                    <rect key="frame" x="192" y="504" width="67" height="66"/>
+                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1045" userLabel="Button - check">
+                    <rect key="frame" x="192" y="508" width="67" height="66"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                    <state key="normal" image="tour_info.png">
+                    <state key="normal" image="tour_pause.png">
                         <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -494,8 +494,8 @@
         <image name="tour_centerbutton.png" width="55" height="55"/>
         <image name="tour_completebutton.png" width="227" height="55"/>
         <image name="tour_direction_back.png" width="320" height="66"/>
-        <image name="tour_info.png" width="67" height="66"/>
         <image name="tour_info_on.png" width="67" height="66"/>
+        <image name="tour_pause.png" width="52" height="52"/>
         <image name="tour_personal.png" width="67" height="66"/>
         <image name="tour_personal_on.png" width="67" height="66"/>
         <image name="tour_photos.png" width="67" height="66"/>
