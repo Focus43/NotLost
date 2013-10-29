@@ -143,7 +143,7 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
 
 - (IBAction)searchButtonTouched:(id)sender {
     
-//    [self.searchTextView becomeFirstResponder];
+    [self.searchTextView becomeFirstResponder];
     [UIView transitionWithView:self.view duration:0.25 options:UIViewAnimationOptionTransitionCrossDissolve animations:^{
         // hide main nav button, since it interferes with the current page nav
         self.mainVC.mainNavButton.hidden = YES;
@@ -151,7 +151,8 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
         
         self.hasStartedTyping = NO;
         self.searchTextView.clearsOnBeginEditing = YES;
-        self.searchTextView.text = @"Bldg. #, address, etc...";
+//        self.searchTextView.text = @"Bldg. #, address, etc...";
+        self.searchTextView.text = @"";
         self.clearSearchTextButton.hidden = NO;
         self.suggestionsArray = nil;
         self.searchResultArray = nil;
