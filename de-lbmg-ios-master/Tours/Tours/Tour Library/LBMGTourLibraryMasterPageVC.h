@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *pagedScrollView;
 @property (weak, nonatomic) IBOutlet UIButton *yourLibraryButton;
 @property (weak, nonatomic) IBOutlet UIButton *RefreshButton;
+@property (strong, nonatomic) IBOutlet UIButton *adButton;
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, strong) NSDate *lastRefreshTime;
@@ -26,6 +27,7 @@
 
 - (IBAction)yourLibraryTouched:(id)sender;
 - (IBAction)refreshTouched:(id)sender;
+- (IBAction)adButtonPressed:(id)sender;
 - (void)getData;
 - (void)removeRefreshTimer;
 

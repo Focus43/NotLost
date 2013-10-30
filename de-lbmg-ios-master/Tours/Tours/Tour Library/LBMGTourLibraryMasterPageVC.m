@@ -29,7 +29,8 @@ const float autoRefreshInterval = 300.0;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.pagedScrollView.contentSize = CGSizeMake(1000, self.pagedScrollView.frame.size.height);
+    
+    self.pagedScrollView.contentSize = CGSizeMake(1000, self.pagedScrollView.frame.size.height-self.adButton.frame.size.height);
     [self startLocationServices];
 
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -144,6 +145,11 @@ const float autoRefreshInterval = 300.0;
 
 - (IBAction)refreshTouched:(id)sender {
     [self getData];
+}
+
+- (IBAction)adButtonPressed:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.mcdonalds.com/us/en/promotions/premium_mcwrap.html"]];
 }
 
 #pragma mark - Notification Methods

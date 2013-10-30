@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LBMGAroundMeMasterPageVC">
             <connections>
+                <outlet property="adButton" destination="Nyn-7c-2jt" id="6XM-UT-xeY"/>
                 <outlet property="clearSearchTextButton" destination="138" id="140"/>
                 <outlet property="maskingLayerView" destination="44" id="109"/>
                 <outlet property="pagedScrollView" destination="35" id="108"/>
@@ -66,10 +67,6 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                 </imageView>
-                <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="menu_neartext.png" id="135">
-                    <rect key="frame" x="35" y="512" width="251" height="44"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                </imageView>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" id="136">
                     <rect key="frame" x="5" y="9" width="310" height="36"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -79,6 +76,17 @@
                     <color key="shadowColor" white="0.0" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
                     <size key="shadowOffset" width="0.0" height="1"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Nyn-7c-2jt" userLabel="Advertising">
+                    <rect key="frame" x="0.0" y="418" width="320" height="150"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" image="ad_sample.jpg" backgroundImage="ad_sample.jpg">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="adButtonPressed:" destination="-1" eventType="touchUpInside" id="4dT-6U-Js8"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
@@ -111,7 +119,7 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="40" sectionHeaderHeight="22" sectionFooterHeight="1" id="116">
-                    <rect key="frame" x="0.0" y="44" width="320" height="522"/>
+                    <rect key="frame" x="0.0" y="44" width="320" height="354"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
                     <connections>
@@ -174,22 +182,24 @@
                     <rect key="frame" x="63" y="16" width="14" height="15"/>
                     <autoresizingMask key="autoresizingMask"/>
                 </imageView>
+                <view contentMode="scaleToFill" id="RLW-uj-qCy">
+                    <rect key="frame" x="0.0" y="398" width="320" height="150"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="0.5" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
     <resources>
-        <image name="around_backgroundimage5.png" width="620" height="1076"/>
+        <image name="ad_sample.jpg" width="320" height="150"/>
         <image name="around_backgroundimage5.png" width="620" height="1076"/>
         <image name="aroundme_searchfield.png" width="252" height="30"/>
         <image name="aroundme_searchicon.png" width="31" height="32"/>
         <image name="aroundme_tinygraysearchicon.png" width="14" height="15"/>
         <image name="gray_backarrow.png" width="32" height="33"/>
         <image name="gray_backarrow_on.png" width="32" height="33"/>
-        <image name="menu_neartext.png" width="251" height="44"/>
         <image name="search_clearx.png" width="19" height="19"/>
-        <image name="tour_whitefade_bottom.png" width="320" height="118"/>
         <image name="tour_whitefade_bottom.png" width="320" height="118"/>
     </resources>
 </document>

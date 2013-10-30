@@ -19,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UIButton *clearSearchTextButton;
 @property (strong, nonatomic) IBOutlet UIButton *searchButton;
+@property (strong, nonatomic) IBOutlet UIButton *adButton;
 
 @property (nonatomic, strong) CLLocationManager *locationManager;
 
@@ -31,5 +32,6 @@
 - (IBAction)searchButtonTouched:(id)sender;
 - (IBAction)closeSearchButtonPressed:(id)sender;
 - (IBAction)clearTextButtonPressed:(id)sender;
+- (IBAction)adButtonPressed:(id)sender;
 
 @end

@@ -140,6 +140,10 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
     }];
 }
 
+- (IBAction)adButtonPressed:(id)sender
+{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.mcdonalds.com/us/en/promotions/premium_mcwrap.html"]];
+}
 
 - (IBAction)searchButtonTouched:(id)sender {
     

@@ -460,6 +460,7 @@
 		A9C97F081700938500F0BC9C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9C97F071700938500F0BC9C /* MapKit.framework */; };
 		A9C97F561700962E00F0BC9C /* PRPAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C97EEC1700929B00F0BC9C /* PRPAlertView.m */; };
 		A9C97F581700962E00F0BC9C /* XCRPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C97EEE170092DB00F0BC9C /* XCRPointAnnotation.m */; };
+		E31BACD0182056F100893F75 /* ad_sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E31BACCF182056F100893F75 /* ad_sample.jpg */; };
 		E343565817B9C157000409CE /* LBMGNavTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E343565617B9C157000409CE /* LBMGNavTableVC.m */; };
 		E343565917B9C157000409CE /* LBMGNavTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E343565717B9C157000409CE /* LBMGNavTableVC.xib */; };
 		E343565C17B9CE9A000409CE /* LBMGNavTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E343565B17B9CE9A000409CE /* LBMGNavTableCell.m */; };
@@ -1109,6 +1110,7 @@
 		A9C97F051700937F00F0BC9C /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		A9C97F071700938500F0BC9C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A9C97F5B1700965400F0BC9C /* Dlog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dlog.h; sourceTree = "<group>"; };
+		E31BACCF182056F100893F75 /* ad_sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ad_sample.jpg; sourceTree = "<group>"; };
 		E343565517B9C157000409CE /* LBMGNavTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LBMGNavTableVC.h; path = Navigation/LBMGNavTableVC.h; sourceTree = "<group>"; };
 		E343565617B9C157000409CE /* LBMGNavTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LBMGNavTableVC.m; path = Navigation/LBMGNavTableVC.m; sourceTree = "<group>"; };
 		E343565717B9C157000409CE /* LBMGNavTableVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LBMGNavTableVC.xib; path = Navigation/LBMGNavTableVC.xib; sourceTree = "<group>"; };
@@ -1431,6 +1433,7 @@
 		6D0782AC16FB8D450029FAA4 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E31BACCF182056F100893F75 /* ad_sample.jpg */,
 				E3FDC27A180DC2C40058B987 /* tutorial_images */,
 				E3FDC26F180C695E0058B987 /* alert_icon.png */,
 				E3A7DC1617C452B100AD674C /* start_pin_poi.png */,
@@ -2590,6 +2593,7 @@
 				6D07836516FBB7F20029FAA4 /* tour_pin_poi.png in Resources */,
 				6D07836616FBB7F20029FAA4 /* tour_pin_todo.png in Resources */,
 				6D07836716FBB7F20029FAA4 /* tour_pin_personal.png in Resources */,
+				E31BACD0182056F100893F75 /* ad_sample.jpg in Resources */,
 				6D07836816FBB7F20029FAA4 /* tour_personal_photo_on@2x.png in Resources */,
 				6D07836916FBB7F20029FAA4 /* tour_personal_photo@2x.png in Resources */,
 				6D07836A16FBB7F20029FAA4 /* tour_personal_video_on@2x.png in Resources */,
