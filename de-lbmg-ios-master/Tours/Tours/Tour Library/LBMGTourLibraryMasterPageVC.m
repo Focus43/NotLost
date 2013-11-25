@@ -11,6 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import "TourList.h"
 #import "LBMGYourLibraryTBVC.h"
+#import "UAPush.h"
 
 // refreshes every 5 minutes = 300 seconds
 const float autoRefreshInterval = 300.0;
@@ -150,6 +151,9 @@ const float autoRefreshInterval = 300.0;
 - (IBAction)adButtonPressed:(id)sender
 {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.nationalinfantrymuseum.org"]];
+    
+    [[UAPush shared] addTagToCurrentDevice:@"nim"];
+    [[UAPush shared] updateRegistration];
 }
 
 #pragma mark - Notification Methods

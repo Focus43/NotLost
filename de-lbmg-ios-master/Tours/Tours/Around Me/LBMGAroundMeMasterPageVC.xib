@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4510" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none">
     <dependencies>
         <deployment defaultVersion="1536" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LBMGAroundMeMasterPageVC">
@@ -76,8 +76,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Nyn-7c-2jt" userLabel="Advertising">
                     <rect key="frame" x="0.0" y="418" width="320" height="150"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <state key="normal" image="NIM_ad.png" backgroundImage="NIM_ad.png">
+                    <state key="normal" backgroundImage="MCD_ad.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -189,7 +190,7 @@
         </view>
     </objects>
     <resources>
-        <image name="NIM_ad.png" width="320" height="150"/>
+        <image name="MCD_ad.png" width="640" height="300"/>
         <image name="around_backgroundimage5.png" width="620" height="1076"/>
         <image name="aroundme_searchfield.png" width="252" height="30"/>
         <image name="aroundme_searchicon.png" width="31" height="32"/>

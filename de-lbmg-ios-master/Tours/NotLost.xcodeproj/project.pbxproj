@@ -541,6 +541,7 @@
 		E3AA75B217C7FD8F00497B4A /* UAPushSettingsUserInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3AA757A17C7FD8F00497B4A /* UAPushSettingsUserInfoView.xib */; };
 		E3AA75B317C7FD8F00497B4A /* UAPushSettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3AA757B17C7FD8F00497B4A /* UAPushSettingsView.xib */; };
 		E3AA75B517C8029700497B4A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3AA75B417C8029600497B4A /* AudioToolbox.framework */; };
+		E3DE913C1843B00400501659 /* MCD_ad.png in Resources */ = {isa = PBXBuildFile; fileRef = E3DE913B1843B00400501659 /* MCD_ad.png */; };
 		E3FDC270180C695E0058B987 /* alert_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E3FDC26F180C695E0058B987 /* alert_icon.png */; };
 		E3FDC278180C75DD0058B987 /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E3FDC275180C75DD0058B987 /* SVProgressHUD.bundle */; };
 		E3FDC279180C75DD0058B987 /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = E3FDC277180C75DD0058B987 /* SVProgressHUD.m */; };
@@ -1277,6 +1278,7 @@
 		E3AA757A17C7FD8F00497B4A /* UAPushSettingsUserInfoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UAPushSettingsUserInfoView.xib; sourceTree = "<group>"; };
 		E3AA757B17C7FD8F00497B4A /* UAPushSettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UAPushSettingsView.xib; sourceTree = "<group>"; };
 		E3AA75B417C8029600497B4A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E3DE913B1843B00400501659 /* MCD_ad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MCD_ad.png; sourceTree = "<group>"; };
 		E3FDC26F180C695E0058B987 /* alert_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert_icon.png; sourceTree = "<group>"; };
 		E3FDC274180C75DD0058B987 /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
 		E3FDC275180C75DD0058B987 /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
@@ -1447,6 +1449,7 @@
 				E3713DFA1823032C00F4DA29 /* icon_29.png */,
 				E3713DFB1823032C00F4DA29 /* icon_58.png */,
 				E3713DFC1823032C00F4DA29 /* icon_80.png */,
+				E3DE913B1843B00400501659 /* MCD_ad.png */,
 				E31BACD11821BD1B00893F75 /* NIM_ad.png */,
 				E31BACCF182056F100893F75 /* ad_sample.jpg */,
 				E3FDC27A180DC2C40058B987 /* tutorial_images */,
@@ -2897,6 +2900,7 @@
 				6DB0DD5317735B440024EEE2 /* tour_info_home.png in Resources */,
 				6DB0DD5517739E370024EEE2 /* tour_whitefade_top.png in Resources */,
 				A9990831177A27D400348A6D /* tour_startbutton_on.png in Resources */,
+				E3DE913C1843B00400501659 /* MCD_ad.png in Resources */,
 				A9990832177A27D400348A6D /* tour_startbutton_on@2x.png in Resources */,
 				E3FDC27B180DC2C40058B987 /* tutorial_images in Resources */,
 				A9990837177A28DB00348A6D /* tour_takemebutton_on.png in Resources */,

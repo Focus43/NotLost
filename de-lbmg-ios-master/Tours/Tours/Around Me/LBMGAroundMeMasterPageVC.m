@@ -143,9 +143,9 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
 
 - (IBAction)adButtonPressed:(id)sender
 {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.nationalinfantrymuseum.org"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/mcdonalds-mobile-ordering/id721788944?mt=8"]];
     
-    [[UAPush shared] addTagToCurrentDevice:@"nim"];
+    [[UAPush shared] addTagToCurrentDevice:@"mcdordering"];
     [[UAPush shared] updateRegistration];
 }
 
