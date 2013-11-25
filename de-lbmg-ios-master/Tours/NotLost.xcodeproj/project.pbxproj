@@ -461,6 +461,7 @@
 		A9C97F561700962E00F0BC9C /* PRPAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C97EEC1700929B00F0BC9C /* PRPAlertView.m */; };
 		A9C97F581700962E00F0BC9C /* XCRPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = A9C97EEE170092DB00F0BC9C /* XCRPointAnnotation.m */; };
 		E31BACD0182056F100893F75 /* ad_sample.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E31BACCF182056F100893F75 /* ad_sample.jpg */; };
+		E31BACD21821BD1B00893F75 /* NIM_ad.png in Resources */ = {isa = PBXBuildFile; fileRef = E31BACD11821BD1B00893F75 /* NIM_ad.png */; };
 		E343565817B9C157000409CE /* LBMGNavTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E343565617B9C157000409CE /* LBMGNavTableVC.m */; };
 		E343565917B9C157000409CE /* LBMGNavTableVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = E343565717B9C157000409CE /* LBMGNavTableVC.xib */; };
 		E343565C17B9CE9A000409CE /* LBMGNavTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E343565B17B9CE9A000409CE /* LBMGNavTableCell.m */; };
@@ -468,6 +469,10 @@
 		E34E50C617CBEB0400304AAD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E34E50C017CBEB0400304AAD /* README.md */; };
 		E34E50C717CBEB0400304AAD /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = E34E50C117CBEB0400304AAD /* release_notes.md */; };
 		E34E50C817CBEB2C00304AAD /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E34E50BF17CBEB0400304AAD /* libTestFlight.a */; };
+		E3713DF91823029B00F4DA29 /* icon_120.png in Resources */ = {isa = PBXBuildFile; fileRef = E3713DF81823029B00F4DA29 /* icon_120.png */; };
+		E3713DFD1823032C00F4DA29 /* icon_29.png in Resources */ = {isa = PBXBuildFile; fileRef = E3713DFA1823032C00F4DA29 /* icon_29.png */; };
+		E3713DFE1823032C00F4DA29 /* icon_58.png in Resources */ = {isa = PBXBuildFile; fileRef = E3713DFB1823032C00F4DA29 /* icon_58.png */; };
+		E3713DFF1823032C00F4DA29 /* icon_80.png in Resources */ = {isa = PBXBuildFile; fileRef = E3713DFC1823032C00F4DA29 /* icon_80.png */; };
 		E376EA3D17BD614300E2399F /* menu.png in Resources */ = {isa = PBXBuildFile; fileRef = E376EA3B17BD614300E2399F /* menu.png */; };
 		E376EA3E17BD614300E2399F /* menu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E376EA3C17BD614300E2399F /* menu@2x.png */; };
 		E37E085E17D6808000ED9B0F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E37E085D17D6808000ED9B0F /* Default-568h@2x.png */; };
@@ -1111,6 +1116,7 @@
 		A9C97F071700938500F0BC9C /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A9C97F5B1700965400F0BC9C /* Dlog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dlog.h; sourceTree = "<group>"; };
 		E31BACCF182056F100893F75 /* ad_sample.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ad_sample.jpg; sourceTree = "<group>"; };
+		E31BACD11821BD1B00893F75 /* NIM_ad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NIM_ad.png; sourceTree = "<group>"; };
 		E343565517B9C157000409CE /* LBMGNavTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LBMGNavTableVC.h; path = Navigation/LBMGNavTableVC.h; sourceTree = "<group>"; };
 		E343565617B9C157000409CE /* LBMGNavTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LBMGNavTableVC.m; path = Navigation/LBMGNavTableVC.m; sourceTree = "<group>"; };
 		E343565717B9C157000409CE /* LBMGNavTableVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LBMGNavTableVC.xib; path = Navigation/LBMGNavTableVC.xib; sourceTree = "<group>"; };
@@ -1123,6 +1129,10 @@
 		E34E50C217CBEB0400304AAD /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
 		E34E50C317CBEB0400304AAD /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
 		E34E50C417CBEB0400304AAD /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		E3713DF81823029B00F4DA29 /* icon_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_120.png; sourceTree = "<group>"; };
+		E3713DFA1823032C00F4DA29 /* icon_29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_29.png; sourceTree = "<group>"; };
+		E3713DFB1823032C00F4DA29 /* icon_58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_58.png; sourceTree = "<group>"; };
+		E3713DFC1823032C00F4DA29 /* icon_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_80.png; sourceTree = "<group>"; };
 		E376EA3B17BD614300E2399F /* menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu.png; sourceTree = "<group>"; };
 		E376EA3C17BD614300E2399F /* menu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu@2x.png"; sourceTree = "<group>"; };
 		E37E085D17D6808000ED9B0F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -1433,6 +1443,11 @@
 		6D0782AC16FB8D450029FAA4 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E3713DF81823029B00F4DA29 /* icon_120.png */,
+				E3713DFA1823032C00F4DA29 /* icon_29.png */,
+				E3713DFB1823032C00F4DA29 /* icon_58.png */,
+				E3713DFC1823032C00F4DA29 /* icon_80.png */,
+				E31BACD11821BD1B00893F75 /* NIM_ad.png */,
 				E31BACCF182056F100893F75 /* ad_sample.jpg */,
 				E3FDC27A180DC2C40058B987 /* tutorial_images */,
 				E3FDC26F180C695E0058B987 /* alert_icon.png */,
@@ -2683,15 +2698,18 @@
 				6D07842A16FD14D00029FAA4 /* comment_entrybox@2x.png in Resources */,
 				6D07842B16FD14D00029FAA4 /* comment_entrybox.png in Resources */,
 				6D07842C16FD14D00029FAA4 /* videothumbnail_current@2x.png in Resources */,
+				E3713DF91823029B00F4DA29 /* icon_120.png in Resources */,
 				6D07842D16FD14D00029FAA4 /* videothumbnail_current.png in Resources */,
 				6D07842E16FD14D00029FAA4 /* tour_videos_text.png in Resources */,
 				6D07842F16FD14D00029FAA4 /* tour_photos_text@2x.png in Resources */,
 				6D07843016FD14D00029FAA4 /* tour_photos_text.png in Resources */,
 				6D07843116FD14D00029FAA4 /* photothumbnail_current.png in Resources */,
+				E31BACD21821BD1B00893F75 /* NIM_ad.png in Resources */,
 				6D07843216FD14D00029FAA4 /* photothumbnail_current@2x.png in Resources */,
 				6D07843316FD14D00029FAA4 /* videothumbnail@2x.png in Resources */,
 				6D07843416FD14D00029FAA4 /* videothumbnail.png in Resources */,
 				6D07843516FD14D00029FAA4 /* notethumbnail@2x.png in Resources */,
+				E3713DFE1823032C00F4DA29 /* icon_58.png in Resources */,
 				6D07843616FD14D00029FAA4 /* notethumbnail.png in Resources */,
 				6D07843716FD14D00029FAA4 /* photothumbnail@2x.png in Resources */,
 				6D07843816FD14D00029FAA4 /* photothumbnail.png in Resources */,
@@ -2798,6 +2816,7 @@
 				6D4A31B51726F7B80049E1E6 /* tour_personalicon@2x.png in Resources */,
 				6D4A31B61726F7B80049E1E6 /* tour_personalicon.png in Resources */,
 				6D4A31B71726F7B80049E1E6 /* virt_imhere_dot@2x.png in Resources */,
+				E3713DFD1823032C00F4DA29 /* icon_29.png in Resources */,
 				6D4A31B81726F7B80049E1E6 /* virt_imhere_dot.png in Resources */,
 				6D4A31BA17278F190049E1E6 /* tour_tableheader.png in Resources */,
 				6D4A31BC172844DA0049E1E6 /* Backgroud_slither.png in Resources */,
@@ -2928,6 +2947,7 @@
 				E3AA75A717C7FD8F00497B4A /* top-detail.png in Resources */,
 				E3AA75A817C7FD8F00497B4A /* top-detail@2x.png in Resources */,
 				E3AA75A917C7FD8F00497B4A /* UALocationSettingsViewController.xib in Resources */,
+				E3713DFF1823032C00F4DA29 /* icon_80.png in Resources */,
 				E3AA75AA17C7FD8F00497B4A /* UAMapPresentationViewController.xib in Resources */,
 				E3AA75AB17C7FD8F00497B4A /* UAPushLocalization.bundle in Resources */,
 				E3AA75AC17C7FD8F00497B4A /* UAPushMoreSettingsView.xib in Resources */,

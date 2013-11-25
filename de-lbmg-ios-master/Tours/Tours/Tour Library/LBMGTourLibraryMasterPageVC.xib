@@ -60,11 +60,11 @@
                         <outlet property="delegate" destination="-1" id="304"/>
                     </connections>
                 </scrollView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VCK-cd-JwE" userLabel="Advertising">
-                    <rect key="frame" x="0.0" y="418" width="320" height="150"/>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VCK-cd-JwE" userLabel="Advertising">
+                    <rect key="frame" x="0.0" y="418" width="320" height="0.0"/>
                     <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                    <state key="normal" image="ad_sample.jpg" backgroundImage="ad_sample.jpg">
+                    <state key="normal" image="NIM_ad.png" backgroundImage="NIM_ad.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -96,8 +96,8 @@
         </view>
     </objects>
     <resources>
+        <image name="NIM_ad.png" width="320" height="150"/>
         <image name="Refresh.png" width="30" height="30"/>
-        <image name="ad_sample.jpg" width="320" height="150"/>
         <image name="tour_mainbkgrdimage5.png" width="620" height="1076"/>
         <image name="tour_whitefade_bottom.png" width="320" height="118"/>
     </resources>

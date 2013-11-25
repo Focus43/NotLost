@@ -24,6 +24,7 @@
 #import "LBMGMainMasterPageVC.h"
 #import "LBMGAroundMeFeaturedCell.h"
 #import "LBMGTourLibraryDetailTBVCell.h"
+#import "UAPush.h"
 
 @interface LBMGAroundMeMasterPageVC ()
 
@@ -142,7 +143,10 @@ static NSString *FeaturedCellIdentifier = @"FeaturedCell";
 
 - (IBAction)adButtonPressed:(id)sender
 {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.mcdonalds.com/us/en/promotions/premium_mcwrap.html"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.nationalinfantrymuseum.org"]];
+    
+    [[UAPush shared] addTagToCurrentDevice:@"nim"];
+    [[UAPush shared] updateRegistration];
 }
 
 - (IBAction)searchButtonTouched:(id)sender {

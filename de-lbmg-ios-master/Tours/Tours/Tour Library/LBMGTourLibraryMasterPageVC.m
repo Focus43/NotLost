@@ -149,7 +149,7 @@ const float autoRefreshInterval = 300.0;
 
 - (IBAction)adButtonPressed:(id)sender
 {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.mcdonalds.com/us/en/promotions/premium_mcwrap.html"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://www.nationalinfantrymuseum.org"]];
 }
 
 #pragma mark - Notification Methods

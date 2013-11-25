@@ -26,10 +26,6 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
-                    <view key="tableFooterView" contentMode="scaleToFill" id="33">
-                        <rect key="frame" x="0.0" y="398" width="320" height="130"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
-                    </view>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="30"/>
                         <outlet property="delegate" destination="-1" id="31"/>
