@@ -131,22 +131,22 @@
 
 - (IBAction)addressButtonPressed:(id)sender {
     
-    if (self.event.longitude && self.event.longitude) {
+    if (self.event.longitude && self.event.latitude) {
         // Create an MKMapItem to pass to the Maps app
         CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake([self.event.latitude doubleValue], [self.event.longitude doubleValue]);
 
-        NSDictionary *addressDict = @{
-                                      (NSString *) kABPersonPhoneMainLabel : self.event.phone_number,
-                                      (NSString *) kABPersonAddressStreetKey : self.event.address_1,
-                                      (NSString *) kABPersonAddressStreetKey : self.event.address_2,
-                                      (NSString *) kABPersonAddressCityKey : self.event.city,
-                                      (NSString *) kABPersonAddressStateKey : self.event.state,
-                                      (NSString *) kABPersonAddressZIPKey : self.event.zip_code,
-                                      (NSString *) kABPersonAddressCountryKey : @"United States"
-                                      };
+//        NSDictionary *addressDict = @{
+//                                      (NSString *) kABPersonPhoneMainLabel : self.event.phone_number,
+//                                      (NSString *) kABPersonAddressStreetKey : self.event.address_1,
+//                                      (NSString *) kABPersonAddressStreetKey : self.event.address_2,
+//                                      (NSString *) kABPersonAddressCityKey : self.event.city,
+//                                      (NSString *) kABPersonAddressStateKey : self.event.state,
+//                                      (NSString *) kABPersonAddressZIPKey : self.event.zip_code,
+//                                      (NSString *) kABPersonAddressCountryKey : @"United States"
+//                                      };
         
         MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:coordinate
-                                                       addressDictionary:addressDict];
+                                                       addressDictionary:NULL];
         
         MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
         [mapItem setName:self.event.name];
